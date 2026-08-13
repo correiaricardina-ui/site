@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A devolução dos resultados e como ler um relatório — Ricardina Correia</title>
+<meta name="description" content="O que significam os percentis, o que é um intervalo de confiança, e porque é que as recomendações são a parte que importa. Como ler um relatório de avaliação psicológica.">
+
+<link rel="preload" href="../assets/fontes/fraunces-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fontes/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="../assets/img/icone-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/img/icone-180.png">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-menu-2" viewBox="0 0 24 24"><path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" /></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></symbol><symbol id="i-school" viewBox="0 0 24 24"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+  <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" /></symbol><symbol id="i-users" viewBox="0 0 24 24"><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+  <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+  <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" /></symbol><symbol id="i-wind" viewBox="0 0 24 24"><path d="M5 8h8.5a2.5 2.5 0 1 0 -2.34 -3.24" />
+  <path d="M3 12h15.5a2.5 2.5 0 1 1 -2.34 3.24" />
+  <path d="M4 16h5.5a2.5 2.5 0 1 1 -2.34 3.24" /></symbol><symbol id="i-lock" viewBox="0 0 24 24"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6" />
+  <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+  <path d="M8 11v-4a4 4 0 1 1 8 0v4" /></symbol><symbol id="i-building-hospital" viewBox="0 0 24 24"><path d="M3 21l18 0" />
+  <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+  <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+  <path d="M10 9l4 0" />
+  <path d="M12 7l0 4" /></symbol><symbol id="i-device-laptop" viewBox="0 0 24 24"><path d="M3 19l18 0" />
+  <path d="M5 7a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1l0 -8" /></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4" />
+  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" />
+  <path d="M9 9l1 0" />
+  <path d="M9 13l6 0" />
+  <path d="M9 17l6 0" /></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+  <path d="M7 11l5 5l5 -5" />
+  <path d="M12 4l0 12" /></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6l6 -6" /></symbol></svg>
+
+<header class="topo">
+  <div class="topo__interior">
+    <a class="marca" href="../index.html">
+      <img class="marca__simbolo" src="../assets/img/simbolo-rc.png" alt="" width="40" height="32">
+      <span>
+        <span class="marca__nome">Ricardina Correia</span><br>
+        <span class="marca__papel">Psicologia focada na infância e na adolescência</span>
+      </span>
+    </a>
+    <button class="menu__botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <svg class="icone" aria-hidden="true"><use href="#i-menu-2"/></svg>
+    </button>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="../biblioteca.html">Biblioteca</a>
+      <a href="../ferramentas.html">Ferramentas</a>
+      <a href="../materiais.html">Materiais</a>
+      <a href="../index.html#encontrar">Consultas</a>
+      <a href="../sobre.html">Sobre</a>
+      <a href="../contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="seccao seccao--primeira" style="padding-top:52px">
+  <div class="leitura">
+    <span class="etiqueta etiqueta--agua">Avaliação</span>
+    <h1>A devolução dos resultados e como ler um relatório</h1>
+    <p class="lede">Um relatório não é uma lista do que a criança fez em gabinete: é a integração de várias fontes, e é a convergência entre elas que sustenta cada conclusão. Por isso não se lê sozinho — a devolução é parte do processo, não um extra.</p>
+
+    <div class="leitura__meta">
+      <img src="../assets/img/ricardina-avatar-96.webp" alt="" width="38" height="38">
+      <span>Ricardina Correia · 10 min de leitura</span>
+    </div>
+
+    <h2>A situação</h2>
+    <p>A avaliação terminou. Segue-se a sessão de devolução — o momento em que se explica o que foi feito, o que se concluiu e o que se propõe — e, dela, um relatório escrito.</p>
+    <p>O que costuma acontecer a seguir é sempre o mesmo: procura-se os números, procura-se o diagnóstico, e lê-se o resto depois — se se ler. É compreensível, mas costuma ser exatamente ao contrário do que serve. A parte do relatório que muda alguma coisa na vida da criança são as recomendações, e essas ficam quase sempre no fim.</p>
+    <p>E há um mal-entendido anterior a esse: o de que um relatório traduz o que a criança fez naquelas horas de gabinete. Não é assim que se constrói, e ler assim leva a conclusões erradas sobre o que ali está escrito.</p>
+    <p class="nota">Sobre o que vem antes — a primeira consulta, o que organizar e o que dizer à criança — há um texto próprio: <a href="preparar-consulta-psicologia.html" style="border-bottom:1px solid var(--clara)">Preparar a ida à consulta de psicologia</a>.</p>
+
+    <h2>O que se sabe</h2>
+
+    <h3>Um relatório não se lê sozinho</h3>
+    <p>Um relatório é um documento técnico. Usa terminologia própria, apresenta resultados que exigem enquadramento, e contém formulações que podem ser lidas de várias maneiras por quem não trabalha com elas todos os dias. Entregar um relatório sem o explicar é entregar metade do trabalho.</p>
+    <p><strong>Na minha prática, a sessão de devolução é obrigatória</strong> — não é uma possibilidade que a família tenha de pedir, é parte do processo e está contemplada desde o início. É nessa sessão que se explica o que foi feito, como se chegou às conclusões, o que significam na prática, e o que se propõe a seguir. E é onde a família pergunta o que quiser, incluindo o que lhe parecer elementar.</p>
+    <p>Há uma razão clínica para isto, além da razão técnica. Receber um relatório mobiliza coisas — alívio por finalmente haver um nome, tristeza, culpa retrospetiva, receio do futuro. Ler sozinho, sem ninguém que enquadre, é como essas reações se transformam em conclusões erradas que depois custam a desfazer.</p>
+
+    <h3>De onde vêm as conclusões</h3>
+    <p>Esta é a parte do trabalho que menos se vê no documento final, e é a que sustenta tudo o resto. As conclusões de uma avaliação <strong>não decorrem de nenhum resultado isolado</strong>, nem sequer do conjunto dos resultados obtidos em gabinete. Decorrem do cruzamento de três origens que, sozinhas, seriam insuficientes:</p>
+    <ul class="condicoes condicoes--sim" style="list-style:none">
+      <li><strong>A avaliação direta com a criança</strong> — os resultados dos instrumentos aplicados e as relações entre eles, mas também a observação do processo: como aborda uma tarefa, o que faz quando erra, quanto tempo sustenta o esforço, como reage ao que é difícil. Esta observação diz frequentemente mais do que a pontuação obtida.</li>
+      <li><strong>Os questionários e a entrevista à família</strong> — o funcionamento em casa, a história de desenvolvimento, a evolução ao longo do tempo, e informação clínica relevante como saúde, sono, acontecimentos de vida e intervenções anteriores.</li>
+      <li><strong>Os questionários à escola</strong>, sempre que se justifique — o funcionamento em contexto de grupo e perante exigência académica, que é onde muitas dificuldades se tornam visíveis e outras se atenuam.</li>
+    </ul>
+    <p>É a convergência entre estas origens que dá solidez a uma conclusão. Vários diagnósticos exigem, aliás, que os sinais estejam presentes em mais do que um contexto — pelo que a informação de casa e da escola não é acessória: é constitutiva da própria decisão diagnóstica.</p>
+    <p>Quando todas as fontes apontam na mesma direção, a formulação é segura. Quando divergem, isso é em si um dado, e um dos mais informativos — uma dificuldade que só aparece num contexto aponta para algo diferente de uma que aparece em todos. O relatório deve dizê-lo, em vez de escolher a fonte que confirma a hipótese inicial.</p>
+    <p>Daí que um relatório sério nunca seja uma lista de pontuações com uma etiqueta no fim. A parte que exige formação é precisamente esta: integrar dados que não dizem todos o mesmo, e explicar o que deles decorre.</p>
+
+    <h3>Porque não basta a avaliação em gabinete</h3>
+    <p>A avaliação direta recolhe uma amostra de comportamento em condições padronizadas. É a sua força: permite comparar o desempenho desta criança com o de crianças da mesma idade, em tarefas administradas da mesma maneira a toda a gente.</p>
+    <p>Mas o que ali se observa é o desempenho <em>naquelas</em> tarefas, <em>naquele</em> dia, com <em>aquele</em> examinador — numa situação individual, silenciosa e com um adulto atento só àquela criança. É quase o oposto de uma sala de aula. Uma criança que dormiu mal, que estava ansiosa, ou que simplesmente não se sentiu à vontade, mostra menos do que sabe; e há dificuldades que, por definição, não se manifestam num contexto tão protegido.</p>
+    <p><strong>É precisamente por isso que existem as outras fontes.</strong> Os questionários à família e à escola não são um complemento acessório nem uma formalidade: são o que permite saber se o que se observou em gabinete corresponde ao funcionamento no dia a dia, e o que só aparece quando há vinte e cinco crianças na sala e trinta minutos para acabar. Sem eles, uma avaliação descreveria apenas o desempenho numa situação que a criança quase nunca vive.</p>
+    <p>Isto é particularmente relevante nas idades mais baixas, em que a atenção é mais curta e o ritmo de desenvolvimento mais rápido — um resultado obtido aos quatro anos envelhece depressa.</p>
+
+    <h3>Percentil não é percentagem</h3>
+    <p>É o erro de leitura mais comum, e o que mais assusta sem razão. Um percentil 30 não significa que a criança acertou 30% das perguntas. Significa que o seu desempenho foi igual ou superior ao de 30% das crianças da mesma idade — e inferior ao das restantes 70%.</p>
+    <p>O percentil 50 é a mediana, não um resultado medíocre. Metade das crianças fica abaixo dele, por definição. Uma boa parte da angústia gerada pelos relatórios vem de se ler uma escala relativa como se fosse uma nota escolar.</p>
+
+    <h3>O intervalo de confiança é o número mais honesto do relatório</h3>
+    <p>Nenhuma medida é exata. Todos os testes têm erro de medida, e é por isso que os resultados devem ser apresentados como um intervalo e não como um valor único. Ver «entre 92 e 108» em vez de «100» não é sinal de imprecisão do trabalho — é sinal de que o relatório está a ser honesto sobre os limites do instrumento.</p>
+
+    <blockquote>
+      <p>Um resultado de 100 com erro-padrão de 4 pontos corresponde, com 95% de confiança, a um intervalo aproximado de 92 a 108 — ou seja, algures entre o percentil 30 e o percentil 70. O número único esconde uma faixa de quarenta percentis.</p>
+    </blockquote>
+
+    <p>Daqui decorre uma consequência prática: <strong>diferenças pequenas entre resultados não são diferenças.</strong> Se dois valores têm intervalos que se sobrepõem, não se pode afirmar que um é superior ao outro. Comparar subtestes ponto a ponto, como se fossem notas, produz leituras que os dados não sustentam.</p>
+
+    <h3>O perfil importa mais do que o valor global</h3>
+    <p>Duas crianças com o mesmo resultado global podem ter perfis completamente diferentes — uma forte no raciocínio e frágil na velocidade de processamento, outra o inverso. São situações distintas, que pedem apoios distintos. É por isso que a leitura de um relatório não se resume a procurar um número.</p>
+    <p>E quando há grande dispersão dentro do próprio perfil, o valor global perde significado: representa uma média de coisas que não andam juntas, e descreve mal a criança.</p>
+
+    <h3>Nem toda a avaliação termina num diagnóstico</h3>
+    <p>Vale a pena dizê-lo com clareza, porque é fonte de desilusão frequente: <strong>uma avaliação que não conclui por um diagnóstico não é uma avaliação mal feita.</strong> É, muitas vezes, uma avaliação bem feita.</p>
+    <p>As razões pelas quais isso acontece são várias e todas legítimas:</p>
+    <ul class="condicoes condicoes--sim" style="list-style:none">
+      <li><strong>As dificuldades existem, mas não em intensidade ou número suficientes</strong> para preencher os critérios. Os critérios de diagnóstico têm limiares, e há situações que ficam abaixo deles sem deixarem de merecer apoio.</li>
+      <li><strong>As dificuldades manifestam-se num único contexto.</strong> Vários diagnósticos exigem que os sinais apareçam em mais do que um ambiente. Uma dificuldade que só existe na escola, ou só em casa, aponta para outra coisa — e essa outra coisa importa perceber.</li>
+      <li><strong>O que se observa explica-se melhor por outra via</strong> — uma fase de desenvolvimento, um acontecimento de vida, sono insuficiente, ansiedade, uma exigência desajustada à idade.</li>
+      <li><strong>A criança é ainda pequena</strong> e o quadro não está estabilizado. Nesses casos, o rigor manda aguardar e reavaliar, e não antecipar um rótulo.</li>
+    </ul>
+    <p>Em qualquer destes cenários o relatório continua a ter valor, e frequentemente mais do que teria com um diagnóstico apressado: descreve o perfil de competências e de fragilidades, explica o que está a acontecer, e indica o que fazer. <strong>O apoio não depende de haver diagnóstico.</strong> As medidas de suporte à aprendizagem, por exemplo, mobilizam-se em função das necessidades identificadas, não da existência de um rótulo.</p>
+    <p>Uma avaliação que exclui hipóteses faz um trabalho tão real quanto uma que confirma. Saber que <em>não</em> é dislexia é informação — evita meses de intervenção mal dirigida.</p>
+
+    <h3>Um diagnóstico não é uma descrição da pessoa</h3>
+    <p>Esta é a distinção mais difícil de manter, e a que mais influencia o que acontece a seguir. Um diagnóstico é uma forma abreviada de nomear um conjunto de dificuldades que aparecem juntas com frequência suficiente para ter nome, e que dá acesso a determinadas respostas.</p>
+    <p>Não descreve a personalidade da criança, não prevê o que ela virá a ser, e não substitui aquilo que a família já sabe sobre ela. O risco, depois de um relatório, é o diagnóstico passar a explicar tudo — cada dificuldade e cada comportamento lidos através dele, e a criança a desaparecer atrás da categoria.</p>
+
+    <h2>O que fazer</h2>
+
+    <p><strong>Ler pelo fim.</strong> Começar pelas conclusões e recomendações, e só depois voltar aos resultados. É a ordem inversa da que o documento sugere, mas é a que serve — as recomendações são a parte acionável, e merecem ser lidas com atenção disponível.</p>
+
+    <p><strong>Dar tempo antes de tomar decisões.</strong> Receber um relatório mobiliza coisas — alívio por finalmente haver um nome, tristeza, culpa retrospetiva, receio do futuro. Tudo isso é esperado. Mas decisões tomadas nos primeiros dias tendem a ser mais reativas do que as tomadas duas semanas depois.</p>
+
+    <p><strong>Levar perguntas escritas à devolução.</strong> Chegar à sessão com as dúvidas anotadas muda o que dela se leva. É fácil, no momento, ficar sem saber o que perguntar e lembrar-se de tudo no carro. Não há perguntas descabidas sobre um documento que trata do próprio filho.</p>
+
+    <p><strong>Procurar como as conclusões foram sustentadas.</strong> Um bom relatório mostra o raciocínio, não apenas o resultado: que fontes convergiram, o que divergiu, e porque se concluiu o que se concluiu. Se a conclusão surge sem se perceber de onde vem, é legítimo perguntar.</p>
+
+    <p><strong>Verificar se as perguntas iniciais foram respondidas.</strong> Vale a pena reler o que se foi perguntar na primeira consulta e confirmar que o relatório responde a isso. É o critério mais simples para avaliar se a avaliação cumpriu o seu objetivo.</p>
+
+    <p><strong>Perguntar o que não corresponde ao que se conhece.</strong> Se alguma coisa no relatório não bate certo com a criança que se conhece, isso é informação relevante e deve ser dito. Pode significar que o desempenho naquele dia não foi representativo, ou que aquela competência se manifesta de forma diferente noutro contexto. Não é pôr em causa o trabalho — é acrescentar-lhe o que só a família observa.</p>
+
+    <p><strong>Separar o que se partilha do documento completo.</strong> A escola precisa das recomendações que dependem dela, não do relatório inteiro. Um relatório contém informação clínica, dados de história pessoal e familiar, e observações que não são necessárias a todos os intervenientes. A criança tem direito a essa reserva.</p>
+
+    <p><strong>Decidir o que se conta à criança — e contar alguma coisa.</strong> O silêncio total raramente protege: a criança sabe que foi avaliada e nota que os adultos falam do assunto. Uma explicação ajustada à idade, que nomeie dificuldades e competências, costuma tranquilizar mais do que preocupar. A partir da adolescência, o próprio deve ter acesso ao essencial das conclusões — é sobre ele.</p>
+
+    <p><strong>Guardar o relatório e voltar a ele daqui a um ano.</strong> Um relatório é uma fotografia, não um veredicto. Reler ao fim de algum tempo, à luz do que entretanto aconteceu, é frequentemente mais esclarecedor do que a primeira leitura.</p>
+
+    <h2>Quando procurar ajuda</h2>
+    <p>Há situações em que vale a pena voltar a quem avaliou, ou procurar outra opinião:</p>
+    <ul class="condicoes condicoes--nao" style="list-style:none">
+      <li>O relatório apresenta números mas poucas recomendações práticas, ou recomendações demasiado genéricas para serem aplicadas.</li>
+      <li>O relatório foi entregue sem sessão de devolução, ou ficaram dúvidas por esclarecer depois dela.</li>
+      <li>As perguntas que motivaram o pedido não estão respondidas no documento.</li>
+      <li>Não se percebe em que dados assentam as conclusões, ou o relatório apresenta pontuações sem integração.</li>
+      <li>O que está descrito não corresponde, de forma significativa, à criança que a família conhece.</li>
+      <li>A avaliação decorreu em condições que podem tê-la afetado — doença, cansaço, sofrimento marcado no momento.</li>
+      <li>O relatório tem mais de dois ou três anos e está a ser usado para decisões atuais, sobretudo se a criança era pequena à data.</li>
+      <li>A leitura do relatório gerou angústia que se mantém, ou está a alterar a forma como a família olha para a criança.</li>
+    </ul>
+    <p>Este último ponto merece atenção própria. Um relatório destina-se a orientar decisões, não a reconfigurar a relação com um filho. Quando é isso que está a acontecer, a conversa a ter é outra — e vale a pena tê-la.</p>
+
+    <div class="recurso">
+      <div class="recurso__icone"><svg class="icone" aria-hidden="true"><use href="#i-file"/></svg></div>
+      <div>
+        <span class="recurso__rotulo">Material para imprimir</span>
+        <h3>Depois da devolução</h3>
+        <p class="nota">Duas páginas para preencher nos dias seguintes: o que se reteve pelas próprias palavras, as recomendações a pôr em prática com responsável e data, o que se conversa com a criança, e as dúvidas que só surgem depois.</p>
+        <p style="margin:0"><a class="botao" href="../assets/materiais/depois-da-devolucao.pdf" download>Descarregar</a></p>
+      </div>
+    </div>
+
+    <p class="nota" style="margin-top:30px">Sobre o que vem antes: <a href="preparar-consulta-psicologia.html" style="border-bottom:1px solid var(--clara)">Preparar a ida à consulta de psicologia</a>.</p>
+
+    <p class="nota" style="margin-top:44px; padding-top:22px; border-top:1px solid var(--linha)">Este texto tem fins informativos e não substitui avaliação nem acompanhamento profissional. Cada situação exige uma leitura própria.</p>
+
+    <div class="referencias">
+      <h2>Referências</h2>
+      <ul>
+        <li>American Educational Research Association, American Psychological Association, &amp; National Council on Measurement in Education. (2014). <em>Standards for educational and psychological testing</em>. American Educational Research Association.</li>
+        <li>American Psychiatric Association. (2022). <em>Diagnostic and statistical manual of mental disorders</em> (5.ª ed., texto revisto). https://doi.org/10.1176/appi.books.9780890425787</li>
+      </ul>
+      <p class="nota" style="margin:14px 0 0; font-size:13px; color:var(--clara)">A interpretação de percentis, do erro-padrão de medida e dos intervalos de confiança segue os princípios psicométricos estabelecidos nas normas acima.</p>
+    </div>
+  </div>
+</article>
+</main>
+
+<footer class="rodape">
+  <div class="envolucro">
+    <div class="rodape__grelha">
+      <div>
+        <img class="rodape__logo" src="../assets/img/logo-rc.png" alt="Ricardina Correia — Psicologia pediátrica" width="180">
+        <p style="margin:0; font-size:13px; color:var(--clara)">Membro efetivo da Ordem dos Psicólogos Portugueses<br>Cédula profissional n.º 8233</p>
+      </div>
+      <div>
+        <h4>Navegar</h4>
+        <ul>
+          <li><a href="../biblioteca.html">Biblioteca</a></li>
+          <li><a href="../ferramentas.html">Ferramentas</a></li>
+          <li><a href="../materiais.html">Materiais</a></li>
+          <li><a href="../index.html#agenda">Agenda e formação</a></li>
+          <li><a href="../sobre.html">Sobre</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para colegas</h4>
+        <ul>
+          <li><a href="../supervisao.html">Supervisão clínica</a></li>
+          <li><a href="../contacto.html">Pedidos de contacto</a></li>
+          <li><a href="../privacidade.html">Política de privacidade</a></li>
+          <li><a href="mailto:geral@ricardinacorreia.pt">geral@ricardinacorreia.pt</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="rodape__legal">Ricardina Correia &amp; Associados, Lda. · NIPC 519 479 610 · Torres Vedras<br>
+    Esta página tem fins informativos e não substitui avaliação ou acompanhamento profissional.</p>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

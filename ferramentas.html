@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferramentas de apoio — Ricardina Correia</title>
+<meta name="description" content="Aplicações de autoria própria entregues em consulta às famílias em acompanhamento: para quem se destinam, objetivos e conteúdos.">
+<link rel="preload" href="assets/fontes/fraunces-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fontes/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="assets/img/icone-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/icone-180.png">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-menu-2" viewBox="0 0 24 24"><path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" /></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></symbol><symbol id="i-school" viewBox="0 0 24 24"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+  <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" /></symbol><symbol id="i-users" viewBox="0 0 24 24"><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+  <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+  <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" /></symbol><symbol id="i-wind" viewBox="0 0 24 24"><path d="M5 8h8.5a2.5 2.5 0 1 0 -2.34 -3.24" />
+  <path d="M3 12h15.5a2.5 2.5 0 1 1 -2.34 3.24" />
+  <path d="M4 16h5.5a2.5 2.5 0 1 1 -2.34 3.24" /></symbol><symbol id="i-lock" viewBox="0 0 24 24"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6" />
+  <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+  <path d="M8 11v-4a4 4 0 1 1 8 0v4" /></symbol><symbol id="i-building-hospital" viewBox="0 0 24 24"><path d="M3 21l18 0" />
+  <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+  <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+  <path d="M10 9l4 0" />
+  <path d="M12 7l0 4" /></symbol><symbol id="i-device-laptop" viewBox="0 0 24 24"><path d="M3 19l18 0" />
+  <path d="M5 7a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1l0 -8" /></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4" />
+  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" />
+  <path d="M9 9l1 0" />
+  <path d="M9 13l6 0" />
+  <path d="M9 17l6 0" /></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+  <path d="M7 11l5 5l5 -5" />
+  <path d="M12 4l0 12" /></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6l6 -6" /></symbol></svg>
+
+<header class="topo">
+  <div class="topo__interior">
+    <a class="marca" href="index.html">
+      <img class="marca__simbolo" src="assets/img/simbolo-rc.png" alt="" width="40" height="32">
+      <span>
+        <span class="marca__nome">Ricardina Correia</span><br>
+        <span class="marca__papel">Psicologia focada na infância e na adolescência</span>
+      </span>
+    </a>
+    <button class="menu__botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <svg class="icone" aria-hidden="true"><use href="#i-menu-2"/></svg>
+    </button>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="biblioteca.html">Biblioteca</a>
+      <a href="ferramentas.html">Ferramentas</a>
+      <a href="materiais.html">Materiais</a>
+      <a href="index.html#encontrar">Consultas</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="seccao seccao--primeira" style="padding-top:52px">
+  <div class="envolucro">
+    <p class="rotulo">Ferramentas</p>
+    <h1 style="margin-bottom:16px">Entre uma sessão e a seguinte</h1>
+    <p class="lede" style="margin-bottom:12px">Ferramentas de autoria própria, desenvolvidas para os casos em acompanhamento. Cada uma empresta um mecanismo com apoio empírico e é usada como apoio à intervenção, não como substituto dela.</p>
+
+    <div class="aviso" style="margin:20px 0 34px">
+      <svg class="icone" aria-hidden="true"><use href="#i-lock"/></svg>
+      <p><b>Não estão disponíveis para descarregar.</b> São prescritas caso a caso em consulta, configuradas com a família e acompanhadas de um documento de instruções. Nenhuma recolhe dados: tudo o que se escreve fica no aparelho da família.</p>
+    </div>
+
+    <nav class="indice-apps" aria-label="Índice das ferramentas">
+      <a href="#pontos-em-fam-lia">Pontos em Família</a>
+      <a href="#entre-irmaos">Entre Irmãos</a>
+      <a href="#rotina-da-manha-e-da-noite">Rotina da manhã e da noite</a>
+      <a href="#agenda-escolar-e-mochila">Agenda escolar e mochila</a>
+      <a href="#os-trabalhos-de-casa-sem-guerra">Os trabalhos de casa sem guerra</a>
+      <a href="#plano-de-estudo">Plano de estudo</a>
+      <a href="#ponte-casa-escola">Ponte casa–escola</a>
+      <a href="#escada-da-coragem">Escada da coragem</a>
+      <a href="#coisas-boas">Coisas Boas</a>
+    </nav>
+
+    <details class="app" id="pontos-em-fam-lia">
+      <summary class="app__resumo-linha">
+        <img class="app__icone-img" src="assets/img/apps/pontos-em-familia.svg" alt="" width="62" height="62">
+        <div class="app__corpo">
+          <div class="app__cabeca">
+          <h2 style="font-size:24px">Pontos em Família</h2>
+          <span class="app__idade">5 aos 14 anos</span>
+          <span class="selo selo--activo">Disponível</span>
+        </div>
+          <p class="nota app__resumo">Sistema de pontos para as tarefas e as regras combinadas em casa, com meta e prémios escolhidos pela própria família.</p>
+        </div>
+        <svg class="app__seta icone" aria-hidden="true"><use href="#i-chevron"/></svg>
+      </summary>
+      <div class="app__detalhe">
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Famílias em que o dia a dia se organiza à volta da repetição de pedidos e da negociação de cada tarefa. As regras existem, mas mudam com o cansaço do adulto e com o dia que correu mal, e a criança deixa de saber o que conta.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Tornar as expectativas explícitas, estáveis e previsíveis para todos os que vivem na casa. Deslocar a atenção dos adultos do incumprimento para o cumprimento. Garantir que a consequência positiva chega de forma consistente e não depende da disposição de quem a dá.</p></div>
+          <div><h4>Conteúdos</h4><p class="nota">Placar de tarefas e de regras da casa, editável pela família. Meta individual por criança — diária até aos 7 anos, semanal a partir dos 8 — com prémio associado. Loja de prémios com saldo, rondas com quadro de honra e resumo em texto para levar à consulta.</p></div>
+          <div><h4>Como se usa</h4><p class="nota">Marcação ao fim do dia, por um adulto, com as crianças presentes. A primeira semana serve para corrigir o desenho: número de tarefas a mais, meta demasiado alta, prémios inalcançáveis. A meta tem de ser atingível desde o primeiro dia.</p></div>
+          <div><h4>Quando não se usa</h4><p class="nota">Quando o comportamento em causa tem função de evitamento de ansiedade: nesses casos o que é preciso é aproximação gradual, não mais exigência. Quando os adultos da casa não estão de acordo sobre as regras, o sistema passa a terreno de disputa e agrava o conflito.</p></div>
+          <div><h4>O que se pede à família</h4><p class="nota">Marcação diária ao fim do dia, por um adulto — poucos minutos. Configuração inicial feita em consulta.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="app" id="entre-irmaos">
+      <summary class="app__resumo-linha">
+        <img class="app__icone-img" src="assets/img/apps/entre-irmaos.svg" alt="" width="62" height="62">
+        <div class="app__corpo">
+          <div class="app__cabeca">
+          <h2 style="font-size:24px">Entre Irmãos</h2>
+          <span class="app__idade">5 aos 15 anos</span>
+          <span class="selo selo--activo">Disponível</span>
+        </div>
+          <p class="nota app__resumo">Protocolo em seis passos, conduzido por um adulto, para o momento da disputa entre irmãos.</p>
+        </div>
+        <svg class="app__seta icone" aria-hidden="true"><use href="#i-chevron"/></svg>
+      </summary>
+      <div class="app__detalhe">
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Famílias em que os conflitos entre irmãos são frequentes e o adulto é chamado a arbitrar sem elementos para o fazer, acabando por decidir quem começou. Situações em que a intervenção do adulto se tornou, ela própria, parte do conflito.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Substituir a arbitragem do adulto por um procedimento estável e igual para os dois. Garantir tempo de palavra equivalente. Introduzir um momento explícito de tomada de perspetiva. Separar a reparação da punição.</p></div>
+          <div><h4>Conteúdos</h4><p class="nota">Os seis passos do momento da disputa: parar, contar à vez com tempo igual, dizer o que se sentiu e o que se queria, tentar dizer o que o outro queria, propor ideias, combinar solução e reparação. As regras da casa sempre à mão e um registo curto de cada episódio.</p></div>
+          <div><h4>Como se usa</h4><p class="nota">Usa-se no momento, com o adulto a conduzir os passos em voz alta. As primeiras vezes demoram mais do que discutir, e é essa a fase em que a maioria das famílias desiste. O passo da tomada de perspetiva atrasa o protocolo e é o que menos se deve saltar.</p></div>
+          <div><h4>Quando não se usa</h4><p class="nota">Quando há agressão que exija separação imediata: primeiro separa-se, o protocolo vem depois. Quando a diferença de idade torna o tempo igual de palavra injusto na prática. E quando um dos irmãos ocupa uma posição sistemática de alvo.</p></div>
+          <div><h4>O que se pede à família</h4><p class="nota">Disponibilidade de um adulto para conduzir o protocolo no momento do conflito — cinco a dez minutos por episódio. Não se pede uso diário.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="app" id="rotina-da-manha-e-da-noite">
+      <summary class="app__resumo-linha">
+        <img class="app__icone-img" src="assets/img/apps/rotinas.svg" alt="" width="62" height="62">
+        <div class="app__corpo">
+          <div class="app__cabeca">
+          <h2 style="font-size:24px">Rotina da manhã e da noite</h2>
+          <span class="app__idade">3 aos 10 anos</span>
+          <span class="selo selo--activo">Disponível</span>
+        </div>
+          <p class="nota app__resumo">Sequência ilustrada dos passos da manhã e da noite, que a criança vai marcando à medida que os faz.</p>
+        </div>
+        <svg class="app__seta icone" aria-hidden="true"><use href="#i-chevron"/></svg>
+      </summary>
+      <div class="app__detalhe">
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Famílias em que a manhã se faz de instruções repetidas e a noite se prolonga em pedidos sucessivos. Crianças que sabem o que têm de fazer, mas se perdem na ordem e ficam pelo caminho — e adultos que acabam por fazer por elas, por falta de tempo.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Transferir a instrução do adulto para um suporte visual, de modo que a criança consulte a sequência em vez de esperar pelo próximo pedido. Tornar previsível a ordem dos passos. Identificar onde a rotina encalha, sem que ninguém tenha de registar nada.</p></div>
+          <div><h4>Conteúdos</h4><p class="nota">Passos editáveis com imagem, marcados pela criança, com temporizador opcional em cada um. Rotinas separadas para a manhã e para a noite. Resumo que mostra em que passo a sequência encalha e quanto tempo demorou.</p></div>
+          <div><h4>Como se usa</h4><p class="nota">A lista constrói-se com a criança e começa curta — a primeira semana serve quase sempre para cortar passos a mais. Funciona melhor com o aparelho fixo num sítio da casa, e não na mão da criança.</p></div>
+          <div><h4>Quando não se usa</h4><p class="nota">Quando a dificuldade da manhã é sono insuficiente: resolve-se primeiro a hora de deitar. Quando a recusa tem função de oposição na relação e não de desorganização. E não se usa para acelerar a criança quando o horário familiar é, ele próprio, irrealista.</p></div>
+          <div><h4>O que se pede à família</h4><p class="nota">Cerca de quinze minutos, uma vez, para construir as rotinas com a criança. Depois disso, uso no momento e nenhum registo adicional.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="app" id="agenda-escolar-e-mochila">
+      <summary class="app__resumo-linha">
+        <img class="app__icone-img" src="assets/img/apps/agenda-escolar.svg" alt="" width="62" height="62">
+        <div class="app__corpo">
+          <div class="app__cabeca">
+          <h2 style="font-size:24px">Agenda escolar e mochila</h2>
+          <span class="app__idade">8 aos 15 anos</span>
+          <span class="selo selo--activo">Disponível</span>
+        </div>
+          <p class="nota app__resumo">Horário escolar, preparação da mochila a partir dele e marcação de trabalhos e testes com contagem decrescente. É do próprio jovem.</p>
+        </div>
+        <svg class="app__seta icone" aria-hidden="true"><use href="#i-chevron"/></svg>
+      </summary>
+      <div class="app__detalhe">
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Jovens que se esquecem do material, descobrem os trabalhos de casa na véspera e lembram-se dos testes tarde demais. Frequente na transição para o 2.º ciclo, quando passa a haver muitas disciplinas, muitos professores e nenhum sistema para os acompanhar.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Externalizar a memória do que está marcado, para que deixe de depender de lembrar-se no momento certo. Tornar visível a antecedência com que as coisas são marcadas. Transferir a responsabilidade do adulto para o jovem — sem transformar a ferramenta em instrumento de vigilância.</p></div>
+          <div><h4>Conteúdos</h4><p class="nota">Horário por dia e material fixo de cada disciplina, a partir do qual a mochila se prepara. Marcação de trabalhos, testes e apresentações, com contagem decrescente. Módulo de notas opcional, desligado por omissão, que mostra a distância entre a nota esperada e a obtida.</p></div>
+          <div><h4>Como se usa</h4><p class="nota">Configura-se em consulta, com o jovem, e é ele quem marca — os pais não marcam por ele. A primeira semana serve para acertar o horário e o material fixo. O módulo de notas só se liga por indicação clínica.</p></div>
+          <div><h4>Quando não se usa</h4><p class="nota">Quando o objetivo dos pais é acompanhar à distância o que o filho tem para fazer: o jovem percebe e deixa de usar. Quando a dificuldade não é de organização mas de compreensão do que é pedido. E quando o que falha é a informação que vem da escola.</p></div>
+          <div><h4>O que se pede à família</h4><p class="nota">Ao jovem, cerca de dois minutos por dia e o ritual de preparar a mochila à noite. Aos pais, não marcar por ele e não usar os registos como forma de verificação.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="app" id="os-trabalhos-de-casa-sem-guerra">
+      <summary class="app__resumo-linha">
+        <img class="app__icone-img" src="assets/img/apps/trabalhos-de-casa.svg" alt="" width="62" height="62">
+        <div class="app__corpo">
+          <div class="app__cabeca">
+          <h2 style="font-size:24px">Os trabalhos de casa sem guerra</h2>
+          <span class="app__idade">6 aos 12 anos</span>
+          <span class="selo selo--activo">Disponível</span>
+        </div>
+          <p class="nota app__resumo">Protocolo para o momento dos trabalhos de casa, com o espaço preparado, blocos curtos e pausas previstas.</p>
+        </div>
+        <svg class="app__seta icone" aria-hidden="true"><use href="#i-chevron"/></svg>
+      </summary>
+      <div class="app__detalhe">
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Famílias em que os trabalhos de casa ocupam a tarde inteira e acabam em conflito, com um adulto sentado ao lado do princípio ao fim. Casos em que a discussão sobre começar é maior do que a tarefa.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Dar ao momento uma estrutura previsível, que não dependa de negociação diária. Separar a tarefa da relação, para que o adulto deixe de ser quem cobra. Prever as pausas antes do esgotamento, em vez de as conceder quando já há choro. Tornar visível o fim.</p></div>
+          <div><h4>Conteúdos</h4><p class="nota">Preparação do espaço, escolha da ordem das tarefas, blocos curtos com pausas marcadas, registo do início e do fim. Anota-se o que ficou por fazer e em que ponto a sessão travou.</p></div>
+          <div><h4>Como se usa</h4><p class="nota">A duração dos blocos define-se em consulta e é habitualmente mais curta do que os pais escolheriam. O adulto ajuda no arranque e nas transições entre blocos, e afasta-se no resto.</p></div>
+          <div><h4>Quando não se usa</h4><p class="nota">Quando o volume de trabalhos é desadequado à idade: resolve-se com a escola, e não com melhor organização em casa. Quando há dificuldade de aprendizagem por avaliar. E quando a relação em torno do estudo está tão desgastada que qualquer protocolo é lido como imposição.</p></div>
+          <div><h4>O que se pede à família</h4><p class="nota">Presença de um adulto no arranque e nas transições, nos dias em que há trabalhos — cerca de dez minutos de envolvimento direto, não a tarde toda.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="app" id="plano-de-estudo">
+      <summary class="app__resumo-linha">
+        <img class="app__icone-img" src="assets/img/apps/plano-estudo.svg" alt="" width="62" height="62">
+        <div class="app__corpo">
+          <div class="app__cabeca">
+          <h2 style="font-size:24px">Plano de estudo</h2>
+          <span class="app__idade">10 aos 17 anos</span>
+          <span class="selo selo--activo">Disponível</span>
+        </div>
+          <p class="nota app__resumo">A partir da data de um teste, distribui as matérias pelos dias disponíveis, em blocos curtos e com uma técnica de estudo definida para cada um.</p>
+        </div>
+        <svg class="app__seta icone" aria-hidden="true"><use href="#i-chevron"/></svg>
+      </summary>
+      <div class="app__detalhe">
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Jovens que estudam na véspera, ou que estudam muitas horas e rendem pouco porque estudar significa, na prática, reler os apontamentos. Também jovens que sabem que deviam começar mais cedo e não têm como transformar isso numa sequência de dias concretos.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Distribuir o estudo no tempo em vez de o concentrar. Substituir a releitura por técnicas com melhor apoio empírico. Tornar visível a antecedência real com que se estuda, para que o jovem a possa comparar com a que julga ter.</p></div>
+          <div><h4>Conteúdos</h4><p class="nota">Introduz-se a data do teste e as matérias, e o plano distribui-as pelos dias em blocos curtos. Cada bloco tem uma técnica associada — resumo, perguntas, exercícios, explicar em voz alta. Complementa a Agenda escolar, que traz as datas: aqui trabalha-se o como estudar.</p></div>
+          <div><h4>Como se usa</h4><p class="nota">As técnicas escolhem-se em consulta, em função do perfil e da disciplina. A primeira semana serve para ajustar a duração dos blocos, quase sempre otimistas à partida. Em consulta compara-se o planeado com o cumprido, sem que isso se transforme em avaliação do esforço.</p></div>
+          <div><h4>Quando não se usa</h4><p class="nota">Quando a dificuldade é de compreensão de leitura ou há lacunas de base: um plano melhor não resolve matéria em falta. Quando existe ansiedade de desempenho intensa, situação em que o plano tende a alimentar a antecipação.</p></div>
+          <div><h4>O que se pede à família</h4><p class="nota">Preenchimento pelo próprio jovem, nos dias de estudo — poucos minutos. Aos pais pede-se que não verifiquem o cumprimento do plano.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="app" id="ponte-casa-escola">
+      <summary class="app__resumo-linha">
+        <img class="app__icone-img" src="assets/img/apps/ponte.svg" alt="" width="62" height="62">
+        <div class="app__corpo">
+          <div class="app__cabeca">
+          <h2 style="font-size:24px">Ponte casa–escola</h2>
+          <span class="app__idade">6 aos 10 anos</span>
+          <span class="selo selo--activo">Disponível</span>
+        </div>
+          <p class="nota app__resumo">Cartão diário preenchido pelo professor sobre dois ou três objetivos definidos em consulta, que chega a casa no próprio dia.</p>
+        </div>
+        <svg class="app__seta icone" aria-hidden="true"><use href="#i-chevron"/></svg>
+      </summary>
+      <div class="app__detalhe">
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Crianças com dificuldades de atenção ou de comportamento em sala de aula, em que a informação sobre o dia chega aos pais apenas em reuniões ou sob a forma de queixa. Famílias que sabem que o dia correu mal e não sabem o quê.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Fazer chegar a casa informação diária, específica e descritiva de comportamentos, em vez de apreciações globais. Alinhar os adultos das duas casas em torno dos mesmos dois ou três objetivos. Fazer com que o que acontece em casa dependa de comportamentos observados.</p></div>
+          <div><h4>Conteúdos</h4><p class="nota">Três modos na mesma aplicação: professor, pais e criança. O professor marca em poucos segundos e envia; nada fica no aparelho dele. Do lado da família, o dia fica registado e há um ecrã dirigido à criança, com o que correu bem.</p></div>
+          <div><h4>Como se usa</h4><p class="nota">Os objetivos definem-se em consulta, articulados com a escola, e têm de ser observáveis por quem está na sala. Requer acordo prévio do professor: sem esse acordo não se prescreve. Em casa, um adulto vê o cartão ao fim do dia e comenta o que correu bem.</p></div>
+          <div><h4>Quando não se usa</h4><p class="nota">Quando não há adesão do professor. Quando o comportamento em causa tem função de fuga a uma tarefa demasiado difícil — o que é preciso ajustar é a tarefa. E quando há indícios de que o cartão possa vir a ser usado para punir em casa.</p></div>
+          <div><h4>O que se pede à família</h4><p class="nota">Ao professor, cerca de um minuto por dia. Aos pais, ver o cartão ao fim do dia com a criança e comentar — poucos minutos, todos os dias de aulas.</p></div>
+        
+          <div class="app__campo--previo"><h4>Condição prévia</h4><p class="nota">É a única ferramenta que depende de alguém fora da família. Requer o acordo prévio do professor titular ou do diretor de turma para um registo diário de cerca de um minuto, e os objetivos são definidos em articulação com a escola. Sem esse acordo, não é prescrita.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="app" id="escada-da-coragem">
+      <summary class="app__resumo-linha">
+        <img class="app__icone-img" src="assets/img/apps/escada-coragem.svg" alt="" width="62" height="62">
+        <div class="app__corpo">
+          <div class="app__cabeca">
+          <h2 style="font-size:24px">Escada da coragem</h2>
+          <span class="app__idade">6 aos 16 anos</span>
+          <span class="selo selo--activo">Disponível</span>
+        </div>
+          <p class="nota app__resumo">Hierarquia de aproximação gradual, definida em sessão, com registo de cada tentativa e da evolução dentro do mesmo degrau.</p>
+        </div>
+        <svg class="app__seta icone" aria-hidden="true"><use href="#i-chevron"/></svg>
+      </summary>
+      <div class="app__detalhe">
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Crianças e jovens que evitam situações específicas — dormir sozinhos, falar em público, animais, situações sociais — e cujo evitamento se tornou organizador da vida da família, com o mundo à volta a adaptar-se para que o confronto não aconteça.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Tornar a aproximação gradual e previsível, em vez de depender de oportunidades. Deslocar o valor da tentativa para a própria tentativa, e não para o resultado. Tornar visível a evolução dentro de um degrau, que de outro modo passa despercebida.</p></div>
+          <div><h4>Conteúdos</h4><p class="nota">Degraus definidos em sessão, do mais fácil ao mais difícil, com registo curto de cada tentativa e um progresso que só sobe. Não há contadores de dias falhados nem listas de tentativas que correram mal.</p></div>
+          <div><h4>Como se usa</h4><p class="nota">A hierarquia é construída em sessão, com a criança, e não pelos pais em casa. Repete-se o mesmo degrau até deixar de ser difícil, e a subida decide-se em consulta — a tendência de todos é subir cedo de mais.</p></div>
+          <div><h4>Quando não se usa</h4><p class="nota">Não se usa sem acompanhamento em curso: exposição gradual mal graduada aumenta o evitamento. Não se usa quando o evitamento responde a uma situação realmente insegura, que tem de ser resolvida primeiro. E não se usa quando a hierarquia é definida pelos pais.</p></div>
+          <div><h4>O que se pede à família</h4><p class="nota">As tentativas combinadas em consulta — habitualmente algumas por semana, em momentos previstos — e um registo curto depois de cada uma, feito com a criança.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="app" id="coisas-boas">
+      <summary class="app__resumo-linha">
+        <img class="app__icone-img" src="assets/img/apps/coisas-boas.svg" alt="" width="62" height="62">
+        <div class="app__corpo">
+          <div class="app__cabeca">
+          <h2 style="font-size:24px">Coisas Boas</h2>
+          <span class="app__idade">10 aos 16 anos</span>
+          <span class="selo selo--activo">Disponível</span>
+        </div>
+          <p class="nota app__resumo">Caderno digital privado onde o jovem regista coisas suas e a que pode voltar mais tarde.</p>
+        </div>
+        <svg class="app__seta icone" aria-hidden="true"><use href="#i-chevron"/></svg>
+      </summary>
+      <div class="app__detalhe">
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Jovens com autoconceito negativo, que descrevem com facilidade o que não são e têm dificuldade em nomear características próprias. Também jovens que, perante o elogio dos adultos, o desvalorizam de imediato.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Constituir um registo pessoal, escrito pelo próprio, a que possa voltar em momentos em que não consegue lembrar-se de nada. O elemento de trabalho é a revisão do que ficou escrito, e não o ato de escrever. Apoiar o autoconhecimento em domínios que não dependem de desempenho.</p></div>
+          <div><h4>Conteúdos</h4><p class="nota">Um campo livre e um conjunto de perguntas de autoconhecimento repartidas por vários domínios — preferências, memórias, capacidades, pessoas, curiosidade sobre o futuro. A partir de certo número de entradas, a aplicação devolve algumas das anteriores. Código de acesso opcional.</p></div>
+          <div><h4>Como se usa</h4><p class="nota">É uma aplicação do próprio, num aparelho dele, e a privacidade é condição de funcionamento: sem aparelho próprio não se prescreve. Não tem uso diário obrigatório nem lembretes. O que for partilhado parte sempre do jovem, incluindo em consulta.</p></div>
+          <div><h4>Quando não se usa</h4><p class="nota">Quando há sintomatologia depressiva marcada ou risco que exija acompanhamento mais próximo entre sessões. Quando o jovem não tem aparelho próprio. E não se usa como diário de emoções nem como registo do que corre mal.</p></div>
+          <div><h4>O que se pede à família</h4><p class="nota">Aos pais pede-se sobretudo uma coisa: não pedir para ver. O documento que os pais recebem explica porque é que a privacidade faz parte do funcionamento.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <div class="preparacao">
+      <p class="rotulo">Em preparação</p>
+      <h2 style="font-size:24px; margin-bottom:10px">Em desenho ou em construção</h2>
+      <p class="nota" style="margin-bottom:26px">Ferramentas cujo desenho está em curso. As condições de utilização definem-se quando o desenho ficar fechado.</p>
+      <div class="grelha">
+      <article class="app app--breve">
+        <div class="app__cabeca">
+          <h3>Antes do vulcão</h3>
+          <span class="app__idade">6 aos 16 anos</span>
+        </div>
+        <p class="nota app__resumo">Plano de ação preparado em tempo de calma, com os sinais precoces daquela criança e o que fazer em cada nível de ativação.</p>
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Famílias com explosões de raiva frequentes, em que tudo o que se sabe fazer acontece já em plena escalada e nada resulta.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Preparar em tempo de calma o que se vai fazer, para não ter de ser decidido no momento. Nomear os sinais precoces daquela criança em concreto.</p></div>
+        </div>
+      </article>
+
+      <article class="app app--breve">
+        <div class="app__cabeca">
+          <h3>Fora do ecrã</h3>
+          <span class="app__idade">8 aos 17 anos</span>
+        </div>
+        <p class="nota app__resumo">O combinado sobre ecrãs, negociado e escrito, e registo do que se faz para além do ecrã.</p>
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Famílias em que o tempo de ecrã é objeto de negociação diária e em que o combinado muda conforme quem está em casa.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Fixar por escrito um combinado negociado, que deixe de se renegociar todos os dias. Deslocar a atenção da contagem do tempo de ecrã para o que fica de fora dele.</p></div>
+        </div>
+      </article>
+
+      <article class="app app--breve">
+        <div class="app__cabeca">
+          <h3>Detetive do corpo</h3>
+          <span class="app__idade">7 aos 16 anos</span>
+        </div>
+        <p class="nota app__resumo">Mapa corporal onde se assinala onde se sente alguma coisa e com que intensidade, antes de haver palavras para isso.</p>
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Crianças e jovens que não conseguem dizer o que sentem, e a quem perguntar como se sentem não produz resposta útil. Também casos em que o mal-estar aparece sobretudo em queixas físicas.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Partir da sensação corporal e só depois chegar à palavra, invertendo a ordem habitual da pergunta. Alargar progressivamente o vocabulário disponível para estados internos.</p></div>
+        </div>
+      </article>
+
+      <article class="app app--breve">
+        <div class="app__cabeca">
+          <h3>Começar</h3>
+          <span class="app__idade">8 aos 17 anos</span>
+        </div>
+        <p class="nota app__resumo">Divide a tarefa em passos muito pequenos e trabalha o arranque, não a gestão do tempo.</p>
+        <div class="app__campos">
+          <div><h4>Para quem</h4><p class="nota">Jovens que adiam tarefas que sabem fazer e que, uma vez começadas, correm sem dificuldade. O problema está no início, e as estratégias de organização do tempo não lhe tocam.</p></div>
+          <div><h4>Objetivos</h4><p class="nota">Tornar o primeiro passo suficientemente pequeno para deixar de haver decisão a tomar. Separar iniciar de concluir, que são dificuldades diferentes e pedem respostas diferentes.</p></div>
+        </div>
+      </article>
+      </div>
+    </div>
+
+    <div class="sessao-apenas">
+      <p class="nota"><strong style="color:var(--tinta)">Materiais de uso exclusivo em sessão.</strong> Existem ainda dois materiais que não são entregues às famílias e se usam apenas em consulta: <em>Vamos conversar sobre…?</em> e <em>Resolver conflitos sociais</em>.</p>
+    </div>
+
+    <p class="autoria">Ilustrações de Júlia, 10 anos.</p>
+
+    <div class="chamada" style="margin-top:34px">
+      <h3>Materiais de acesso livre</h3>
+      <p class="nota">Ao contrário destas ferramentas, os materiais para imprimir são de utilização livre e não dependem de acompanhamento.</p>
+      <p style="margin:0"><a class="botao" href="materiais.html">Ver materiais</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="rodape">
+  <div class="envolucro">
+    <div class="rodape__grelha">
+      <div>
+        <img class="rodape__logo" src="assets/img/logo-rc.png" alt="Ricardina Correia — Psicologia pediátrica" width="180">
+        <p style="margin:0; font-size:13px; color:var(--clara)">Membro efetivo da Ordem dos Psicólogos Portugueses<br>Cédula profissional n.º 8233</p>
+      </div>
+      <div>
+        <h4>Navegar</h4>
+        <ul>
+          <li><a href="biblioteca.html">Biblioteca</a></li>
+          <li><a href="ferramentas.html">Ferramentas</a></li>
+          <li><a href="materiais.html">Materiais</a></li>
+          <li><a href="index.html#agenda">Agenda e formação</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para colegas</h4>
+        <ul>
+          <li><a href="supervisao.html">Supervisão clínica</a></li>
+          <li><a href="contacto.html">Pedidos de contacto</a></li>
+          <li><a href="privacidade.html">Política de privacidade</a></li>
+          <li><a href="mailto:geral@ricardinacorreia.pt">geral@ricardinacorreia.pt</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="rodape__legal">Ricardina Correia &amp; Associados, Lda. · NIPC 519 479 610 · Torres Vedras<br>
+    Esta página tem fins informativos e não substitui avaliação ou acompanhamento profissional.</p>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
