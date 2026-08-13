@@ -1,0 +1,7 @@
+# Rascunhos — ficam só no computador, nunca vão para o GitHub
+_rascunhos/
+
+# Ficheiros do sistema
+.DS_Store
+Thumbs.db
+desktop.ini

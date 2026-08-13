@@ -39,7 +39,6 @@ Pages. Não faz mal mantê-lo, caso venha a mudar de alojamento.
 | `sobre.html` | Confirmar datas e designações do percurso |
 | `privacidade.html` | Data da última atualização |
 | `index.html` (secção *Onde me encontrar*) | Designação do CNS, após autorização |
-| Formulário da newsletter | Ligar ao serviço de envio (ver ponto 4) |
 | `sitemap.xml` e `robots.txt` | Trocar o domínio, se for diferente |
 
 O endereço `geral@ricardinacorreia.pt` aparece no rodapé e na política de
@@ -68,13 +67,6 @@ parágrafos, `<blockquote><p>…</p></blockquote>` para caixas de destaque, e
 ---
 
 ## 4. Newsletter
-
-O formulário está desenhado mas não está ligado. Para o ativar com o MailerLite
-(gratuito até 1000 subscritores), basta substituir no `index.html` o atributo
-`action="#"` pelo endereço do formulário fornecido pelo serviço.
-
-Antes de recolher endereços, confirmar que a política de privacidade está
-publicada e que a mensagem de subscrição inclui ligação de cancelamento.
 
 ---
 
@@ -599,3 +591,131 @@ princípio que impede a publicação de fotografias de crianças.
 **A idade não se atualiza.** Não descreve quem Júlia é hoje, descreve quando o
 trabalho foi feito — é informação sobre a obra, como uma data. Alterá-la mais
 tarde falsearia o registo e sugeriria que as ilustrações são recentes.
+
+---
+
+## 23. Gerir a página no dia a dia
+
+### O que é público e o que não é
+
+O repositório é público. **Tudo o que estiver dentro da pasta `site` fica visível**
+a quem souber procurar, mesmo que nenhuma página lhe faça ligação.
+
+Por isso existe a pasta `_rascunhos/`, declarada no ficheiro `.gitignore`. O que
+estiver lá dentro **fica apenas no computador** e nunca vai para o GitHub. É onde
+devem viver os artigos em escrita e os que não devem ser publicados.
+
+Está lá o artigo sobre medidas de suporte, que descreve um regime a ser revogado
+e não deve ser acessível.
+
+### Escrever um artigo novo
+
+Trabalhar sempre dentro de `_rascunhos/`. O GitHub Desktop ignora essa pasta —
+não aparece nada na lista de alterações, e não há risco de publicar por engano.
+
+### Publicar
+
+Quando o artigo estiver revisto:
+
+1. Mover o ficheiro de `_rascunhos/` para `artigos/`
+2. Fazer as cinco alterações descritas no ponto 18 — cartão na biblioteca, cartão
+   na página inicial, destaque, sitemap, filtros
+3. No GitHub Desktop, escrever um resumo (por exemplo «Publica o artigo sobre o
+   sono») e clicar em **Commit to main**
+4. Clicar em **Push origin**
+
+Ao fim de um minuto está online. Não é preciso mais nada.
+
+### Alterar qualquer coisa
+
+Corrigir uma frase, mudar uma data, trocar uma imagem: editar o ficheiro no
+computador, gravar, e no GitHub Desktop fazer commit e push. O mesmo gesto serve
+para tudo.
+
+### Voltar atrás
+
+Cada commit é uma fotografia do site. Se alguma coisa correr mal, o separador
+**History** no GitHub Desktop mostra tudo o que foi feito, e é possível reverter
+um commit sem perder o resto. Nada se perde definitivamente.
+
+### Quando é preciso ajuda
+
+Alterações de conteúdo — texto, datas, cartões — fazem-se num editor de texto
+simples. Alterações de estrutura ou de desenho é melhor pedir, para não partir
+nada.
+
+**Antes de publicar, correr sempre a verificação:** abrir o site localmente e
+confirmar que nenhuma ligação está partida e que nenhum ficheiro falta. O
+procedimento está descrito na skill do projeto.
+
+
+---
+
+## 24. A newsletter foi retirada
+
+A página inicial tinha uma secção de subscrição de newsletter, retirada em agosto
+de 2026. A decisão foi de Ricardina Correia, e as razões ficam registadas caso se
+pondere voltar atrás:
+
+- Zero subscritores e onze artigos por publicar — a carta não acrescentava nada
+  que o site não fizesse
+- Uma carta mensal é um compromisso adicional, a somar ao ritmo semanal
+- Gerir subscritores traz obrigações próprias: consentimento registado,
+  cancelamento em cada mensagem, lista alojada em serviço conforme
+
+As referências à newsletter foram retiradas da política de privacidade, que a
+descrevia como existente.
+
+Se vier a fazer sentido, a decisão reavalia-se quando o site tiver tráfego
+próprio — provavelmente em janeiro, quando também se decidir sobre o Instagram.
+
+
+---
+
+## 25. Estrutura de páginas e desenho — agosto de 2026
+
+### As páginas
+
+| Página | Conteúdo |
+|---|---|
+| `index.html` | Entrada, artigo em destaque, novidades, biblioteca em resumo |
+| `biblioteca.html` | Todos os artigos, com filtros por tema |
+| `ferramentas.html` | As aplicações, em fichas que abrem |
+| `materiais.html` | Materiais para imprimir |
+| `formacao.html` | Formações e encontros, passados e futuros |
+| `onde-me-encontrar.html` | Os três contextos: CNS, supervisão, Cheque Cuida-te |
+| `sobre.html` | Percurso e formação |
+| `contacto.html` | Formulário de pedido de contacto |
+
+A página inicial **não repete o site inteiro** — encaminha. Cada assunto tem uma
+página própria, e o menu leva lá.
+
+### A secção «Novidades» é manual
+
+Os três cartões — ferramenta, material, próximo encontro — são editados à mão em
+`index.html`. Sempre que houver algo novo, substituir o cartão respetivo. É o
+único sítio da página inicial que precisa de manutenção regular.
+
+### Sistema de cor
+
+Cada secção tem um tom próprio, em saturação muito baixa: verde-água para
+avaliação e consultas, rosa para a biblioteca, roxo para ferramentas e materiais,
+ocre para formação. **A cor cheia aparece apenas em elementos pequenos** — barras
+de topo dos cartões, ícones, rótulos de secção.
+
+O princípio a manter: área grande com saturação mínima, cor cheia só no que é
+pequeno. É o que permite ter cor sem perder sobriedade.
+
+Classes disponíveis: `seccao--tom-agua`, `seccao--tom-rosa`, `seccao--tom-roxo`,
+`seccao--tom-ocre`, `seccao--tom-neutro`.
+
+### Tipografia
+
+Fraunces nos títulos, com o eixo de suavidade a 25 a 30. **Não subir acima de 40**
+— acima disso as letras deformam-se e o texto parece mal formatado. O eixo `WONK`
+fica a 0, exceto no «só» do título da entrada, onde é deliberado.
+
+### O símbolo da entrada
+
+`simbolo-grande-cor.png` — o cérebro em ardósia e o coração em rosa, com gradiente
+na transição. Gerado a partir do logótipo original por recoloração horizontal.

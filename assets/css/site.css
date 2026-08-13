@@ -37,18 +37,18 @@
 
 :root {
   /* Paleta */
-  --tinta:   #33465C;
-  --ardosia: #6E86A6;
-  --clara:   #9FB6D0;
-  --linha:   #E2E7EF;
-  --papel:   #F6F7FA;
+  --tinta:   #1F2D3D;
+  --ardosia: #55677D;
+  --clara:   #8FA3B8;
+  --linha:   #E6E3DE;
+  --papel:   #F8F6F3;
   --branco:  #FFFFFF;
 
   /* Acentos temáticos */
-  --rosa: #E24B78;
-  --agua: #12A594;
-  --ocre: #D97008;
-  --roxo: #7B5BD6;
+  --rosa: #D6336C;
+  --agua: #0E9384;
+  --ocre: #C2620A;
+  --roxo: #6B4BC4;
 
   --rosa-fundo: #FCEBF1;
   --agua-fundo: #E1F5F1;
@@ -958,3 +958,288 @@ details.app .app__cabeca { margin-bottom: 8px; }
 
 /* Mais folga no crédito de autoria */
 .autoria { margin-top: 40px; }
+
+/* Destaque do limite etário na medida do Cheque Cuida-te */
+.destaque-idade {
+  margin: 14px 0 18px; padding: 14px 16px;
+  background: var(--branco); border: 1px solid var(--agua);
+  border-radius: 10px; font-size: 14.5px; color: var(--tinta); line-height: 1.55;
+}
+
+
+/* ═══════════ PROPOSTA VISUAL ═══════════ */
+
+body { background: var(--branco); }
+
+/* Entrada: mais peso, mais ar, sem grelha fria */
+.hero { padding: 96px 0 88px; background: var(--papel); }
+.hero h1 {
+  font-size: clamp(44px, 6.4vw, 82px);
+  line-height: 1.02; letter-spacing: -0.03em;
+  margin-bottom: 22px;
+}
+.hero .lede { font-size: 19.5px; line-height: 1.62; max-width: 46ch; }
+
+/* Títulos de secção com mais autoridade */
+h2 { font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -0.022em; line-height: 1.14; }
+.leitura h1 { font-size: clamp(34px, 4.4vw, 50px); line-height: 1.1; }
+
+/* Corpo mais legível */
+body, p { font-size: 16.5px; }
+.leitura p { font-size: 17.5px; line-height: 1.72; }
+.lede { color: var(--ardosia); }
+
+/* Etiquetas de secção com cor, não cinzento */
+.rotulo { color: var(--agua); font-weight: 500; letter-spacing: .14em; }
+
+/* Cartões: contorno mais quente, sem sombra */
+.artigo-cartao, .local, .material, .app, .evento-cartao, .chamada {
+  border-color: var(--linha);
+}
+.artigo-cartao:hover, .local:hover, .material:hover { border-color: var(--clara); }
+
+/* Alternância de fundo com temperatura */
+.seccao--papel { background: var(--papel); }
+
+
+/* ═══ Entrada assimétrica, com cor nos caminhos ═══ */
+
+.entrada { background: var(--papel); border-bottom: 1px solid var(--linha); }
+.entrada__grelha {
+  display: grid; grid-template-columns: 1.45fr 1fr;
+  gap: 44px; align-items: center; margin-bottom: 48px;
+}
+.entrada__texto { text-align: left; }
+.entrada h1 {
+  font-size: clamp(46px, 6.6vw, 84px); line-height: 0.99;
+  letter-spacing: -0.035em; margin-bottom: 22px; text-align: left;
+  font-variation-settings: "wght" 500, "SOFT" 40, "WONK" 1;
+}
+.entrada .lede { font-size: 18.5px; line-height: 1.6; max-width: 46ch; margin: 0; text-align: left; }
+.entrada__marca { display: flex; justify-content: center; }
+.entrada__marca img { width: 100%; max-width: 280px; height: auto; }
+
+@media (max-width: 860px) {
+  .entrada__grelha { grid-template-columns: 1fr; gap: 24px; margin-bottom: 34px; }
+  .entrada__marca { order: -1; justify-content: flex-start; }
+  .entrada__marca img { max-width: 130px; }
+}
+
+/* Caminhos com identidade de cor */
+.caminhos { gap: 14px; }
+.caminho {
+  border-top: 3px solid var(--clara);
+  align-items: flex-start; text-align: left;
+  padding: 22px 22px 24px; gap: 12px;
+}
+.caminho:nth-child(1) { border-top-color: var(--rosa); }
+.caminho:nth-child(1) .caminho__icone { color: var(--rosa); }
+.caminho:nth-child(2) { border-top-color: var(--agua); }
+.caminho:nth-child(2) .caminho__icone { color: var(--agua); }
+.caminho:nth-child(3) { border-top-color: var(--ocre); }
+.caminho:nth-child(3) .caminho__icone { color: var(--ocre); }
+.caminho__icone { font-size: 26px; }
+.caminho__nome { font-size: 18px; font-family: var(--display); }
+
+/* Afinações */
+.caminhos { grid-template-columns: repeat(3, 1fr); max-width: none; }
+.caminho { min-height: 0; }
+.entrada__marca img { max-width: 250px; opacity: .95; }
+.entrada__grelha { grid-template-columns: 1.5fr 0.9fr; }
+.entrada__interior { padding-top: 76px; padding-bottom: 68px; }
+
+
+/* ═══════════ FUNDO QUENTE E COERÊNCIA DE COR ═══════════ */
+
+:root {
+  --branco:  #FDFBF8;   /* base quente, em vez de branco puro */
+  --cartao:  #FFFFFF;   /* branco reservado a cartões, para dar relevo */
+  --papel:   #F5F1EB;   /* alternância com mais presença */
+  --linha:   #E4DFD7;
+}
+
+body { background: var(--branco); }
+
+/* Cartões destacam-se por serem mais claros que o fundo */
+.artigo-cartao, .local, .material, details.app, .evento-cartao,
+.app--breve, .caminho, .recurso, .video {
+  background: var(--cartao);
+}
+
+/* Secções alternadas com mais distinção */
+.seccao--papel { background: var(--papel); }
+.seccao--papel + .seccao { border-top: 0; }
+
+/* Cabeçalho e rodapé sobre a base quente */
+.cabecalho { background: rgba(253,251,248,.94); backdrop-filter: saturate(1.1) blur(6px); }
+.rodape { background: var(--papel); border-top: 1px solid var(--linha); }
+
+/* ── Cartões de artigo com a cor do tema ── */
+.artigo-cartao { border-top: 3px solid var(--linha); }
+.artigo-cartao:has(.etiqueta--rosa)  { border-top-color: var(--rosa); }
+.artigo-cartao:has(.etiqueta--agua)  { border-top-color: var(--agua); }
+.artigo-cartao:has(.etiqueta--ocre)  { border-top-color: var(--ocre); }
+.artigo-cartao:has(.etiqueta--roxo)  { border-top-color: var(--roxo); }
+
+/* ── Símbolo da entrada com fundo quente ── */
+.entrada__marca { position: relative; }
+.entrada__marca::before {
+  content: ""; position: absolute; inset: -8% -6%;
+  background: radial-gradient(circle at 50% 48%, #FFF4EA 0%, rgba(255,244,234,0) 68%);
+  z-index: 0;
+}
+.entrada__marca img { position: relative; z-index: 1; }
+
+
+/* ═══════════ CARÁCTER TIPOGRÁFICO E COR ═══════════ */
+
+/* Fraunces com máxima suavidade: terminais mais redondos, mais calor */
+h1, h2, h3, .caminho__nome, .artigo-cartao h3 {
+  font-variation-settings: "wght" 520, "opsz" 40, "SOFT" 30, "WONK" 0;
+}
+.entrada h1 {
+  font-variation-settings: "wght" 560, "opsz" 96, "SOFT" 25, "WONK" 0;
+  letter-spacing: -0.028em;
+}
+/* o «só» destacado, em itálico wonk e cor */
+.entrada h1 em {
+  font-style: italic; color: var(--rosa);
+  font-variation-settings: "wght" 560, "opsz" 96, "SOFT" 25, "WONK" 1;
+}
+
+/* Símbolo maior e com halo mais presente */
+.entrada__marca img { max-width: 330px; }
+.entrada__marca::before {
+  inset: -14% -12%;
+  background: radial-gradient(circle at 54% 46%, #FDEEF3 0%, #FFF6EE 42%, rgba(255,246,238,0) 72%);
+}
+
+/* Etiquetas de tema com mais cor */
+.etiqueta { font-weight: 500; letter-spacing: .05em; }
+
+/* Rótulos de secção alternam com o tema da secção */
+.rotulo { color: var(--rosa); }
+.seccao--papel .rotulo { color: var(--agua); }
+
+/* Botões com mais presença */
+.botao { font-weight: 500; letter-spacing: .01em; }
+
+
+/* ═══════════ LINGUAGEM APLICADA A TODO O SITE ═══════════ */
+
+/* Títulos coerentes em todas as páginas */
+h1, h2, h3, h4 { font-variation-settings: "wght" 520, "opsz" 40, "SOFT" 30, "WONK" 0; }
+.leitura h1 { font-variation-settings: "wght" 560, "opsz" 72, "SOFT" 25, "WONK" 0; }
+
+/* Cabeçalho de página com cor no rótulo, por tema */
+.seccao--primeira .rotulo { color: var(--agua); }
+
+/* Cartões de material e ferramenta com a cor do tema no topo */
+.material { border-top: 3px solid var(--linha); }
+.material:has([href*="phda"])       { border-top-color: var(--rosa); }
+.material:has([data-temas*="escola"]) { border-top-color: var(--agua); }
+
+details.app { border-top: 3px solid var(--linha); }
+details.app:hover { border-top-color: var(--clara); }
+
+/* Blocos de evento com barra de cor */
+.evento-cartao { border-top: 3px solid var(--linha); }
+.evento-cartao:first-child { border-top-color: var(--agua); }
+
+/* Caixas de destaque e recursos, com temperatura */
+.chamada, .recurso, .aviso, .sessao-apenas, .preparacao > p { background: var(--papel); }
+.chamada { border-left: 3px solid var(--rosa); }
+.recurso { border-left: 3px solid var(--agua); }
+.video   { border-left: 3px solid var(--roxo); }
+
+/* Citações destacadas com barra colorida */
+blockquote { border-left: 3px solid var(--rosa); background: var(--papel); }
+
+/* Listas clínicas com marcador colorido mais visível */
+.condicoes--sim { background: var(--cartao); border-color: var(--linha); }
+.condicoes--nao li::before { color: var(--rosa); }
+
+/* Percurso com marcador de ano em cor */
+.percurso__ano { color: var(--rosa); }
+
+/* Caminhos: mais respiração e texto assente */
+.caminho { padding: 24px 22px 26px; justify-content: flex-start; }
+.caminho__nome { line-height: 1.25; }
+
+/* Referências com barra discreta */
+.referencias { border-top: 2px solid var(--linha); }
+.referencias h2 { color: var(--ardosia); }
+
+
+/* ═══════════ COR POR SECÇÃO ═══════════
+   Áreas grandes com saturação muito baixa; cor cheia
+   apenas em barras, ícones e rótulos. */
+
+.seccao--tom-agua   { background: #EEF6F4; }
+.seccao--tom-rosa   { background: #FBF1F4; }
+.seccao--tom-roxo   { background: #F3F1FA; }
+.seccao--tom-ocre   { background: #FCF4EA; }
+.seccao--tom-neutro { background: var(--papel); }
+
+/* dentro de secção com tom, os cartões ficam brancos e destacam-se */
+.seccao--tom-agua .artigo-cartao, .seccao--tom-rosa .artigo-cartao,
+.seccao--tom-roxo .artigo-cartao, .seccao--tom-ocre .artigo-cartao,
+.seccao--tom-agua .local, .seccao--tom-rosa .local,
+.seccao--tom-roxo .local, .seccao--tom-ocre .local,
+.seccao--tom-neutro .evento-cartao, .seccao--tom-ocre .instituicoes__item {
+  background: var(--cartao);
+}
+
+/* o rótulo de cada secção assume o seu tom */
+.seccao--tom-agua .rotulo { color: var(--agua); }
+.seccao--tom-rosa .rotulo { color: var(--rosa); }
+.seccao--tom-roxo .rotulo { color: var(--roxo); }
+.seccao--tom-ocre .rotulo { color: var(--ocre); }
+.seccao--tom-neutro .rotulo { color: var(--ardosia); }
+
+/* ícones das caixas assumem o tom da secção */
+.seccao--tom-agua .local .icone { color: var(--agua); }
+.seccao--tom-roxo .local .icone { color: var(--roxo); }
+.seccao--tom-ocre .icone:not(.marca-inst) { color: var(--ocre); }
+
+/* páginas interiores: cabeçalho com tom próprio */
+.seccao--primeira { background: linear-gradient(180deg, #EEF6F4 0%, var(--branco) 100%); }
+
+/* rodapé com tom quente e barra de cor no topo */
+.rodape { background: var(--papel); position: relative; }
+.rodape::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--rosa) 0%, var(--roxo) 34%, var(--agua) 67%, var(--ocre) 100%);
+}
+
+/* ── Cartões de novidade ── */
+.novidade {
+  display: block; padding: 24px 24px 26px;
+  background: var(--cartao); border: 1px solid var(--linha);
+  border-radius: var(--raio); border-top: 3px solid var(--clara);
+}
+.novidade:hover { border-color: var(--clara); }
+.novidade .icone { font-size: 24px; margin-bottom: 12px; display: block; }
+.novidade__marca {
+  display: block; font-size: 11px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--clara); margin-bottom: 6px;
+}
+.novidade h3 { font-size: 19px; margin-bottom: 8px; }
+.novidade p { margin: 0; }
+.novidade--roxo { border-top-color: var(--roxo); }
+.novidade--roxo .icone, .novidade--roxo .novidade__marca { color: var(--roxo); }
+.novidade--agua { border-top-color: var(--agua); }
+.novidade--agua .icone, .novidade--agua .novidade__marca { color: var(--agua); }
+.novidade--ocre { border-top-color: var(--ocre); }
+.novidade--ocre .icone, .novidade--ocre .novidade__marca { color: var(--ocre); }
+
+/* Cartão de índice da biblioteca */
+.artigo-cartao--indice {
+  background: var(--papel); display: flex; flex-direction: column; justify-content: center;
+  border-top-color: var(--linha);
+}
+
+/* Menu com sete entradas: mais compacto */
+.menu { gap: 20px; }
+.menu a { font-size: 15px; }
+@media (max-width: 1080px) { .menu { gap: 15px; } .menu a { font-size: 14px; } }
