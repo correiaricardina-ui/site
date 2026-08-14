@@ -921,3 +921,20 @@ basta incluir o botão no bloco da figura:
 ```
 
 O `data-imagem` do botão tem de apontar ao mesmo ficheiro que o `img`.
+
+
+---
+
+## 30. Cartões dos recursos: logótipos e retratos
+
+Cada recurso da página «Onde saber mais» usa a imagem real da entidade ou da
+pessoa, em vez de um ícone genérico:
+
+- **Logótipos** — classe `achado__icone--logo`, em WebP com fundo transparente,
+  cerca de 220 px de largura. A altura é fixada por CSS, pelo que qualquer
+  proporção se ajusta.
+- **Retratos** — classe `achado__icone--retrato`, recortados em círculo, 200×200.
+
+Ao acrescentar um recurso com pessoa, **pedir autorização para usar a fotografia**
+ou usar apenas o ícone genérico. Uma fotografia de perfil é pública, mas usá-la
+noutro sítio é outra coisa.

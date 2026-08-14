@@ -141,6 +141,19 @@
     '<p class="nota" style="font-size:12.5px; text-align:center; margin:14px 0 0">' + d.legenda + '</p>';
   visual.style.flexDirection = 'column';
 
+  // Botão de ampliar, se o destaque for uma imagem
+  var img = visual.querySelector('img');
+  if (img) {
+    visual.style.position = 'relative';
+    var botao = document.createElement('button');
+    botao.className = 'figura__ampliar destaque__ampliar';
+    botao.type = 'button';
+    botao.setAttribute('data-imagem', img.getAttribute('src'));
+    botao.setAttribute('aria-label', 'Ver o diagrama em tamanho grande');
+    botao.innerHTML = '<svg class="icone" aria-hidden="true"><use href="#i-maximizar"/></svg><span>Ampliar</span>';
+    visual.insertBefore(botao, visual.firstChild);
+  }
+
   document.getElementById('destaque-etiqueta').textContent = d.etiqueta;
   document.getElementById('destaque-titulo').textContent = d.titulo;
   document.getElementById('destaque-resumo').textContent = d.resumo;

@@ -118,9 +118,6 @@
 
 /* ---------- Ampliar diagramas ---------- */
 (function () {
-  var botoes = document.querySelectorAll('.figura__ampliar');
-  if (!botoes.length) return;
-
   var lupa = document.createElement('div');
   lupa.className = 'lupa';
   lupa.setAttribute('role', 'dialog');
@@ -153,8 +150,9 @@
     if (origem) { origem.focus(); origem = null; }
   }
 
-  Array.prototype.forEach.call(botoes, function (b) {
-    b.addEventListener('click', function () { abrir(b); });
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('.figura__ampliar') : null;
+    if (b) abrir(b);
   });
   fechar.addEventListener('click', encerrar);
   lupa.addEventListener('click', function (e) {
