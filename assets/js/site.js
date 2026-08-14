@@ -86,33 +86,50 @@
   }
 })();
 
-/* ---- Formulário de pedido de contacto ----
-   Compõe uma mensagem de correio no programa da própria pessoa.
-   Nenhum dado é transmitido a serviços de terceiros.            */
+/* ---------- Formulário de contacto (Tally, carregado ao clique) ----------
+   O formulário está alojado na Tally. Nada é pedido a servidores externos
+   enquanto a pessoa não carregar no botão — só nesse momento o endereço IP
+   de quem visita é transmitido. Quem abrir a página e não abrir o
+   formulário não estabelece qualquer ligação a terceiros.
+
+   PARA LIGAR: substituir ID_DO_FORMULARIO pelo identificador do formulário
+   publicado no Tally. Encontra-se no fim do endereço do formulário:
+   https://tally.so/r/XXXXXXX  ->  o identificador é XXXXXXX              */
 (function () {
   'use strict';
-  var f = document.getElementById('pedido');
-  if (!f) return;
 
-  var DESTINO = 'geral@ricardinacorreia.pt';
+  var FORMULARIO = 'ID_DO_FORMULARIO';
 
-  f.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (!f.reportValidity()) return;
+  var caixa = document.getElementById('tally');
+  if (!caixa) return;
+  var botao = caixa.querySelector('.tally__abrir');
+  if (!botao) return;
 
-    var v = function (id) { return (document.getElementById(id).value || '').trim(); };
-    var assunto = v('assunto');
-    var linhas = [
-      'Nome: ' + v('nome'),
-      'Correio eletrónico: ' + v('mail')
-    ];
-    if (v('tel')) linhas.push('Telefone: ' + v('tel'));
-    linhas.push('', 'Mensagem:', v('msg'), '',
-                '—', 'Enviado através do formulário de ricardinacorreia.pt');
+  /* Salvaguarda: por ligar, o botão não finge funcionar. */
+  if (FORMULARIO === 'ID_DO_FORMULARIO') {
+    botao.disabled = true;
+    botao.textContent = 'Formulário por ativar';
+    return;
+  }
 
-    window.location.href = 'mailto:' + DESTINO
-      + '?subject=' + encodeURIComponent('Pedido de contacto — ' + assunto)
-      + '&body=' + encodeURIComponent(linhas.join('\n'));
+  botao.addEventListener('click', function () {
+    caixa.innerHTML = '';
+    caixa.classList.add('tally--aberto');
+
+    var quadro = document.createElement('iframe');
+    quadro.className = 'tally__quadro';
+    quadro.src = 'https://tally.so/embed/' + FORMULARIO +
+                 '?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1';
+    quadro.title = 'Formulário de pedido de contacto';
+    quadro.setAttribute('frameborder', '0');
+    quadro.setAttribute('marginheight', '0');
+    quadro.setAttribute('marginwidth', '0');
+    caixa.appendChild(quadro);
+
+    /* Só agora se carrega o script de ajuste de altura da Tally. */
+    var s = document.createElement('script');
+    s.src = 'https://tally.so/widgets/embed.js';
+    document.body.appendChild(s);
   });
 })();
 

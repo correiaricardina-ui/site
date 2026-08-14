@@ -79,57 +79,10 @@
       <p><b>Este formulário não se destina a marcação de consultas.</b> O acompanhamento clínico de crianças, jovens e famílias decorre no CNS — Campus Neurológico e é marcado através dos canais da instituição. Não escreva informação clínica nem dados de terceiros neste formulário.</p>
     </div>
 
-    <form class="pedido" action="#" method="post">
-      <div class="pedido__campo">
-        <label for="tipo">Tipo de pedido</label>
-        <select id="tipo" name="tipo" required>
-          <option value="">Escolher…</option>
-          <option>Supervisão clínica individual</option>
-          <option>Supervisão de grupo</option>
-          <option>Consultoria de casos</option>
-          <option>Consultoria a equipa ou instituição</option>
-          <option>Orientação de estágio profissional</option>
-          <option>Cheque Cuida-te — Psicologia</option>
-          <option>Ação de formação</option>
-          <option>Convite para sessão pública, tertúlia ou palestra</option>
-          <option>Outro assunto</option>
-        </select>
-      </div>
-
-      <div class="pedido__linha">
-        <div class="pedido__campo">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" required>
-        </div>
-        <div class="pedido__campo">
-          <label for="mail">Correio eletrónico</label>
-          <input type="email" id="mail" name="email" required>
-        </div>
-      </div>
-
-      <div class="pedido__linha">
-        <div class="pedido__campo">
-          <label for="tel">Telefone <span>(facultativo)</span></label>
-          <input type="tel" id="tel" name="telefone">
-        </div>
-        <div class="pedido__campo">
-          <label for="inst">Instituição ou contexto <span>(facultativo)</span></label>
-          <input type="text" id="inst" name="instituicao" placeholder="Ex.: agrupamento de escolas, clínica, prática privada">
-        </div>
-      </div>
-
-      <div class="pedido__campo">
-        <label for="nota">Nota breve <span>(sem informação clínica)</span></label>
-        <textarea id="nota" name="nota" rows="3" placeholder="Ex.: procuro supervisão quinzenal em avaliação neuropsicológica; ou: convite para sessão numa escola em novembro"></textarea>
-      </div>
-
-      <div class="pedido__consentimento">
-        <input type="checkbox" id="rgpd" name="rgpd" required>
-        <label for="rgpd">Autorizo o tratamento dos dados indicados para efeitos de resposta a este pedido, nos termos da <a href="privacidade.html">política de privacidade</a>.</label>
-      </div>
-
-      <button type="submit">Enviar pedido</button>
-    </form>
+    <div class="tally" id="tally">
+      <p class="tally__nota">O formulário é fornecido pela <b>Tally</b>, serviço com sede na Bélgica e dados alojados na União Europeia. Só é carregado quando o abrir — até lá, esta página não faz qualquer pedido a servidores externos.</p>
+      <button class="tally__abrir" type="button">Abrir o formulário de pedido de contacto</button>
+    </div>
 
     <p class="nota" style="margin-top:30px; padding-top:22px; border-top:1px solid var(--linha)">A resposta é dada por correio eletrónico, habitualmente em dois a três dias úteis. As modalidades de supervisão e consultoria estão descritas em <a href="supervisao.html" style="border-bottom:1px solid var(--clara)">supervisão clínica</a>.</p>
   </div>

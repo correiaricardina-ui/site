@@ -532,42 +532,6 @@ p { margin: 0 0 1.1em; }
 .simples strong { color: var(--tinta); font-weight: 600; }
 .simples a { color: inherit; }
 
-/* ---------- Formulário de pedido ---------- */
-
-.pedido { display: grid; gap: 18px; }
-.campo { display: grid; gap: 7px; }
-.campo label { font-size: 14px; font-weight: 500; color: var(--tinta); }
-.campo label span { color: var(--clara); font-weight: 400; }
-.campo input, .campo select, .campo textarea {
-  font: inherit; font-size: 15px; color: var(--tinta);
-  background: var(--branco);
-  border: 1px solid var(--linha); border-radius: var(--raio-p);
-  padding: 11px 14px; width: 100%;
-}
-.campo textarea { resize: vertical; line-height: 1.55; }
-.campo input::placeholder, .campo textarea::placeholder { color: var(--clara); }
-.campo select { appearance: none; cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%239FB6D0' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: right 14px center; padding-right: 38px;
-}
-
-.campo--consentimento { margin-top: 4px; }
-.campo--consentimento label {
-  display: flex; gap: 11px; align-items: flex-start;
-  font-size: 14px; font-weight: 400; color: var(--ardosia); line-height: 1.55;
-}
-.campo--consentimento input { width: auto; margin-top: 3px; flex-shrink: 0; }
-.campo--consentimento a { color: var(--ardosia); border-bottom: 1px solid var(--clara); }
-
-.pedido button {
-  font: inherit; font-size: 15px; font-weight: 500; cursor: pointer;
-  background: var(--tinta); color: var(--branco);
-  border: 1px solid var(--tinta); border-radius: var(--raio-p);
-  padding: 12px 26px; justify-self: start;
-  transition: background .18s;
-}
-.pedido button:hover { background: #26374A; }
-
 /* ---------- Condições da consulta online ---------- */
 
 .condicoes {
@@ -643,6 +607,27 @@ p { margin: 0 0 1.1em; }
   padding: 12px 26px; justify-self: start; transition: background .18s;
 }
 .pedido button:hover { background: #26374A; }
+
+/* ---------- Formulário no Tally, carregado ao clique ---------- */
+
+.tally {
+  background: var(--papel); border: 1px solid var(--linha);
+  border-radius: var(--raio); padding: 26px;
+}
+.tally__nota { margin: 0 0 17px; font-size: 14px; color: var(--ardosia); line-height: 1.65; }
+.tally__nota b { color: var(--tinta); font-weight: 600; }
+.tally__abrir {
+  font: inherit; font-size: 15px; font-weight: 500; cursor: pointer;
+  background: var(--tinta); color: var(--branco);
+  border: 1px solid var(--tinta); border-radius: var(--raio-p);
+  padding: 12px 26px; transition: background .18s;
+}
+.tally__abrir:hover { background: #26374A; }
+.tally__abrir[disabled] {
+  background: var(--clara); border-color: var(--clara); cursor: not-allowed;
+}
+.tally--aberto { background: none; border: 0; padding: 0; }
+.tally__quadro { display: block; width: 100%; border: 0; min-height: 720px; }
 
 /* ---------- Formação ---------- */
 
