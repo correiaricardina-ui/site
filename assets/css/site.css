@@ -1482,3 +1482,15 @@ body[data-lupa] { overflow: hidden; }
 .figura__ampliar .icone { width: 15px; height: 15px; font-size: 15px; flex: none; }
 .destaque__ampliar .icone { width: 15px; height: 15px; }
 .destaque__visual > .destaque__ampliar { align-self: flex-end; }
+
+/* Desligar ligaduras discricionárias nos títulos grandes:
+   o «fa» formava uma ligadura em que o f invadia o a */
+.entrada h1, .leitura h1, h2 {
+  font-variant-ligatures: no-common-ligatures no-discretionary-ligatures no-contextual;
+  font-feature-settings: "liga" 0, "dlig" 0, "clig" 0, "calt" 0;
+}
+
+/* O eixo ótico a 144 alonga demais o remate do «f».
+   A 60 o desenho é mais contido, mantendo o carácter. */
+.entrada h1 { font-variation-settings: "wght" 450, "opsz" 60, "SOFT" 0, "WONK" 0; }
+.entrada h1 em { font-variation-settings: "wght" 450, "opsz" 60, "SOFT" 0, "WONK" 1; }

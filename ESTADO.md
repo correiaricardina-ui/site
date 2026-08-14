@@ -40,34 +40,51 @@ vier a ativar, o acompanhamento limita-se aos 18 anos.
 
 | Elemento | Estado |
 |---|---|
-| Páginas | 9 páginas + 10 artigos |
-| Artigos escritos | 10, revistos clinicamente |
+| Páginas | 12 páginas + 10 artigos |
+| Artigos escritos | 10, revistos clinicamente, cada um com diagrama |
 | Artigos publicados | Apenas o primeiro, «Será que já é caso para consulta?» |
 | Materiais | 10, em PDF e Word |
 | Ferramentas descritas | 9 disponíveis, 4 em preparação |
-| Repositório | Público, no GitHub |
-| Domínio | Registado; DNS por configurar |
-| Alojamento | GitHub Pages, gratuito |
+| Recursos recomendados | 5, na página «Onde saber mais» |
+| Repositório | `correiaricardina-ui/site`, público, no GitHub |
+| Alojamento | GitHub Pages, gratuito, já a funcionar |
+| Domínio | **Registado e pago, mas por ativar** |
+
+**As páginas:** index, biblioteca, ferramentas, materiais, recursos, formacao,
+onde-me-encontrar, sobre, contacto, online, supervisao, privacidade.
+
+**Desenho:** entrada assimétrica com o símbolo cérebro-coração em gradiente
+ardósia-rosa; fundo quente `#FDFBF8` com cartões brancos; cada secção com o seu
+tom em saturação muito baixa; Fraunces nos títulos com suavidade a 25–30.
 
 ---
 
-## Por fazer
+## O problema do domínio
 
-**Bloqueado pelo domínio:** configurar os registos DNS (quatro A e um CNAME),
-ativar o HTTPS.
+O `ricardinacorreia.pt` foi registado a 13 de agosto de 2026 e **pago por
+referência Multibanco**, com fatura emitida pela Dominios.pt. Apesar disso, o
+estado continua «Pendente», a data de registo aparece por preencher, e a página
+de gestão diz «Domínio não ativo. Não é possível fazer alterações.»
 
-**Depende de decisão ou de terceiros:**
-- Email `geral@ricardinacorreia.pt` — está no rodapé e ainda não existe
-- Formulário de contacto — ligar ao Tally; neste momento não faz nada
-- Seguro de responsabilidade civil ao nível da sociedade
-- Decisão sobre manter ou sair da bolsa do Cheque Cuida-te
+**O pagamento não foi associado ao registo.** Resolve-se com um ticket de
+suporte, anexando a fatura. Enquanto não estiver ativo, não é possível
+configurar o DNS.
 
-**Editorial:**
-- Publicar semanalmente ao sábado, segundo o calendário
-- Escrever os artigos da fase mensal, de novembro em diante
-- Reescrever o artigo sobre medidas de suporte para o novo regime, em janeiro
+**Os registos a criar, quando ativar:**
 
-**Adiado para janeiro de 2027:** Instagram profissional e newsletter.
+```
+Quatro registos A, nome vazio ou @
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+Um registo CNAME, nome www
+correiaricardina-ui.github.io
+```
+
+O domínio já está declarado no GitHub Pages, que é a ordem correta — declarar
+primeiro, apontar depois.
 
 ---
 
