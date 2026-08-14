@@ -115,3 +115,52 @@
       + '&body=' + encodeURIComponent(linhas.join('\n'));
   });
 })();
+
+/* ---------- Ampliar diagramas ---------- */
+(function () {
+  var botoes = document.querySelectorAll('.figura__ampliar');
+  if (!botoes.length) return;
+
+  var lupa = document.createElement('div');
+  lupa.className = 'lupa';
+  lupa.setAttribute('role', 'dialog');
+  lupa.setAttribute('aria-modal', 'true');
+  lupa.setAttribute('aria-label', 'Diagrama em tamanho grande');
+  lupa.innerHTML = '<div class="lupa__interior">' +
+    '<button class="lupa__fechar" type="button">Fechar</button>' +
+    '<img alt=""></div>';
+  document.body.appendChild(lupa);
+
+  var img = lupa.querySelector('img');
+  var fechar = lupa.querySelector('.lupa__fechar');
+  var origem = null;
+
+  function abrir(botao) {
+    origem = botao;
+    var fig = botao.closest('.figura');
+    var alvo = fig ? fig.querySelector('img') : null;
+    img.src = botao.getAttribute('data-imagem');
+    img.alt = alvo ? alvo.getAttribute('alt') : '';
+    lupa.setAttribute('data-aberta', '');
+    document.body.setAttribute('data-lupa', '');
+    fechar.focus();
+  }
+
+  function encerrar() {
+    lupa.removeAttribute('data-aberta');
+    document.body.removeAttribute('data-lupa');
+    img.removeAttribute('src');
+    if (origem) { origem.focus(); origem = null; }
+  }
+
+  Array.prototype.forEach.call(botoes, function (b) {
+    b.addEventListener('click', function () { abrir(b); });
+  });
+  fechar.addEventListener('click', encerrar);
+  lupa.addEventListener('click', function (e) {
+    if (e.target === lupa || e.target.classList.contains('lupa__interior')) encerrar();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lupa.hasAttribute('data-aberta')) encerrar();
+  });
+})();

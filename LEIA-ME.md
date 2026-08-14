@@ -408,8 +408,13 @@ Para publicar o artigo da semana, quatro alterações:
    trocar «A publicar · data» pelo tempo de leitura). Acrescentar de seguida um
    novo cartão *a publicar* para o artigo seguinte, com a data.
 2. **`index.html`** — a mesma operação nos dois cartões da secção *Da biblioteca*.
-3. **`assets/js/destaques.js`** — acrescentar o bloco do artigo novo, com a sua
-   ilustração. Os destaques rodam diariamente entre os que estiverem na lista.
+3. **`assets/js/destaques.js`** — **mover** o bloco do artigo do comentário para
+   dentro do array `destaques`. Os blocos dos dez artigos estão já escritos, num
+   comentário no fim do ficheiro, por ordem de publicação e com a data indicada.
+
+   **Só devem estar no array os artigos já publicados.** Se lá estiverem os
+   restantes, a página inicial passa a mostrar e a ligar artigos que ainda não
+   saíram — e qualquer pessoa lhes acede.
 4. **`sitemap.xml`** — acrescentar a linha do artigo.
 
 **Filtros.** Só devem estar visíveis os temas com artigos publicados. À medida
@@ -888,3 +893,31 @@ As secções `<h2>` levam agora um separador no topo, o que divide o artigo em
 blocos visíveis ao percorrer. A isso somam-se as caixas de destaque, as listas
 de condições com marcador colorido, e os blocos de material e de ferramenta.
 Um artigo com estes elementos não se lê como um muro de texto mesmo sem imagem.
+
+
+---
+
+## 29. Ampliar os diagramas
+
+Cada figura tem um botão **Ampliar** no canto superior direito, que abre o
+diagrama em ecrã inteiro sobre um fundo escurecido. Fecha-se com o botão, com a
+tecla Escape, ou clicando fora da imagem.
+
+Existe porque os diagramas são densos e, à largura da coluna de leitura, o texto
+mais pequeno fica no limite do legível — sobretudo em telemóvel.
+
+O comportamento está no fim de `assets/js/site.js` e é acrescentado
+automaticamente a qualquer figura com a classe `figura`. Ao criar um artigo novo,
+basta incluir o botão no bloco da figura:
+
+```html
+<figure class="figura">
+  <button class="figura__ampliar" type="button" data-imagem="../assets/img/nome.webp"
+          aria-label="Ver o diagrama em tamanho grande">
+    <svg class="icone" aria-hidden="true"><use href="#i-maximizar"/></svg><span>Ampliar</span>
+  </button>
+  <img src="../assets/img/nome.webp" alt="..." width="..." height="..." loading="lazy">
+</figure>
+```
+
+O `data-imagem` do botão tem de apontar ao mesmo ficheiro que o `img`.

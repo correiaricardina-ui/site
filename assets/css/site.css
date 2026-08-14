@@ -1394,3 +1394,45 @@ h3, h4 { font-variation-settings: "wght" 520, "opsz" 30, "SOFT" 0, "WONK" 0; }
   .achado { flex-direction: column; gap: 12px; }
   .achado__icone { width: 44px; height: 44px; }
 }
+
+/* ── Botão de ampliar o diagrama ── */
+.figura { position: relative; }
+.figura__ampliar {
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 13px; border-radius: 999px; cursor: pointer;
+  background: rgba(253,251,248,.94); border: 1px solid var(--linha);
+  color: var(--ardosia); font-family: var(--corpo); font-size: 13px;
+  backdrop-filter: blur(4px);
+}
+.figura__ampliar:hover { border-color: var(--clara); color: var(--tinta); }
+.figura__ampliar .icone { font-size: 15px; }
+
+/* ── Vista ampliada ── */
+.lupa {
+  position: fixed; inset: 0; z-index: 200; display: none;
+  background: rgba(31,45,61,.86); padding: 24px;
+  overflow: auto; -webkit-overflow-scrolling: touch;
+}
+.lupa[data-aberta] { display: block; }
+.lupa__interior { max-width: 1100px; margin: 0 auto; }
+.lupa img { width: 100%; height: auto; display: block; border-radius: var(--raio); }
+.lupa__fechar {
+  position: sticky; top: 0; margin-left: auto; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+  padding: 9px 16px; border-radius: 999px; cursor: pointer;
+  background: var(--branco); border: 1px solid var(--linha);
+  color: var(--tinta); font-family: var(--corpo); font-size: 14px;
+}
+body[data-lupa] { overflow: hidden; }
+@media (max-width: 620px) {
+  .lupa { padding: 12px; }
+  .figura__ampliar span { display: none; }
+  .figura__ampliar { padding: 8px; }
+}
+
+/* Menu com oito entradas: mais compacto */
+.menu { gap: 16px; }
+.menu a { font-size: 14.5px; white-space: nowrap; }
+@media (max-width: 1200px) { .menu { gap: 12px; } .menu a { font-size: 13.5px; } }
+@media (max-width: 1040px) { .menu { gap: 10px; } .menu a { font-size: 13px; } }
