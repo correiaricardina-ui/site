@@ -13,28 +13,7 @@
       resumo: 'O critério não é a gravidade — é há quanto tempo dura, quanto interfere, e se o que já se fazia deixou de resultar.',
       ligacao: 'artigos/porque-procurar-consulta.html',
       legenda: 'Os três critérios que substituem a pergunta sobre gravidade',
-      svg: [
-        '<svg viewBox="0 0 460 250" role="img" aria-label="Diagrama dos três critérios que substituem a pergunta sobre gravidade: duração, interferência e o que já se tentou">',
-        '<rect x="88" y="20" width="284" height="40" rx="10" fill="#FDF6F8" stroke="#E0B4C4" stroke-width="0.5"/>',
-        '<text class="dv-txt-p" x="230" y="45" text-anchor="middle" fill="#993556">«Será que já é grave o suficiente?»</text>',
-        '<text class="dv-txt-c" x="230" y="76" text-anchor="middle">não tem resposta possível</text>',
-        '<path d="M230 86 L 230 104" stroke="#9FB6D0" stroke-width="1"/>',
-        '<path d="M224 98 L 230 105 L 236 98" fill="none" stroke="#9FB6D0" stroke-width="1"/>',
-        '<rect x="14" y="116" width="136" height="76" rx="10" fill="#E1F5F1" stroke="#12A594" stroke-width="0.5"/>',
-        '<text class="dv-txt-p" x="82" y="142" text-anchor="middle" fill="#0F6E56">Duração</text>',
-        '<text class="dv-txt" x="82" y="162" text-anchor="middle" fill="#0F6E56">Há quanto tempo</text>',
-        '<text class="dv-txt" x="82" y="177" text-anchor="middle" fill="#0F6E56">dura?</text>',
-        '<rect x="162" y="116" width="136" height="76" rx="10" fill="#E1F5F1" stroke="#12A594" stroke-width="0.5"/>',
-        '<text class="dv-txt-p" x="230" y="142" text-anchor="middle" fill="#0F6E56">Interferência</text>',
-        '<text class="dv-txt" x="230" y="162" text-anchor="middle" fill="#0F6E56">O que é que isto</text>',
-        '<text class="dv-txt" x="230" y="177" text-anchor="middle" fill="#0F6E56">o impede de fazer?</text>',
-        '<rect x="310" y="116" width="136" height="76" rx="10" fill="#E1F5F1" stroke="#12A594" stroke-width="0.5"/>',
-        '<text class="dv-txt-p" x="378" y="142" text-anchor="middle" fill="#0F6E56">O que se tentou</text>',
-        '<text class="dv-txt" x="378" y="162" text-anchor="middle" fill="#0F6E56">Deixou de</text>',
-        '<text class="dv-txt" x="378" y="177" text-anchor="middle" fill="#0F6E56">resultar?</text>',
-        '<text class="dv-txt-c" x="230" y="222" text-anchor="middle">Três perguntas com resposta — e nenhuma exige saber nomear o problema</text>',
-        '</svg>'
-      ].join('')
+      svg: '<img src="assets/img/destaque-criterios.webp" alt="Os três critérios que substituem a pergunta sobre gravidade: duração, interferência e o que já se tentou" class="destaque__imagem" width="1000" height="667">'
     }
   ];
 

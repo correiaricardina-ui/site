@@ -30,8 +30,9 @@ Participa na rubrica «CNS Pediatria responde», no Instagram @cnspediatria.
 técnica terminou em 2026 e é referida com delimitação temporal, a pedido da
 Direção Técnica.
 
-**À distância**, apenas duas modalidades: supervisão a colegas e consultas ao
-abrigo do Cheque Cuida-te, estas até aos 18 anos.
+**À distância**, apenas supervisão a colegas. O **Cheque Cuida-te aguarda
+ativação** — a página assinala-o como tal e não aceita pedidos por essa via. Se
+vier a ativar, o acompanhamento limita-se aos 18 anos.
 
 ---
 
