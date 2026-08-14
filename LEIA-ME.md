@@ -719,3 +719,172 @@ fica a 0, exceto no «só» do título da entrada, onde é deliberado.
 
 `simbolo-grande-cor.png` — o cérebro em ardósia e o coração em rosa, com gradiente
 na transição. Gerado a partir do logótipo original por recoloração horizontal.
+
+**Fotografias de eventos com participantes.** Nunca publicar capturas de ecrã de
+sessões em linha que mostrem o chat, a lista de participantes ou as janelas de
+vídeo. Contêm nomes e imagens de pessoas que assistiram, e são dados pessoais
+delas — não da sessão. O mesmo se aplica a fotografias de sala com público
+reconhecível.
+
+O que é seguro: o cartaz do evento, a oradora sozinha, ou planos onde ninguém é
+identificável.
+
+---
+
+## 26. Página «Onde saber mais» — recursos escolhidos
+
+`recursos.html` reúne páginas, contas e conteúdos de outros profissionais que
+Ricardina Correia considera úteis. Está ligada a partir do rodapé e da página de
+materiais, **não do menu principal** — que já tem sete entradas.
+
+**Não inclui organismos oficiais nem associações.** Foi decisão explícita: a
+Ordem, o SNS 24, a DGE e as associações encontram-se numa pesquisa simples, e
+listá-los faria da página um diretório como outro qualquer. **O valor está na
+escolha, não na lista.**
+
+### Acrescentar um recurso
+
+Copiar um bloco `<article class="achado">` inteiro e editar cinco coisas:
+
+```html
+<article class="achado">
+  <img class="achado__icone" src="assets/img/recursos/ICONE.svg" alt="" width="56" height="56">
+  <div>
+    <span class="achado__tipo achado__tipo--sitio">Página</span>
+    <h3><a href="ENDEREÇO" rel="noopener">Nome</a></h3>
+    <p class="achado__fonte">Área ou instituição</p>
+    <p class="nota">O que é, em duas ou três frases.</p>
+    <p class="nota" style="margin-top:10px">Porque é que vale a pena, e para quem.</p>
+  </div>
+</article>
+```
+
+**O segundo parágrafo é o que dá valor à lista.** Não é o resumo do que lá está —
+é a razão pela qual vale o tempo de quem visita, e a quem se recomenda. Sem ele,
+isto é uma lista de ligações como qualquer outra.
+
+Etiquetas disponíveis: `achado__tipo--artigo`, `--video`, `--livro` e `--sitio`,
+cada uma com a sua cor. A barra lateral assume automaticamente a cor da etiqueta.
+A classe `achado--destaque` dá fundo e barra mais espessa ao primeiro item.
+
+### Ícones
+
+SVG em `assets/img/recursos/`, no mesmo sistema dos das páginas: traço simples,
+uma só cor, legível em tamanho pequeno. Existem cinco — `medico`, `rubrica`,
+`formacao-ext`, `leitura` e `video-ext`. Para um recurso de tipo novo, desenhar
+outro com as mesmas regras.
+
+### Manutenção
+
+**Rever as ligações uma vez por ano.** Páginas de profissionais mudam de endereço
+com frequência, e uma ligação partida numa página de recomendações é pior do que
+noutra qualquer.
+
+A caixa final declara que são páginas externas e que a inclusão não significa
+vínculo nem parceria, salvo onde se indica. Manter essa nota.
+
+---
+
+## 27. Ícones ilustrados das páginas
+
+Cada página interior tem um ícone no topo, em `assets/img/paginas/`. São SVG de
+traço simples, com a cor do tema da página, no mesmo sistema dos ícones das
+aplicações: silhueta simples, uma só cor, legível em tamanho pequeno.
+
+| Página | Ficheiro | Cor |
+|---|---|---|
+| Biblioteca | `biblioteca.svg` | magenta |
+| Ferramentas | `ferramentas.svg` | roxo |
+| Materiais | `materiais.svg` | turquesa |
+| Formações | `formacao.svg` | ocre |
+| Onde me encontrar | `encontrar.svg` | azul |
+| Onde saber mais | `recursos.svg` | laranja |
+| Sobre mim | `sobre.svg` | azul-marinho |
+| Contacto | `contacto.svg` | turquesa |
+
+**Estes foram desenhados por código, não à mão.** Os ícones das aplicações são
+desenhos da Júlia, vetorizados, e têm um traço irregular que estes não têm. Se
+vier a fazer sentido uniformizar, o caminho é pedir-lhe que os desenhe — o
+processo de vetorização está descrito no projeto das ferramentas.
+
+---
+
+## 28. Ilustrações nos artigos
+
+Cada artigo deve ter **uma ilustração**, e uma só. Não é decoração — é a ideia
+central do texto traduzida em imagem, colocada junto da secção que a explica.
+
+**A mesma ilustração serve duas vezes:** dentro do artigo, num bloco
+`<figure class="figura">`, e na rotação de destaques da página inicial, em
+`assets/js/destaques.js`. Fazer uma e usar nos dois sítios.
+
+```html
+<figure class="figura">
+  <img src="../assets/img/nome.webp" alt="Descrição do que o diagrama mostra"
+       width="1000" height="667" loading="lazy">
+  <figcaption>Uma frase que acrescenta, não que repita o que está na imagem.</figcaption>
+</figure>
+```
+
+**A legenda não repete o que a imagem diz.** Se a imagem já tem a frase escrita,
+a legenda deve dizer outra coisa — o que se conclui dela, por exemplo.
+
+**O texto alternativo descreve o conteúdo**, não o formato. «Diagrama dos três
+critérios: duração, interferência e o que já se tentou» serve; «ilustração do
+artigo» não serve de nada a quem usa leitor de ecrã.
+
+### O que não usar
+
+**Fotografias de banco de imagens.** São genéricas e reconhecem-se como tal. As
+de crianças estão excluídas pela regra que atravessa todo o site.
+
+**Animações.** Numa página de leitura, o movimento distrai — e parte do público
+são famílias de crianças com dificuldades de atenção. Acresce que obriga a
+JavaScript e prejudica quem tem movimento reduzido ativado no sistema.
+
+### Estado das ilustrações
+
+Os dez artigos escritos têm todos o seu diagrama, em `assets/img/`:
+
+| Artigo | Ficheiro |
+|---|---|
+| Será que já é caso para consulta? | `destaque-criterios.webp` |
+| Retomar o sono | `destaque-sono.webp` |
+| Preparar a ida à consulta | `destaque-preparar.webp` |
+| A devolução dos resultados | `destaque-relatorio.webp` |
+| Organizar-se não é feitio | `destaque-organizar.webp` |
+| «Ele consegue quando quer» | `destaque-phda.webp` |
+| Correu tudo bem na escola | `destaque-desaba.webp` |
+| E se ele não se adaptar? | `destaque-pais.webp` |
+| A reunião na escola | `destaque-reuniao.webp` |
+| Manhãs difíceis | `destaque-manhas.webp` |
+
+Falta o das medidas de suporte, que se faz quando o artigo for reescrito para o
+novo regime, em janeiro de 2027.
+
+### Como se desenha um diagrama novo
+
+**Formato vertical**, cerca de 1000 × 1700 píxeis. O horizontal parece melhor no
+ecrã largo e fica ilegível na coluna de leitura, que tem cerca de 700 píxeis.
+
+**Estrutura em três ou quatro blocos**, com separadores entre eles: o que se
+observa, o que daí decorre, e a conclusão no fim. **A conclusão fica sempre no
+fim** — a meio, antecipa o que ainda não foi apresentado.
+
+**Nada abaixo de 28 píxeis** de tamanho de letra no original. Reduzido a 700 de
+largura, 28 tornam-se 20, que é legível; 18 tornam-se 13, que não é.
+
+**O teste, antes de dar por bom:** reduzir a imagem para 700 píxeis de largura e
+lê-la no ecrã. Se não se ler tudo com conforto, não serve — independentemente de
+como fica em tamanho real.
+
+**Cores por função:** verde-água para o que funciona ou tranquiliza, rosa para a
+tese central, roxo para o que estrutura, ocre para a leitura que atrasa ou
+prejudica. Nunca o ocre a julgar quem faz essa leitura.
+
+### O que dá ritmo sem imagens
+
+As secções `<h2>` levam agora um separador no topo, o que divide o artigo em
+blocos visíveis ao percorrer. A isso somam-se as caixas de destaque, as listas
+de condições com marcador colorido, e os blocos de material e de ferramenta.
+Um artigo com estes elementos não se lê como um muro de texto mesmo sem imagem.

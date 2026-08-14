@@ -1292,3 +1292,105 @@ h3, h4 { font-variation-settings: "wght" 520, "opsz" 30, "SOFT" 0, "WONK" 0; }
 .entrada__interior { position: relative; z-index: 2; padding-top: 76px; padding-bottom: 68px; }
 .entrada__marca::before { display: none; }
 .entrada__marca img { max-width: 300px; opacity: 1; }
+
+/* Três blocos de formação */
+.formacao { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .formacao { grid-template-columns: 1fr; } }
+
+/* Caixa de credenciais */
+.credenciais {
+  margin-top: 22px; padding: 18px 22px;
+  background: var(--cartao); border: 1px solid var(--linha); border-radius: var(--raio);
+}
+.credenciais p { margin-bottom: 10px; }
+
+/* Ligações para recursos externos */
+.recurso-ext {
+  display: block; padding: 22px 24px 24px;
+  background: var(--cartao); border: 1px solid var(--linha);
+  border-radius: var(--raio); border-top: 3px solid var(--clara);
+}
+.recurso-ext:hover { border-color: var(--clara); }
+.recurso-ext h3 { font-size: 18px; margin-bottom: 8px; }
+.recurso-ext p { margin-bottom: 12px; }
+.recurso-ext__url {
+  font-size: 12.5px; color: var(--clara); letter-spacing: .02em;
+  border-bottom: 1px solid var(--linha); padding-bottom: 1px;
+}
+.recurso-ext--agua { border-top-color: var(--agua); }
+.recurso-ext--agua .recurso-ext__url { color: var(--agua); }
+.recurso-ext--roxo { border-top-color: var(--roxo); }
+.recurso-ext--roxo .recurso-ext__url { color: var(--roxo); }
+
+/* ── Achados: a lista que cresce ── */
+.achados { display: grid; gap: 14px; }
+.achado {
+  background: var(--cartao); border: 1px solid var(--linha);
+  border-radius: var(--raio); padding: 22px 24px 24px;
+  border-left: 3px solid var(--clara);
+}
+.achado h3 { font-size: 18.5px; margin: 8px 0 4px; }
+.achado h3 a { border-bottom: 1px solid var(--linha); }
+.achado h3 a:hover { border-bottom-color: var(--clara); }
+.achado__fonte { font-size: 13px; color: var(--clara); margin-bottom: 10px; }
+.achado p.nota { margin: 0; }
+.achado__tipo {
+  display: inline-block; font-size: 11px; letter-spacing: .09em;
+  text-transform: uppercase; padding: 3px 10px; border-radius: 999px;
+  border: 1px solid var(--linha); color: var(--ardosia);
+}
+.achado__tipo--artigo { color: var(--agua); border-color: #BFE5DC; background: #F4FAF8; }
+.achado__tipo--video  { color: var(--roxo); border-color: #D5CBF2; background: #F3F1FA; }
+.achado__tipo--livro  { color: var(--ocre); border-color: #E8C89C; background: #FDF4EA; }
+.achado__tipo--sitio  { color: var(--rosa); border-color: #F0C4D3; background: #FCF0F4; }
+
+.achado:has(.achado__tipo--artigo) { border-left-color: var(--agua); }
+.achado:has(.achado__tipo--video)  { border-left-color: var(--roxo); }
+.achado:has(.achado__tipo--livro)  { border-left-color: var(--ocre); }
+.achado:has(.achado__tipo--sitio)  { border-left-color: var(--rosa); }
+
+/* Ícone ilustrado no topo de cada página */
+.pagina__icone {
+  width: 68px; height: 68px; display: block;
+  margin: 0 0 18px;
+}
+@media (max-width: 620px) { .pagina__icone { width: 54px; height: 54px; margin-bottom: 14px; } }
+
+/* ── Figuras dentro dos artigos ── */
+.figura { margin: 34px 0; }
+.figura img {
+  width: 100%; height: auto; display: block;
+  border: 1px solid var(--linha); border-radius: var(--raio);
+}
+.figura figcaption {
+  margin-top: 10px; font-size: 13.5px; color: var(--clara);
+  text-align: center; line-height: 1.5;
+}
+
+/* Orientações numeradas na secção «O que fazer» */
+.leitura h2 + p > strong:first-child,
+.leitura p > strong:first-child { color: var(--tinta); }
+
+/* Ritmo: separador discreto entre secções principais */
+.leitura h2 {
+  margin-top: 52px; padding-top: 30px;
+  border-top: 1px solid var(--linha);
+}
+.leitura h2:first-of-type { margin-top: 38px; padding-top: 0; border-top: 0; }
+
+/* Figuras verticais: limitar a altura para não dominarem a leitura */
+.figura img { max-height: 780px; width: auto; margin: 0 auto; }
+@media (max-width: 700px) { .figura img { max-height: none; width: 100%; } }
+
+/* No destaque da página inicial, a imagem vertical fica contida */
+.destaque__imagem { max-height: 460px; width: auto; margin: 0 auto; }
+
+/* Achados com ícone */
+.achado { display: flex; gap: 20px; align-items: flex-start; }
+.achado__icone { width: 52px; height: 52px; flex-shrink: 0; margin-top: 4px; }
+.achado > div { flex: 1; }
+.achado--destaque { border-left-width: 4px; background: var(--papel); }
+@media (max-width: 620px) {
+  .achado { flex-direction: column; gap: 12px; }
+  .achado__icone { width: 44px; height: 44px; }
+}
