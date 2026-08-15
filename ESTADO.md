@@ -1,4 +1,4 @@
-# Estado do projeto — atualizado a 14 de agosto de 2026
+# Estado do projeto — atualizado a 15 de agosto de 2026
 
 Documento de referência rápida. **Atualizar sempre que houver alteração
 substancial.** O que aqui está desatualizado gera trabalho errado.
@@ -60,9 +60,27 @@ cabeçalho HTML em `formacao`, `onde-me-encontrar` e `recursos`, que faziam as
 três mostrar o título do «Sobre»; retirada a ligação a um artigo por publicar
 em `materiais.html`.
 
-**Por fazer:** criar o `geral@` nos Extras da Dominios.pt; criar o formulário no
-Tally e preencher a constante `FORMULARIO` em `assets/js/site.js`; criar os
-registos de DNS; ligar o *Enforce HTTPS* no GitHub Pages.
+**Feito a 15 de agosto — o site está no ar em `ricardinacorreia.pt`.**
+
+- **DNS configurado** na Gestão de DNS da Dominios.pt: quatro registos A do GitHub,
+  CNAME do `www`, e um MX para `webdomain04.dnscpanel.com` com prioridade 10.
+  Os nameservers continuam os `dns1-4.host-redirect.com` — **não mudar para os do
+  cPanel**, que tomariam conta do domínio e tirariam o site do ar.
+- **Caixa `geral@ricardinacorreia.pt` criada** no cPanel, dentro do serviço «Web
+  Domain 1GB de Alojamento e Email» — o email não existe como serviço isolado.
+  IMAP e SMTP em `webdomain04.dnscpanel.com`, portas 993 e 465.
+- **Formulário de contacto ligado à Tally**, identificador `ODqq08`.
+
+**Por fazer:**
+
+- **Enforce HTTPS** no GitHub Pages, assim que o «DNS Check» ficar verde. Enquanto
+  não estiver, o site serve por `http://` e o browser assinala-o como inseguro.
+- **Ligar a caixa `geral@`** ao Gmail ou ao Outlook, e confirmar que já recebe.
+- **Mudar o email da conta Tally** de `ricardinacorreia.lda@gmail.com` para o
+  `geral@`. No plano gratuito o aviso de nova submissão vai sempre para o email
+  da conta, pelo que basta essa alteração para os avisos passarem a chegar lá.
+- **Avisar a Dra. Inês Oliveira e a T.O. Diana Barroso** de que constam da página
+  «Onde saber mais», com fotografia. A Enf.ª Ângela Baptista já reviu o seu texto.
 
 **Desenho:** entrada assimétrica com o símbolo cérebro-coração em gradiente
 ardósia-rosa; fundo quente `#FDFBF8` com cartões brancos; cada secção com o seu
@@ -108,6 +126,8 @@ primeiro, apontar depois.
   o formulário não faz qualquer pedido a terceiros.
 - **A página não marca consultas presenciais.** Remete para o CNS.
 - **As aplicações não se descarregam.** São entregues em consulta.
-- **O formulário não recolhe informação clínica.** Conservação: 12 meses.
+- **O formulário não recolhe informação clínica.** Conservação: máximo de 12 meses,
+  **por eliminação manual** — a eliminação automática é do plano Business da Tally,
+  a 79 €/mês. Apagar as submissões no painel depois de responder.
 - **Nunca se publicam fotografias de crianças**, mesmo com autorização.
 - **A newsletter foi retirada** em agosto de 2026.

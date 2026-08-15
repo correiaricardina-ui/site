@@ -193,10 +193,39 @@ natureza, apagá-la do serviço depois de responder.
 Os tipos de pedido são configurados no próprio Tally. Ao acrescentar um, manter
 a correspondência com as modalidades descritas em `supervisao.html`.
 
-**A política de privacidade nomeia a Tally, a sede na Bélgica e o prazo de
-conservação de 12 meses.** Se o prazo for alterado nas definições do Tally, a
-política tem de ser alterada em conformidade — e vice-versa. Uma das duas coisas
-estar errada é pior do que não estar declarada.
+O identificador do formulário publicado é **`ODqq08`**, e está na constante
+`FORMULARIO` do `site.js`.
+
+### Conservação das submissões — é manual
+
+**A eliminação automática é do plano Business**, a 79 €/mês. No plano gratuito as
+submissões ficam guardadas até serem apagadas à mão.
+
+A política de privacidade foi escrita em conformidade: declara que as submissões
+são eliminadas logo que o pedido esteja respondido, e no máximo ao fim de 12
+meses, **por eliminação manual**. Cumprir isso depende de apagar as submissões no
+painel da Tally — `Submissions`, selecionar a linha, eliminar. Vale a pena rever
+uma vez por ano, ao mesmo tempo que as ligações da página «Onde saber mais».
+
+Se um dia se contratar o plano Business, ligar a retenção a 12 meses e atualizar
+a política, que deixaria de precisar da menção à eliminação manual.
+
+### O aviso por email
+
+No plano gratuito, o aviso de nova submissão **vai sempre para o email da conta
+Tally**, com assunto fixo e sem *reply-to* — o painel que os mostra é apenas
+ilustrativo. Para responder a quem escreveu, copiar o endereço do corpo da
+mensagem ou responder a partir do painel.
+
+Consequência prática: para mudar o destinatário dos avisos, muda-se o email da
+conta. É uma alteração, não duas.
+
+### O DPA está celebrado
+
+Não há nada a assinar. Pelos termos da Tally, ao criar a conta o utilizador
+profissional aceita, em nome da empresa, o Acordo de Tratamento de Dados. O texto
+está em `tally.so/help/data-processing-agreement` e convém guardar uma cópia em
+PDF no dossiê de RGPD.
 
 ---
 
