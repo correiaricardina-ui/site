@@ -98,7 +98,7 @@
 (function () {
   'use strict';
 
-  var FORMULARIO = 'ID_DO_FORMULARIO';
+  var FORMULARIO = 'ODqq08';
 
   var caixa = document.getElementById('tally');
   if (!caixa) return;
