@@ -842,13 +842,12 @@ aplicações: silhueta simples, uma só cor, legível em tamanho pequeno.
 | Onde saber mais | `recursos.svg` | laranja `#D97008` | desenho da Júlia |
 | Sobre mim | `sobre.svg` | azul-marinho `#2B4C7E` | desenho da Júlia |
 | Contacto | `contacto.svg` | turquesa `#0E9384` | desenho da Júlia |
-| Onde me encontrar | `encontrar.svg` | azul `#0C447C` | desenhado por código |
+| Onde me encontrar | `encontrar.svg` | azul `#0C447C` | desenho da Júlia |
 
-**Sete dos oito são desenhos à mão da Júlia, vetorizados** — não reconstruções.
-O traço irregular é deliberado, e é o mesmo princípio dos ícones das aplicações.
-Substituídos a 15 de agosto de 2026. Falta o de «Onde me encontrar», que
-continua a ser o desenhado por código e destoa dos restantes; se vier a haver
-desenho para essa página, vetoriza-se pelo mesmo processo.
+**Os oito são desenhos à mão da Júlia, vetorizados** — não reconstruções. O traço
+irregular é deliberado, e é o mesmo princípio dos ícones das aplicações.
+Substituídos a 15 de agosto de 2026. Nenhum ícone do site é agora desenhado por
+código.
 
 Cada ícone existe em duas versões com o mesmo nome: o `.svg`, que é o que as
 páginas usam, e um `.png` de 512×512 com fundo transparente, para utilizações

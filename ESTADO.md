@@ -87,10 +87,8 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
   páginas.
 - Corrigidas as duas referências Paruthi et al. (2016) do artigo do sono, que em
   APA 7 pedem os sufixos *2016a* e *2016b*.
-- **Ícones das páginas substituídos pelos desenhos da Júlia**, vetorizados —
-  biblioteca, ferramentas, materiais, formação, onde saber mais, sobre mim e
-  contacto. Falta o de «Onde me encontrar», que continua a ser o desenhado por
-  código.
+- **Os oito ícones das páginas substituídos pelos desenhos da Júlia**,
+  vetorizados. Nenhum ícone do site é agora desenhado por código.
 - Reescrito o ponto 27 do LEIA-ME, que descrevia os ícones das páginas como
   desenhados por código. Passa a documentar a vetorização e a razão da espessura
   de traço escolhida.
@@ -108,11 +106,8 @@ semanas», que está na página como «Em preparação» e cujo PDF já existe e
 
 **2 · Decidir onde fica o crédito à Júlia.** O crédito «Ilustrações de Júlia, 10
 anos» está apenas no fim da página das ferramentas, e assim ficou por decisão de
-15 de agosto. Os desenhos dela passaram a estar em quase todas as páginas do
+15 de agosto. Os desenhos dela passaram a estar no topo de todas as páginas do
 site, pelo que a questão fica em aberto, e não fechada.
-
-**3 · Um ícone por desenhar** — o de «Onde me encontrar», caso se queira a série
-completa da mesma mão.
 
 ---
 
