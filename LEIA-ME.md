@@ -894,20 +894,34 @@ se altera para nome completo.
 Cada artigo tem **um diagrama**, e um só. Não é decoração — é a ideia central do
 texto traduzida em imagem, colocada junto da secção que a explica.
 
-**A isso pode juntar-se uma ilustração de abertura**, antes da primeira secção.
-Não faz o mesmo trabalho: o diagrama explica, a ilustração dá o tom. Duas imagens
-por artigo é o limite, e só se fizerem coisas diferentes — duas que expliquem o
-mesmo competem entre si. Começou com «Será que já é caso para consulta?», em
+**E deve ter também um desenho**, que abre o artigo, antes da primeira secção.
+Não faz o mesmo trabalho: o diagrama explica, o desenho dá o tom. Duas imagens
+por artigo é o limite, e só porque fazem coisas diferentes — duas que expliquem o
+mesmo competiriam entre si. Começou com «Será que já é caso para consulta?», em
 agosto de 2026.
 
-**Os diagramas são verticais; as ilustrações de abertura, deitadas.** Uma figura
-deitada leva a classe `figura--larga` além de `figura`, sem a qual o limite de
-altura pensado para os diagramas verticais lhe daria uma largura acima da coluna
-de leitura.
+### A regra, nos dois casos
+
+| | Página inicial | Início do artigo | Meio do artigo |
+|---|---|---|---|
+| **Com desenho** | desenho | desenho | diagrama |
+| **Sem desenho** | diagrama | — | diagrama |
+
+Ou seja: **o desenho, quando existe, ocupa a página inicial e a abertura do
+artigo, e o diagrama fica reservado ao interior**, junto da secção que explica.
+Sem desenho, o diagrama faz as duas coisas, como fazia antes.
+
+O objetivo é que todos os artigos venham a ter os dois. Enquanto não tiverem, a
+rotação da página inicial mistura desenhos e diagramas, e não há problema nisso —
+o que não se deve fazer é publicar um artigo sem nenhuma imagem.
+
+**Os diagramas são verticais; os desenhos, deitados.** Uma figura deitada leva a
+classe `figura--larga` além de `figura`, sem a qual o limite de altura pensado
+para os diagramas verticais lhe daria uma largura acima da coluna de leitura.
 
 ### Autoria
 
-**As ilustrações dos artigos são da Luísa; os ícones das páginas e das aplicações,
+**Os desenhos dos artigos são da Luísa; os ícones das páginas e das aplicações,
 da Júlia.** O crédito segue a mesma convenção nos dois casos: primeiro nome e
 idade, sem apelido, e **a idade não se atualiza** — descreve quando o trabalho foi
 feito, como uma data. As razões estão no ponto 22 e valem igualmente aqui.
@@ -927,9 +941,9 @@ em vez de flutuar sobre ela num cinzento fotográfico. Exportar em WebP a cerca 
 cena com caras, cabelos e traços finos a vetorização engrossa-os até se fecharem
 — e a textura do marcador faz parte do desenho.
 
-**Na rotação de destaques da página inicial entra a ilustração de abertura,
-quando existe; o diagrama, quando não existe.** A regra mudou a 15 de agosto de
-2026, e a razão está nas medidas: a coluna do visual tem cerca de 450 píxeis
+**Na rotação de destaques da página inicial entra o desenho, quando existe; o
+diagrama, quando não existe.** A regra mudou a 15 de agosto de 2026, e a razão
+está nas medidas: a coluna do visual tem cerca de 450 píxeis
 úteis, e um diagrama vertical, travado pelo limite de altura de 460, sai com 227
 de largura — o texto fica a uns 7 píxeis, ilegível. Uma imagem deitada enche a
 caixa e lê-se. O diagrama não perde nada: passa a aparecer uma vez só, dentro do
@@ -969,23 +983,28 @@ JavaScript e prejudica quem tem movimento reduzido ativado no sistema.
 
 ### Estado das ilustrações
 
-Os dez artigos escritos têm todos o seu diagrama, em `assets/img/`:
+Os dez artigos escritos têm todos o seu diagrama, em `assets/img/`. Dois têm já
+o desenho da Luísa; faltam oito.
 
-| Artigo | Ficheiro |
-|---|---|
-| Será que já é caso para consulta? | `destaque-criterios.webp` |
-| Retomar o sono | `destaque-sono.webp` |
-| Preparar a ida à consulta | `destaque-preparar.webp` |
-| A devolução dos resultados | `destaque-relatorio.webp` |
-| Organizar-se não é feitio | `destaque-organizar.webp` |
-| «Ele consegue quando quer» | `destaque-phda.webp` |
-| Correu tudo bem na escola | `destaque-desaba.webp` |
-| E se ele não se adaptar? | `destaque-pais.webp` |
-| A reunião na escola | `destaque-reuniao.webp` |
-| Manhãs difíceis | `destaque-manhas.webp` |
+| Artigo | Diagrama | Desenho |
+|---|---|---|
+| Será que já é caso para consulta? | `destaque-criterios.webp` | `desenho-consulta.webp` |
+| Retomar o sono | `destaque-sono.webp` | `desenho-sono.webp` |
+| Preparar a ida à consulta | `destaque-preparar.webp` | — |
+| A devolução dos resultados | `destaque-relatorio.webp` | — |
+| Organizar-se não é feitio | `destaque-organizar.webp` | — |
+| «Ele consegue quando quer» | `destaque-phda.webp` | — |
+| Correu tudo bem na escola | `destaque-desaba.webp` | — |
+| E se ele não se adaptar? | `destaque-pais.webp` | — |
+| A reunião na escola | `destaque-reuniao.webp` | — |
+| Manhãs difíceis | `destaque-manhas.webp` | — |
 
-Falta o das medidas de suporte, que se faz quando o artigo for reescrito para o
-novo regime, em janeiro de 2027.
+Falta o diagrama das medidas de suporte, que se faz quando o artigo for reescrito
+para o novo regime, em janeiro de 2027.
+
+**Os desenhos chamam-se `desenho-*`; os diagramas, `destaque-*`.** O prefixo dos
+diagramas é anterior à existência dos desenhos e ficou por razões de história —
+não se renomeiam, porque estão referidos em vários sítios.
 
 **Os dez diagramas continuam em Fraunces**, e assim ficam — são imagens, e
 substituem-se uma a uma se e quando fizer sentido. **O décimo primeiro, o das

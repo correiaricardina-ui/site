@@ -29,8 +29,8 @@
         titulo: 'Retomar o sono antes do regresso às aulas',
         resumo: 'O horário ajusta-se em duas semanas. O que costuma demorar mais é o que acontece entre as pessoas na hora de deitar.',
         ligacao: 'artigos/sono-regresso-as-aulas.html',
-        legenda: 'O que se resolve com método, e o que não se resolve',
-        svg: '<img src="assets/img/destaque-sono.webp" alt="Diagrama do ajuste gradual do horário de deitar e do ciclo que se instala entre a criança e os adultos" class="destaque__imagem" width="1000" height="1500">'
+        legenda: 'O que se quer de volta, antes de se falar de horários',
+        svg: '<img src="assets/img/desenho-sono.webp" alt="Desenho à mão de uma figura adormecida, enrolada dentro de um coração grande, rodeada de estrelas" class="destaque__imagem destaque__imagem--larga" width="1600" height="1200">'
       }
 
   // ── 29 ago ──

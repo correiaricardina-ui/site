@@ -43,7 +43,7 @@ vier a ativar, o acompanhamento limita-se aos 18 anos.
 | Endereço | **`https://ricardinacorreia.pt` — no ar, com certificado válido** |
 | Páginas | 12 páginas + 11 artigos na pasta |
 | Artigos escritos | 10, revistos clinicamente, cada um com diagrama |
-| Ilustrações | Diagramas dos artigos; ilustrações de abertura da Luísa; ícones da Júlia |
+| Ilustrações | 10 diagramas; 2 desenhos da Luísa, faltam 8; ícones da Júlia |
 | Artigos publicados | Apenas o primeiro, «Será que já é caso para consulta?» |
 | Materiais | 10, em PDF e Word; 9 publicados na página |
 | Ferramentas descritas | 9 disponíveis, 4 em preparação |
@@ -97,10 +97,15 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
   que já é caso para consulta?», antes da secção «A situação». O diagrama dos
   critérios mantém-se onde estava. O ponto 28 do LEIA-ME passa a prever duas
   imagens por artigo, desde que façam coisas diferentes.
-- **O destaque da página inicial passou a mostrar a ilustração**, em vez do
-  diagrama vertical, que à largura da caixa ficava ilegível. Enquanto só um
-  artigo tiver ilustração de abertura, a rotação fica desigual: os outros nove
-  continuam a mostrar os seus diagramas.
+- **O destaque da página inicial passou a mostrar o desenho**, em vez do diagrama
+  vertical, que à largura da caixa ficava ilegível.
+- **Regra nova, no ponto 28 do LEIA-ME:** cada artigo deve ter desenho e
+  diagrama. Havendo desenho, ele ocupa a página inicial e a abertura do artigo, e
+  o diagrama fica para o meio do texto; não havendo, o diagrama faz as duas
+  coisas. **Dois artigos têm já o desenho — o dos critérios e o do sono. Faltam
+  oito.**
+- O artigo do sono ficou com o desenho inserido e o bloco do destaque já
+  atualizado, à espera do dia 22. Continua por publicar.
 
 ---
 
