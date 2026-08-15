@@ -97,6 +97,10 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
   que já é caso para consulta?», antes da secção «A situação». O diagrama dos
   critérios mantém-se onde estava. O ponto 28 do LEIA-ME passa a prever duas
   imagens por artigo, desde que façam coisas diferentes.
+- **O destaque da página inicial passou a mostrar a ilustração**, em vez do
+  diagrama vertical, que à largura da caixa ficava ilegível. Enquanto só um
+  artigo tiver ilustração de abertura, a rotação fica desigual: os outros nove
+  continuam a mostrar os seus diagramas.
 
 ---
 

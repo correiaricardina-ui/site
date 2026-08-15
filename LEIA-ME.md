@@ -927,9 +927,21 @@ em vez de flutuar sobre ela num cinzento fotográfico. Exportar em WebP a cerca 
 cena com caras, cabelos e traços finos a vetorização engrossa-os até se fecharem
 — e a textura do marcador faz parte do desenho.
 
-**A mesma ilustração serve duas vezes:** dentro do artigo, num bloco
-`<figure class="figura">`, e na rotação de destaques da página inicial, em
-`assets/js/destaques.js`. Fazer uma e usar nos dois sítios.
+**Na rotação de destaques da página inicial entra a ilustração de abertura,
+quando existe; o diagrama, quando não existe.** A regra mudou a 15 de agosto de
+2026, e a razão está nas medidas: a coluna do visual tem cerca de 450 píxeis
+úteis, e um diagrama vertical, travado pelo limite de altura de 460, sai com 227
+de largura — o texto fica a uns 7 píxeis, ilegível. Uma imagem deitada enche a
+caixa e lê-se. O diagrama não perde nada: passa a aparecer uma vez só, dentro do
+artigo, à largura a que foi desenhado.
+
+Uma imagem deitada no destaque leva `destaque__imagem--larga` além de
+`destaque__imagem`, pela mesma razão que a `figura--larga` no artigo.
+
+**O crédito não vai na legenda do destaque**, ao contrário do que acontece na
+figura dentro do artigo. O desenho liga ao artigo, e é lá que o crédito está. É a
+mesma lógica que mantém o crédito da Júlia numa página só: não pôr o nome de uma
+criança na entrada do site, indexado.
 
 ```html
 <figure class="figura">

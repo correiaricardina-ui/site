@@ -1401,7 +1401,11 @@ h3, h4 { font-variation-settings: "wght" 520, "opsz" 30; }
 .figura--larga img { max-height: none; width: 100%; }
 
 /* No destaque da página inicial, a imagem vertical fica contida */
-.destaque__imagem { max-height: 460px; width: auto; margin: 0 auto; }
+.destaque__imagem { max-height: 460px; width: auto; max-width: 100%; margin: 0 auto; }
+
+/* Destaque com imagem deitada: o limite de altura acima foi pensado para os
+   diagramas verticais e, numa imagem deitada, deixaria a largura acima da caixa. */
+.destaque__imagem--larga { max-height: none; width: 100%; }
 
 /* Achados com ícone */
 .achado { display: flex; gap: 20px; align-items: flex-start; }

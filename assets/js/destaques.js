@@ -12,8 +12,8 @@
       titulo: '«Será que já é caso para consulta?»',
       resumo: 'O critério não é a gravidade — é há quanto tempo dura, quanto interfere, e se o que já se fazia deixou de resultar.',
       ligacao: 'artigos/porque-procurar-consulta.html',
-      legenda: 'Os três critérios, e a leitura que decide tudo',
-      svg: '<img src="assets/img/destaque-criterios.webp" alt="Os três critérios que substituem a pergunta sobre gravidade: duração, interferência e o que já se tentou" class="destaque__imagem" width="881" height="1786">'
+      legenda: 'A sala que está do outro lado da decisão',
+      svg: '<img src="assets/img/desenho-consulta.webp" alt="Desenho à mão de uma sala de consulta: quadros na parede, uma mesa comprida com uma criança sentada de cada lado e uma pessoa de pé entre as duas" class="destaque__imagem destaque__imagem--larga" width="1600" height="1178">'
     }
   ];
 
@@ -149,7 +149,7 @@
     botao.className = 'figura__ampliar destaque__ampliar';
     botao.type = 'button';
     botao.setAttribute('data-imagem', img.getAttribute('src'));
-    botao.setAttribute('aria-label', 'Ver o diagrama em tamanho grande');
+    botao.setAttribute('aria-label', 'Ver a imagem em tamanho grande');
     botao.innerHTML = '<svg class="icone" aria-hidden="true"><use href="#i-maximizar"/></svg><span>Ampliar</span>';
     visual.insertBefore(botao, visual.firstChild);
   }

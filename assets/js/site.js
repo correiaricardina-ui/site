@@ -151,7 +151,7 @@
 
   function abrir(botao) {
     origem = botao;
-    var fig = botao.closest('.figura');
+    var fig = botao.closest('.figura') || botao.closest('.destaque__visual');
     var alvo = fig ? fig.querySelector('img') : null;
     img.src = botao.getAttribute('data-imagem');
     img.alt = alvo ? alvo.getAttribute('alt') : '';
