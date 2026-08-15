@@ -43,6 +43,7 @@ vier a ativar, o acompanhamento limita-se aos 18 anos.
 | Endereço | **`https://ricardinacorreia.pt` — no ar, com certificado válido** |
 | Páginas | 12 páginas + 11 artigos na pasta |
 | Artigos escritos | 10, revistos clinicamente, cada um com diagrama |
+| Ilustrações | Diagramas dos artigos; ilustrações de abertura da Luísa; ícones da Júlia |
 | Artigos publicados | Apenas o primeiro, «Será que já é caso para consulta?» |
 | Materiais | 10, em PDF e Word; 9 publicados na página |
 | Ferramentas descritas | 9 disponíveis, 4 em preparação |
@@ -92,6 +93,10 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
 - Reescrito o ponto 27 do LEIA-ME, que descrevia os ícones das páginas como
   desenhados por código. Passa a documentar a vetorização e a razão da espessura
   de traço escolhida.
+- **Primeira ilustração de abertura num artigo** — um desenho da Luísa, no «Será
+  que já é caso para consulta?», antes da secção «A situação». O diagrama dos
+  critérios mantém-se onde estava. O ponto 28 do LEIA-ME passa a prever duas
+  imagens por artigo, desde que façam coisas diferentes.
 
 ---
 
@@ -107,7 +112,8 @@ semanas», que está na página como «Em preparação» e cujo PDF já existe e
 **2 · Decidir onde fica o crédito à Júlia.** O crédito «Ilustrações de Júlia, 10
 anos» está apenas no fim da página das ferramentas, e assim ficou por decisão de
 15 de agosto. Os desenhos dela passaram a estar no topo de todas as páginas do
-site, pelo que a questão fica em aberto, e não fechada.
+site, pelo que a questão fica em aberto, e não fechada. O crédito à Luísa, esse,
+ficou resolvido: vai na legenda da própria figura.
 
 ---
 

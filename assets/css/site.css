@@ -1392,8 +1392,13 @@ h3, h4 { font-variation-settings: "wght" 520, "opsz" 30; }
 .leitura h2:first-of-type { margin-top: 38px; padding-top: 0; border-top: 0; }
 
 /* Figuras verticais: limitar a altura para não dominarem a leitura */
-.figura img { max-height: 780px; width: auto; margin: 0 auto; }
+.figura img { max-height: 780px; width: auto; max-width: 100%; margin: 0 auto; }
 @media (max-width: 700px) { .figura img { max-height: none; width: 100%; } }
+
+/* Figuras horizontais: ocupam a coluna toda. O limite de altura acima
+   destina-se aos diagramas verticais e, numa imagem deitada, deixaria a
+   largura acima da coluna de leitura. */
+.figura--larga img { max-height: none; width: 100%; }
 
 /* No destaque da página inicial, a imagem vertical fica contida */
 .destaque__imagem { max-height: 460px; width: auto; margin: 0 auto; }

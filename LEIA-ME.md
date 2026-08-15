@@ -891,8 +891,41 @@ se altera para nome completo.
 
 ## 28. Ilustrações nos artigos
 
-Cada artigo deve ter **uma ilustração**, e uma só. Não é decoração — é a ideia
-central do texto traduzida em imagem, colocada junto da secção que a explica.
+Cada artigo tem **um diagrama**, e um só. Não é decoração — é a ideia central do
+texto traduzida em imagem, colocada junto da secção que a explica.
+
+**A isso pode juntar-se uma ilustração de abertura**, antes da primeira secção.
+Não faz o mesmo trabalho: o diagrama explica, a ilustração dá o tom. Duas imagens
+por artigo é o limite, e só se fizerem coisas diferentes — duas que expliquem o
+mesmo competem entre si. Começou com «Será que já é caso para consulta?», em
+agosto de 2026.
+
+**Os diagramas são verticais; as ilustrações de abertura, deitadas.** Uma figura
+deitada leva a classe `figura--larga` além de `figura`, sem a qual o limite de
+altura pensado para os diagramas verticais lhe daria uma largura acima da coluna
+de leitura.
+
+### Autoria
+
+**As ilustrações dos artigos são da Luísa; os ícones das páginas e das aplicações,
+da Júlia.** O crédito segue a mesma convenção nos dois casos: primeiro nome e
+idade, sem apelido, e **a idade não se atualiza** — descreve quando o trabalho foi
+feito, como uma data. As razões estão no ponto 22 e valem igualmente aqui.
+
+Nos artigos, o crédito vai na legenda da própria figura, a seguir à frase da
+legenda: «Ilustração de Luísa, 6 anos.»
+
+### Tratamento de um desenho fotografado
+
+Não se publica a fotografia como veio, nem em PNG. Corrigir a iluminação
+dividindo pelo cinzento desfocado, recortar ao conteúdo, e mapear as cores às do
+site — papel a `#FDFBF8`, tinta a `#1F2D3D` —, para o desenho assentar na página
+em vez de flutuar sobre ela num cinzento fotográfico. Exportar em WebP a cerca de
+1600 píxeis de largura; o mesmo desenho em PNG pesaria uns dois megabytes.
+
+**Não vetorizar.** É o que se faz aos ícones, que são silhuetas simples, mas numa
+cena com caras, cabelos e traços finos a vetorização engrossa-os até se fecharem
+— e a textura do marcador faz parte do desenho.
 
 **A mesma ilustração serve duas vezes:** dentro do artigo, num bloco
 `<figure class="figura">`, e na rotação de destaques da página inicial, em
