@@ -1,4 +1,4 @@
-# Estado do projeto — atualizado a 13 de agosto de 2026
+# Estado do projeto — atualizado a 14 de agosto de 2026
 
 Documento de referência rápida. **Atualizar sempre que houver alteração
 substancial.** O que aqui está desatualizado gera trabalho errado.
@@ -53,9 +53,21 @@ vier a ativar, o acompanhamento limita-se aos 18 anos.
 **As páginas:** index, biblioteca, ferramentas, materiais, recursos, formacao,
 onde-me-encontrar, sobre, contacto, online, supervisao, privacidade.
 
+**Feito a 14 de agosto:** tipografia mudada de Fraunces para Source Serif 4;
+formulário de contacto passado para a Tally, com carregamento ao clique;
+corrigida uma duplicação do bloco de arranque no `index.html` e um segundo
+cabeçalho HTML em `formacao`, `onde-me-encontrar` e `recursos`, que faziam as
+três mostrar o título do «Sobre»; retirada a ligação a um artigo por publicar
+em `materiais.html`.
+
+**Por fazer:** criar o `geral@` nos Extras da Dominios.pt; criar o formulário no
+Tally e preencher a constante `FORMULARIO` em `assets/js/site.js`; criar os
+registos de DNS; ligar o *Enforce HTTPS* no GitHub Pages.
+
 **Desenho:** entrada assimétrica com o símbolo cérebro-coração em gradiente
 ardósia-rosa; fundo quente `#FDFBF8` com cartões brancos; cada secção com o seu
-tom em saturação muito baixa; Fraunces nos títulos com suavidade a 25–30.
+tom em saturação muito baixa; Source Serif 4 nos títulos, com itálico
+verdadeiro no «só» da entrada.
 
 ---
 
@@ -90,9 +102,12 @@ primeiro, apontar depois.
 
 ## Decisões tomadas que não se revertem sem conversa
 
-- **Zero pedidos externos.** Fontes, ícones e imagens servidos do próprio domínio.
+- **Zero pedidos externos, com uma exceção declarada.** Fontes, ícones e imagens
+  servidos do próprio domínio. A exceção é o formulário de contacto, alojado na
+  Tally (Bélgica, dados na UE) — e mesmo esse só carrega ao clique. Quem não abrir
+  o formulário não faz qualquer pedido a terceiros.
 - **A página não marca consultas presenciais.** Remete para o CNS.
 - **As aplicações não se descarregam.** São entregues em consulta.
-- **O formulário não recolhe informação clínica.**
+- **O formulário não recolhe informação clínica.** Conservação: 12 meses.
 - **Nunca se publicam fotografias de crianças**, mesmo com autorização.
 - **A newsletter foi retirada** em agosto de 2026.

@@ -81,7 +81,7 @@ artigos/              Um ficheiro por artigo
   _modelo-artigo.html Modelo a copiar (o underscore indica que não é publicado)
 assets/css/site.css   Todos os estilos, num só ficheiro
 assets/js/site.js     Menu, painéis expansíveis e filtros
-assets/fontes/        Fraunces e Instrument Sans, alojadas localmente
+assets/fontes/        Source Serif 4 e Instrument Sans, alojadas localmente
 assets/icones/        Sprite SVG com os dez ícones usados
 assets/img/           Ilustração em quatro tamanhos
 _headers              Cabeçalhos de segurança e de cache (Cloudflare)
@@ -109,8 +109,8 @@ artigo é mais simples e não depende de nada. Se a frequência aumentar, essa
 camada pode ser acrescentada depois sem refazer o desenho.
 
 **Paleta e tipografia.** Azul-ardósia herdado da identidade já existente.
-Fraunces nos títulos, pela leitura simultaneamente séria e acolhedora;
-Instrument Sans no texto corrido, pela legibilidade em ecrãs pequenos.
+Source Serif 4 nos títulos, pela sobriedade sem frieza; Instrument Sans no
+texto corrido, pela legibilidade em ecrãs pequenos.
 
 ---
 
@@ -149,64 +149,54 @@ em que estão escritos no ficheiro — o mais recente primeiro.
 
 ## 8. Formulário de pedido de contacto
 
-O formulário em `contacto.html` **não envia nada para nenhum servidor**. Ao carregar
-em "Enviar pedido", compõe uma mensagem no programa de correio da própria pessoa,
-com os campos já preenchidos, e é ela quem decide se a envia.
+O formulário está alojado na **Tally** (tally.so), empresa com sede na Bélgica,
+com os dados armazenados na União Europeia e ao abrigo de contrato de
+subcontratação. Foi escolhida por isso: alternativas como o Formspree ou o
+Google Forms alojam fora da UE, o que é evitável num site de saúde.
 
-Foi esta a opção escolhida por uma razão: serviços de formulário como o Formspree
-ou o Web3Forms passariam a receber e armazenar o que as pessoas escrevem, muitas
-vezes em servidores fora da União Europeia. Num contexto clínico, mesmo com o aviso
-para não incluir informação clínica, evitar esse intermediário é mais defensável.
+**A Tally não tem endpoint para formulários HTML próprios.** Não é possível
+apontar um `<form>` para um endereço deles — o modelo é de incorporação, em
+janela. Foi por isso que o formulário desenhado à mão deixou de existir.
 
-**O endereço de destino** está definido em `assets/js/site.js`, na constante
-`DESTINO`. Alterar aí se o endereço mudar.
+### Carregamento ao clique
 
-**Limitação a conhecer:** em computadores sem programa de correio configurado, o
-botão pode não abrir nada. Por isso o endereço de correio aparece também no
-rodapé de todas as páginas, como alternativa sempre disponível.
+`contacto.html` tem uma caixa com uma nota e um botão. Só quando alguém carrega
+no botão é que a janela da Tally é carregada — e é nesse momento que o endereço
+IP de quem visita é transmitido. **Quem abrir a página e não abrir o formulário
+não faz qualquer pedido a servidores de terceiros.**
 
-**Se um dia preferir um formulário que envie diretamente**, a alteração é simples:
-criar conta num serviço de formulários, e substituir no `site.js` a construção do
-`mailto:` por um `fetch()` para o endereço fornecido pelo serviço. Nesse caso, a
-política de privacidade tem de ser atualizada para identificar o subcontratante.
+Foi esta a forma encontrada de manter o princípio de zero pedidos externos com o
+formulário na própria página, em vez de uma ligação para fora.
 
-### Acrescentar ou alterar assuntos
+O código está em `assets/js/site.js`, na secção do formulário. **O identificador
+do formulário está na constante `FORMULARIO`**, no início desse bloco: é o que
+aparece no fim do endereço do formulário publicado — `https://tally.so/r/XXXXXXX`.
 
-A lista de assuntos está em `contacto.html`, dentro do `<select id="assunto">`.
-Basta acrescentar ou editar as linhas `<option>`.
+**Salvaguarda:** enquanto o identificador não estiver preenchido, o botão fica
+desativado e diz «Formulário por ativar». Nunca finge funcionar.
 
----
+### O que substituiu
 
-## 8. Ligar o formulário de contacto
+Existia código de `mailto:` no `site.js` que **nunca chegou a funcionar**:
+procurava `getElementById('pedido')` quando o formulário tinha `class="pedido"`
+sem `id`, e lia campos com nomes de uma versão anterior. Carregar em «Enviar
+pedido» fazia um POST para `#` e recarregava a página, dando a impressão de ter
+enviado. Foi removido, tal como as regras `.campo` da folha de estilos, que
+também não eram usadas por nenhuma página.
 
-O formulário em `contacto.html` está desenhado mas não envia nada. Um site
-estático não tem servidor próprio, pelo que o envio tem de passar por um
-serviço externo.
+### Regras que não se alteram
 
-**Serviço recomendado: Tally** (tally.so). É sediado na Bélgica, aloja os dados
-na União Europeia e o plano gratuito é suficiente para este volume. Alternativas
-como o Formspree ou o Google Forms alojam os dados fora da UE, o que é evitável
-tratando-se de um site de saúde.
+O formulário **não pede nem deve permitir informação clínica**. O aviso no topo
+da página existe por essa razão. Se um pedido chegar com informação dessa
+natureza, apagá-la do serviço depois de responder.
 
-Passos:
+Os tipos de pedido são configurados no próprio Tally. Ao acrescentar um, manter
+a correspondência com as modalidades descritas em `supervisao.html`.
 
-1. Criar conta gratuita no Tally e um formulário com os mesmos campos.
-2. Nas definições do formulário, escolher a opção de integração por HTML.
-3. Em `contacto.html`, substituir `action="#"` pelo endereço fornecido.
-4. Assinar o contrato de subcontratação (DPA) disponibilizado pelo serviço —
-   é obrigatório e costuma ser aceite com um clique nas definições da conta.
-
-**Regra que não deve ser alterada:** o formulário não pede nem deve permitir
-informação clínica. O aviso no topo da página existe por essa razão. Se um
-pedido chegar com informação clínica no campo de nota, convém apagá-la do
-serviço depois de responder.
-
-**Importante — a política de privacidade já descreve o formulário como ligado a
-um serviço de formulários com dados na União Europeia.** Enquanto o formulário
-não estiver ligado, esse parágrafo antecipa a situação futura; assim que ligar,
-confirme que o serviço escolhido corresponde à descrição (dados na UE, contrato
-de subcontratação assinado). Se optar por um serviço fora da UE, a política tem
-de ser alterada em conformidade.
+**A política de privacidade nomeia a Tally, a sede na Bélgica e o prazo de
+conservação de 12 meses.** Se o prazo for alterado nas definições do Tally, a
+política tem de ser alterada em conformidade — e vice-versa. Uma das duas coisas
+estar errada é pior do que não estar declarada.
 
 ---
 
@@ -339,7 +329,7 @@ documentos), `simbolo-rc.png` (apenas o símbolo, usado no cabeçalho do site) e
 `icone-32.png` / `icone-180.png` (ícone do separador do browser e do ecrã
 inicial em telemóvel). Todos com fundo transparente.
 
-A versão PDF gerada aqui usa as fontes do site (Fraunces e Instrument Sans); a
+A versão PDF gerada aqui usa as fontes do site (Source Serif 4 e Instrument Sans); a
 versão Word usa Calibri, por ser universal e não depender de fontes instaladas.
 Se preferir uniformizar, é possível instalar as fontes do site no computador e
 alterá-las no Word.
@@ -538,7 +528,16 @@ consulta; e promessas de resultado, que são problemáticas do ponto de vista
 deontológico.
 
 **Ícones.** Ficheiros SVG em `assets/img/apps/`, um por aplicação disponível. As
-aplicações em preparação não têm ícone e usam ficha breve, com apenas dois campos.
+aplicações em preparação não têm ícone.
+
+**As fichas das aplicações em preparação têm apenas três coisas:** o nome, a idade
+e uma linha a dizer a quem se destina, no mesmo registo das fichas completas —
+«Para famílias em que…», «Para jovens que…». Reduzidas a 14 de agosto de 2026, por
+decisão de Ricardina Correia: descrever em detalhe uma aplicação que ainda não
+existe sugere um estado de desenvolvimento que não corresponde ao real.
+
+Não levam resumo, «Para quem» nem «Objetivos». Esses campos entram quando a
+aplicação passar a disponível e ganhar ficha completa.
 
 O sistema visual das aplicações tem documento próprio, mantido no projeto das
 ferramentas. As regras essenciais: quadrado branco, cantos a 22% da largura,
@@ -555,8 +554,8 @@ texto `#33465C`, secundário `#6E86A6`, contornos `#E2E7EF`, e os acentos magent
 turquesa, laranja e roxo. O azul `#9FB6D0` está reservado à autoria em ambos.
 
 **A tipografia é que não é partilhada, e é deliberado.** As aplicações usam uma
-pilha arredondada (`Avenir Next`, `SF Pro Rounded`, `Nunito`); o site usa Fraunces
-nos títulos e Instrument Sans no corpo. São contextos distintos — uma aplicação
+pilha arredondada (`Avenir Next`, `SF Pro Rounded`, `Nunito`); o site usa
+Source Serif 4 nos títulos e Instrument Sans no corpo. São contextos distintos — uma aplicação
 usada por uma criança e um site lido por adultos — e não devem ser uniformizados.
 
 **Fichas que abrem.** Cada ferramenta disponível está num elemento `<details>`,
@@ -716,9 +715,18 @@ Classes disponíveis: `seccao--tom-agua`, `seccao--tom-rosa`, `seccao--tom-roxo`
 
 ### Tipografia
 
-Fraunces nos títulos, com o eixo de suavidade a 25 a 30. **Não subir acima de 40**
-— acima disso as letras deformam-se e o texto parece mal formatado. O eixo `WONK`
-fica a 0, exceto no «só» do título da entrada, onde é deliberado.
+**Source Serif 4** nos títulos, Instrument Sans no corpo. A Fraunces foi
+substituída em agosto de 2026, por decisão de Ricardina Correia — era demasiado
+marcada e chamava atenção a si própria.
+
+A Source Serif tem dois eixos, `wght` e `opsz`, e nenhum equivalente ao `SOFT` e
+ao `WONK` da Fraunces. Ao mexer em `font-variation-settings`, usar apenas esses
+dois; qualquer outro eixo é ignorado em silêncio, o que faz um título ficar com
+o peso errado sem se perceber porquê.
+
+**Há um ficheiro de itálico verdadeiro** — `source-serif-latin-full-italic.woff2`
+— que a Fraunces não tinha. O «só» da entrada era inclinado artificialmente pelo
+browser; agora é itálico desenhado. Só é descarregado quando aparece na página.
 
 ### O símbolo da entrada
 
@@ -866,6 +874,12 @@ Os dez artigos escritos têm todos o seu diagrama, em `assets/img/`:
 
 Falta o das medidas de suporte, que se faz quando o artigo for reescrito para o
 novo regime, em janeiro de 2027.
+
+**Os dez diagramas continuam em Fraunces**, e assim ficam — são imagens, e
+substituem-se uma a uma se e quando fizer sentido. **O décimo primeiro, o das
+medidas de suporte, deve seguir os outros dez e ser feito em Fraunces.** O que se
+nota não é a diferença entre os diagramas e a página: é a diferença entre os
+diagramas uns dos outros.
 
 ### Como se desenha um diagrama novo
 

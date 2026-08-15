@@ -936,6 +936,22 @@ details.app[open] .app__seta { transform: rotate(180deg); }
 @media (prefers-reduced-motion: reduce) { .app__seta { transition: none; } }
 
 .app__detalhe { padding: 22px 26px 26px; }
+
+/* ---------- Cheque Cuida-te: detalhe recolhido ---------- */
+
+.cheque__mais { margin-top: 20px; border-top: 1px solid var(--linha); }
+.cheque__mais > summary {
+  display: flex; align-items: center; gap: 10px;
+  padding: 15px 0 0; cursor: pointer; list-style: none;
+  font-family: var(--display); font-size: 16px; font-weight: 500;
+  color: var(--tinta);
+}
+.cheque__mais > summary::-webkit-details-marker { display: none; }
+.cheque__mais > summary:hover { color: var(--agua); }
+.cheque__mais > summary .app__seta { margin: 0 0 0 auto; font-size: 18px; }
+.cheque__mais[open] > summary .app__seta { transform: rotate(180deg); }
+.cheque__mais-corpo { padding-top: 18px; }
+.cheque__mais-corpo > p:last-child { margin-bottom: 0; }
 .app__detalhe .app__campos { margin: 0; }
 details.app .app__resumo { margin-bottom: 0; }
 details.app .app__cabeca { margin-bottom: 8px; }
