@@ -833,21 +833,60 @@ Cada página interior tem um ícone no topo, em `assets/img/paginas/`. São SVG 
 traço simples, com a cor do tema da página, no mesmo sistema dos ícones das
 aplicações: silhueta simples, uma só cor, legível em tamanho pequeno.
 
-| Página | Ficheiro | Cor |
-|---|---|---|
-| Biblioteca | `biblioteca.svg` | magenta |
-| Ferramentas | `ferramentas.svg` | roxo |
-| Materiais | `materiais.svg` | turquesa |
-| Formações | `formacao.svg` | ocre |
-| Onde me encontrar | `encontrar.svg` | azul |
-| Onde saber mais | `recursos.svg` | laranja |
-| Sobre mim | `sobre.svg` | azul-marinho |
-| Contacto | `contacto.svg` | turquesa |
+| Página | Ficheiro | Cor | Origem |
+|---|---|---|---|
+| Biblioteca | `biblioteca.svg` | magenta `#D6336C` | desenho da Júlia |
+| Ferramentas | `ferramentas.svg` | roxo `#7B5BD6` | desenho da Júlia |
+| Materiais | `materiais.svg` | turquesa `#0E9384` | desenho da Júlia |
+| Formações | `formacao.svg` | ocre `#C2620A` | desenho da Júlia |
+| Onde saber mais | `recursos.svg` | laranja `#D97008` | desenho da Júlia |
+| Sobre mim | `sobre.svg` | azul-marinho `#2B4C7E` | desenho da Júlia |
+| Contacto | `contacto.svg` | turquesa `#0E9384` | desenho da Júlia |
+| Onde me encontrar | `encontrar.svg` | azul `#0C447C` | desenhado por código |
 
-**Estes foram desenhados por código, não à mão.** Os ícones das aplicações são
-desenhos da Júlia, vetorizados, e têm um traço irregular que estes não têm. Se
-vier a fazer sentido uniformizar, o caminho é pedir-lhe que os desenhe — o
-processo de vetorização está descrito no projeto das ferramentas.
+**Sete dos oito são desenhos à mão da Júlia, vetorizados** — não reconstruções.
+O traço irregular é deliberado, e é o mesmo princípio dos ícones das aplicações.
+Substituídos a 15 de agosto de 2026. Falta o de «Onde me encontrar», que
+continua a ser o desenhado por código e destoa dos restantes; se vier a haver
+desenho para essa página, vetoriza-se pelo mesmo processo.
+
+Cada ícone existe em duas versões com o mesmo nome: o `.svg`, que é o que as
+páginas usam, e um `.png` de 512×512 com fundo transparente, para utilizações
+fora do site. As páginas não referenciam o PNG.
+
+### Como se vetoriza um desenho novo
+
+O guião é o `icone-paginas.py`, guardado no projeto. Faz o mesmo que o dos
+ícones das aplicações — corrigir a iluminação dividindo pelo cinzento desfocado
+e aplicar Otsu, reduzir a resolução antes de traçar, engrossar o traço, e deitar
+fora os componentes com menos de 800 píxeis, que são manchas do papel.
+
+**Uma diferença em relação ao guião das aplicações, e a razão dela.** Ali a
+dilatação é fixa; aqui não pode ser. Cada desenho ocupa a folha de maneira
+diferente — o chapéu enche a página, as ferramentas atravessam-na na diagonal —
+e uma dilatação igual para todos daria traços de espessuras visivelmente
+diferentes depois de encaixados na caixa de 512. O guião mede a espessura do
+traço de cada desenho, pela transformada de distância, e dilata o necessário
+para que todos fiquem iguais.
+
+**A espessura alvo é 18 numa caixa de 512, e não mais.** Os ícones que estes
+substituíram tinham traço a 26, e experimentou-se lá chegar: a essa espessura o
+interior do desenho das ferramentas fecha-se — as bocas das chaves, o coração e
+os riscos do cabo tornam-se uma mancha. 18 é o mais grosso que ainda deixa esse
+desenho respirar, e continua legível a 72 píxeis, que é o tamanho a que aparecem.
+
+**O teste, antes de dar por bom:** reduzir a 72 píxeis e olhar para o ícone ao
+lado dos outros. É o tamanho real, e é a essa escala que se decide.
+
+Ao substituir um ícone, basta trocar o ficheiro mantendo o nome — as páginas
+não precisam de alteração. A cor vai dentro do SVG, no atributo `fill` do
+caminho, e é a do tema da página.
+
+**Crédito.** Mantém-se apenas no fim da página das ferramentas, na forma
+«Ilustrações de Júlia, 10 anos», e não foi alargado às restantes páginas. A
+questão de onde deve figurar, agora que os desenhos dela estão em quase todo o
+site, ficou em aberto — ver o ponto 22 quanto às razões da formulação, que não
+se altera para nome completo.
 
 ---
 

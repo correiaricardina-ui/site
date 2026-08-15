@@ -40,81 +40,89 @@ vier a ativar, o acompanhamento limita-se aos 18 anos.
 
 | Elemento | Estado |
 |---|---|
-| Páginas | 12 páginas + 10 artigos |
+| Endereço | **`https://ricardinacorreia.pt` — no ar, com certificado válido** |
+| Páginas | 12 páginas + 11 artigos na pasta |
 | Artigos escritos | 10, revistos clinicamente, cada um com diagrama |
 | Artigos publicados | Apenas o primeiro, «Será que já é caso para consulta?» |
-| Materiais | 10, em PDF e Word |
+| Materiais | 10, em PDF e Word; 9 publicados na página |
 | Ferramentas descritas | 9 disponíveis, 4 em preparação |
 | Recursos recomendados | 5, na página «Onde saber mais» |
 | Repositório | `correiaricardina-ui/site`, público, no GitHub |
-| Alojamento | GitHub Pages, gratuito, já a funcionar |
-| Domínio | **Registado e pago, mas por ativar** |
+| Alojamento | GitHub Pages, gratuito |
+| Formulário | Ligado à Tally, identificador `ODqq08`, carregamento ao clique |
+| Email | `geral@ricardinacorreia.pt`, criado e a receber |
 
 **As páginas:** index, biblioteca, ferramentas, materiais, recursos, formacao,
 onde-me-encontrar, sobre, contacto, online, supervisao, privacidade.
 
-**Feito a 14 de agosto:** tipografia mudada de Fraunces para Source Serif 4;
-formulário de contacto passado para a Tally, com carregamento ao clique;
-corrigida uma duplicação do bloco de arranque no `index.html` e um segundo
-cabeçalho HTML em `formacao`, `onde-me-encontrar` e `recursos`, que faziam as
-três mostrar o título do «Sobre»; retirada a ligação a um artigo por publicar
-em `materiais.html`.
+---
 
-**Feito a 15 de agosto — o site está no ar em `ricardinacorreia.pt`.**
+## Infraestrutura — como está montada
 
-- **DNS configurado** na Gestão de DNS da Dominios.pt: quatro registos A do GitHub,
-  CNAME do `www`, e um MX para `webdomain04.dnscpanel.com` com prioridade 10.
-  Os nameservers continuam os `dns1-4.host-redirect.com` — **não mudar para os do
-  cPanel**, que tomariam conta do domínio e tirariam o site do ar.
-- **Caixa `geral@ricardinacorreia.pt` criada** no cPanel, dentro do serviço «Web
-  Domain 1GB de Alojamento e Email» — o email não existe como serviço isolado.
-  IMAP e SMTP em `webdomain04.dnscpanel.com`, portas 993 e 465.
-- **Formulário de contacto ligado à Tally**, identificador `ODqq08`.
+**DNS**, na Gestão de DNS da Dominios.pt: quatro registos A do GitHub
+(185.199.108–111.153), um CNAME de `www` para `correiaricardina-ui.github.io`, e
+um MX para `webdomain04.dnscpanel.com` com prioridade 10.
 
-**Por fazer:**
+**Os nameservers continuam os `dns1-4.host-redirect.com`. Não mudar para os do
+cPanel** — tomariam conta do domínio e tirariam o site do ar.
 
-- **Enforce HTTPS** no GitHub Pages, assim que o «DNS Check» ficar verde. Enquanto
-  não estiver, o site serve por `http://` e o browser assinala-o como inseguro.
-- **Ligar a caixa `geral@`** ao Gmail ou ao Outlook, e confirmar que já recebe.
-- **Mudar o email da conta Tally** de `ricardinacorreia.lda@gmail.com` para o
-  `geral@`. No plano gratuito o aviso de nova submissão vai sempre para o email
-  da conta, pelo que basta essa alteração para os avisos passarem a chegar lá.
-- **Avisar a Dra. Inês Oliveira e a T.O. Diana Barroso** de que constam da página
-  «Onde saber mais», com fotografia. A Enf.ª Ângela Baptista já reviu o seu texto.
+**HTTPS ativo.** O «Enforce HTTPS» foi assinalado no GitHub Pages depois de o
+DNS check passar.
 
-**Desenho:** entrada assimétrica com o símbolo cérebro-coração em gradiente
-ardósia-rosa; fundo quente `#FDFBF8` com cartões brancos; cada secção com o seu
-tom em saturação muito baixa; Source Serif 4 nos títulos, com itálico
-verdadeiro no «só» da entrada.
+**Email.** A caixa `geral@` vive dentro do serviço «Web Domain 1GB de Alojamento
+e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
+`webdomain04.dnscpanel.com`, portas 993 e 465.
 
 ---
 
-## O problema do domínio
+## Feito a 15 de agosto
 
-O `ricardinacorreia.pt` foi registado a 13 de agosto de 2026 e **pago por
-referência Multibanco**, com fatura emitida pela Dominios.pt. Apesar disso, o
-estado continua «Pendente», a data de registo aparece por preencher, e a página
-de gestão diz «Domínio não ativo. Não é possível fazer alterações.»
+- DNS configurado, HTTPS ativo, site no ar no domínio próprio.
+- Caixa `geral@` criada e a receber.
+- Formulário ligado à Tally e testado de ponta a ponta: submissão, registo no
+  painel, aviso por email.
+- Avisadas as três colegas que constam da página «Onde saber mais».
+- Corrigida a ligação partida `#agenda` no rodapé da página inicial, que apontava
+  a uma secção extinta. Passou a apontar a `formacao.html`, como nas restantes
+  páginas.
+- Corrigidas as duas referências Paruthi et al. (2016) do artigo do sono, que em
+  APA 7 pedem os sufixos *2016a* e *2016b*.
+- **Ícones das páginas substituídos pelos desenhos da Júlia**, vetorizados —
+  biblioteca, ferramentas, materiais, formação, onde saber mais, sobre mim e
+  contacto. Falta o de «Onde me encontrar», que continua a ser o desenhado por
+  código.
+- Reescrito o ponto 27 do LEIA-ME, que descrevia os ícones das páginas como
+  desenhados por código. Passa a documentar a vetorização e a razão da espessura
+  de traço escolhida.
 
-**O pagamento não foi associado ao registo.** Resolve-se com um ticket de
-suporte, anexando a fatura. Enquanto não estiver ativo, não é possível
-configurar o DNS.
+---
 
-**Os registos a criar, quando ativar:**
+## Por fazer
 
-```
-Quatro registos A, nome vazio ou @
-185.199.108.153
-185.199.109.153
-185.199.110.153
-185.199.111.153
+**1 · Publicar o artigo de 22 de agosto** — «Retomar o sono antes do regresso às
+aulas». São cinco alterações coordenadas: cartão na `biblioteca.html`, cartões na
+`index.html`, mover o bloco do comentário para o array em `assets/js/destaques.js`,
+linha no `sitemap.xml`, e tornar descarregável o material «Registo de sono — três
+semanas», que está na página como «Em preparação» e cujo PDF já existe em
+`assets/materiais/`.
 
-Um registo CNAME, nome www
-correiaricardina-ui.github.io
-```
+**2 · Decidir onde fica o crédito à Júlia.** O crédito «Ilustrações de Júlia, 10
+anos» está apenas no fim da página das ferramentas, e assim ficou por decisão de
+15 de agosto. Os desenhos dela passaram a estar em quase todas as páginas do
+site, pelo que a questão fica em aberto, e não fechada.
 
-O domínio já está declarado no GitHub Pages, que é a ordem correta — declarar
-primeiro, apontar depois.
+**3 · Um ícone por desenhar** — o de «Onde me encontrar», caso se queira a série
+completa da mesma mão.
+
+---
+
+## Histórico — o registo do domínio
+
+O `ricardinacorreia.pt` foi registado e pago a 13 de agosto de 2026, mas o
+pagamento por referência Multibanco não ficou associado ao registo: o estado
+manteve-se «Pendente» e a página de gestão recusava alterações. Resolveu-se com
+um ticket de suporte à Dominios.pt, com a fatura anexada. **Fica a nota para o
+caso de a renovação, em agosto de 2027, repetir o problema.**
 
 ---
 
@@ -129,5 +137,23 @@ primeiro, apontar depois.
 - **O formulário não recolhe informação clínica.** Conservação: máximo de 12 meses,
   **por eliminação manual** — a eliminação automática é do plano Business da Tally,
   a 79 €/mês. Apagar as submissões no painel depois de responder.
+- **O `geral@` lê-se pelo webmail do cPanel, uma vez por dia, e assim fica.** O
+  Gmail já não oferece «Consultar o correio de outras contas» e a alternativa do
+  Outlook foi ponderada e recusada. **Não propor de novo ligar a caixa a outro
+  programa** sem que seja pedido.
+- **Os avisos de novas submissões da Tally continuam a ir para o
+  `ricardinacorreia.lda@gmail.com`**, que é consultado diariamente. É o inverso do
+  que estava planeado, e é deliberado: o gmail é onde se vê, o webmail é onde se
+  vai buscar.
 - **Nunca se publicam fotografias de crianças**, mesmo com autorização.
 - **A newsletter foi retirada** em agosto de 2026.
+
+---
+
+## Desenho
+
+Entrada assimétrica com o símbolo cérebro-coração em gradiente ardósia-rosa;
+fundo quente `#FDFBF8` com cartões brancos; cada secção com o seu tom em
+saturação muito baixa; Source Serif 4 nos títulos, com itálico verdadeiro no
+«só» da entrada. Os ícones do topo de cada página são desenhos à mão da Júlia,
+vetorizados, cada um na cor do tema da página.
