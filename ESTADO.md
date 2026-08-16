@@ -43,7 +43,7 @@ vier a ativar, o acompanhamento limita-se aos 18 anos.
 | Endereço | **`https://ricardinacorreia.pt` — no ar, com certificado válido** |
 | Páginas | 12 páginas + 11 artigos na pasta |
 | Artigos escritos | 10, revistos clinicamente, cada um com diagrama |
-| Ilustrações | 10 diagramas; 2 desenhos da Luísa, faltam 8; ícones da Júlia |
+| Ilustrações | 10 diagramas; 4 desenhos da Luísa, faltam 6; ícones da Júlia |
 | Artigos publicados | Apenas o primeiro, «Será que já é caso para consulta?» |
 | Materiais | 10, em PDF e Word; 9 publicados na página |
 | Ferramentas descritas | 9 disponíveis, 4 em preparação |
@@ -102,8 +102,8 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
 - **Regra nova, no ponto 28 do LEIA-ME:** cada artigo deve ter desenho e
   diagrama. Havendo desenho, ele ocupa a página inicial e a abertura do artigo, e
   o diagrama fica para o meio do texto; não havendo, o diagrama faz as duas
-  coisas. **Dois artigos têm já o desenho — o dos critérios e o do sono. Faltam
-  oito.**
+  coisas. **Quatro artigos têm já o desenho — os critérios, o sono, a preparação
+  da consulta e a devolução. Faltam seis.**
 - O artigo do sono ficou com o desenho inserido e o bloco do destaque já
   atualizado, à espera do dia 22. Continua por publicar.
 
@@ -118,11 +118,39 @@ linha no `sitemap.xml`, e tornar descarregável o material «Registo de sono —
 semanas», que está na página como «Em preparação» e cujo PDF já existe em
 `assets/materiais/`.
 
-**2 · Decidir onde fica o crédito à Júlia.** O crédito «Ilustrações de Júlia, 10
+**2 · Os desenhos que faltam.** Seis artigos ainda só têm diagrama. O ritmo
+natural é um desenho por semana, para o artigo seguinte — o de 12 de setembro,
+«Organizar-se não é feitio, é uma competência», é o próximo.
+
+**Ao publicar o de 5 de setembro, há também o vídeo da rubrica a ligar** — o Reel
+com a Dra. Marta Ezequiel, indicado no CALENDARIO-EDITORIAL, ainda por ligar.
+
+**O desenho da devolução é o primeiro com palavras escritas** — «pontos fortes» e
+«a melhorar». Os três anteriores não tinham nenhuma. Fica a nota de que a coluna
+da direita é ilustrada com duas caras em sofrimento, o que aproxima dificuldade
+de tristeza; o artigo trabalha precisamente contra essa leitura. Foi decidido
+manter, com a legenda a fazer o contrapeso.
+
+**3 · Decidir onde fica o crédito à Júlia.** O crédito «Ilustrações de Júlia, 10
 anos» está apenas no fim da página das ferramentas, e assim ficou por decisão de
 15 de agosto. Os desenhos dela passaram a estar no topo de todas as páginas do
 site, pelo que a questão fica em aberto, e não fechada. O crédito à Luísa, esse,
 ficou resolvido: vai na legenda da própria figura.
+
+**4 · Estatísticas de visitas — ponderado e adiado a 15 de agosto.** A opção
+considerada foi uma ferramenta sem cookies alojada na União Europeia (Plausible,
+Simple Analytics, Matomo), a cerca de nove euros por mês. Ficou adiada por não
+corresponder a nenhuma decisão em curso. **O que a distingue da Tally:** o
+formulário só faz pedido externo se a pessoa o abrir, e um script de estatísticas
+dispara em todas as visitas — deixaria de ser verdade que o site não faz pedidos
+a terceiros, e a política de privacidade teria de o dizer, antes de o script
+entrar e não depois. Fica ligada à reavaliação de janeiro, sobre a newsletter e o
+Instagram, que é quando a pergunta passa a ter consequência.
+
+A Search Console do Google é a alternativa gratuita e sem script na página, mas
+só vê quem chega pela pesquisa — e **não recupera o passado**: só conta a partir
+do dia em que é ligada. Se em janeiro se quiser ter alguma coisa para olhar, esse
+é o único gesto que tem de acontecer antes.
 
 ---
 

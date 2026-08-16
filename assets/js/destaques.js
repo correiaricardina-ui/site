@@ -39,8 +39,8 @@
         titulo: 'Preparar a ida à consulta de psicologia',
         resumo: 'A primeira consulta é só com os pais, e há razões clínicas para isso. É nela que se define o que vai ser avaliado.',
         ligacao: 'artigos/preparar-consulta-psicologia.html',
-        legenda: 'O que organizar antes de vir',
-        svg: '<img src="assets/img/destaque-preparar.webp" alt="Diagrama das razões pelas quais a primeira consulta é só com os pais e dos três eixos a organizar antes de vir" class="destaque__imagem" width="1000" height="1860">'
+        legenda: 'Boa parte do trabalho faz-se antes de lá chegar',
+        svg: '<img src="assets/img/desenho-preparar.webp" alt="Desenho à mão de uma figura com um saco, parada no início de um caminho de pedras, com um ponto de interrogação ao lado e um coração num balão de pensamento" class="destaque__imagem destaque__imagem--larga" width="1600" height="1148">'
       }
 
   // ── 5 set ──
@@ -49,8 +49,8 @@
         titulo: 'A devolução dos resultados e como ler um relatório',
         resumo: 'A convergência entre as fontes é o que sustenta cada conclusão — e é por isso que um relatório não se lê sozinho.',
         ligacao: 'artigos/ler-relatorio-avaliacao.html',
-        legenda: 'De onde vêm as conclusões, e como se leem',
-        svg: '<img src="assets/img/destaque-relatorio.webp" alt="Diagrama das três origens que convergem num relatório e dos dois erros de leitura mais comuns" class="destaque__imagem" width="1024" height="1536">'
+        legenda: 'As duas colunas existem sempre — o que muda está no fim',
+        svg: '<img src="assets/img/desenho-relatorio.webp" alt="Desenho à mão dividido em duas colunas, «pontos fortes» e «a melhorar», cada uma com dois quadros: à esquerda as vogais com um livro aberto e duas figuras com corações; à direita duas caras em sofrimento" class="destaque__imagem destaque__imagem--larga" width="1600" height="1196">'
       }
 
   // ── 12 set ──

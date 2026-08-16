@@ -983,15 +983,15 @@ JavaScript e prejudica quem tem movimento reduzido ativado no sistema.
 
 ### Estado das ilustrações
 
-Os dez artigos escritos têm todos o seu diagrama, em `assets/img/`. Dois têm já
-o desenho da Luísa; faltam oito.
+Os dez artigos escritos têm todos o seu diagrama, em `assets/img/`. Quatro têm já
+o desenho da Luísa; faltam seis.
 
 | Artigo | Diagrama | Desenho |
 |---|---|---|
 | Será que já é caso para consulta? | `destaque-criterios.webp` | `desenho-consulta.webp` |
 | Retomar o sono | `destaque-sono.webp` | `desenho-sono.webp` |
-| Preparar a ida à consulta | `destaque-preparar.webp` | — |
-| A devolução dos resultados | `destaque-relatorio.webp` | — |
+| Preparar a ida à consulta | `destaque-preparar.webp` | `desenho-preparar.webp` |
+| A devolução dos resultados | `destaque-relatorio.webp` | `desenho-relatorio.webp` |
 | Organizar-se não é feitio | `destaque-organizar.webp` | — |
 | «Ele consegue quando quer» | `destaque-phda.webp` | — |
 | Correu tudo bem na escola | `destaque-desaba.webp` | — |
