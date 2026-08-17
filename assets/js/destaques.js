@@ -10,7 +10,7 @@
     {
       etiqueta: 'Em destaque · Avaliação',
       titulo: '«Será que já é caso para consulta?»',
-      resumo: 'O critério não é a gravidade — é há quanto tempo dura, quanto interfere, e se o que já se fazia deixou de resultar.',
+      resumo: 'O critério não é a gravidade — é há quanto tempo dura, quanto interfere e se o que já se fazia deixou de resultar.',
       ligacao: 'artigos/porque-procurar-consulta.html',
       legenda: 'A sala que está do outro lado da decisão',
       svg: '<img src="assets/img/desenho-consulta.webp" alt="Desenho à mão de uma sala de consulta: quadros na parede, uma mesa comprida com uma criança sentada de cada lado e uma pessoa de pé entre as duas" class="destaque__imagem destaque__imagem--larga" width="1600" height="1178">'

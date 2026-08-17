@@ -941,6 +941,19 @@ em vez de flutuar sobre ela num cinzento fotográfico. Exportar em WebP a cerca 
 cena com caras, cabelos e traços finos a vetorização engrossa-os até se fecharem
 — e a textura do marcador faz parte do desenho.
 
+**Os desenhos são a marcador preto.** Decidido a 17 de agosto de 2026, depois de
+chegar um a cores. Ao pedir um desenho novo, dizê-lo — é mais fácil do que
+resolver depois.
+
+**Um desenho a cores não se aproveita.** Tentaram-se as duas conversões possíveis
+e nenhuma serve. Converter por luminância faz **desaparecer o amarelo**, que é
+claro e fica indistinguível do papel — num desenho com um sol, perde-se o sol.
+Converter pela distância à cor do papel resolve isso, mas transforma as áreas
+pintadas em manchas escuras: o mesmo sol passa a ser uma mancha preta que domina
+a imagem, e a relva uma faixa cinzenta. **Deixa de ser o desenho que a criança
+fez.** Se vier um a cores, ou se pede outro a preto, ou o artigo sai só com o
+diagrama.
+
 **Na rotação de destaques da página inicial entra o desenho, quando existe; o
 diagrama, quando não existe.** A regra mudou a 15 de agosto de 2026, e a razão
 está nas medidas: a coluna do visual tem cerca de 450 píxeis

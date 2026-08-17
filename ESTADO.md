@@ -90,6 +90,11 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
   APA 7 pedem os sufixos *2016a* e *2016b*.
 - **Os oito ícones das páginas substituídos pelos desenhos da Júlia**,
   vetorizados. Nenhum ícone do site é agora desenhado por código.
+- **Revisão ortográfica e gramatical de todas as páginas**, a partir da lista
+  enviada por Ricardina Correia: 81 correções em 14 ficheiros, quase todas
+  supressão da vírgula antes de «e». Três correções da lista caem dentro do
+  diagrama `destaque-criterios.webp` e uma dentro de um material em PDF — nenhuma
+  delas se faz por texto.
 - Reescrito o ponto 27 do LEIA-ME, que descrevia os ícones das páginas como
   desenhados por código. Passa a documentar a vetorização e a razão da espessura
   de traço escolhida.
@@ -102,8 +107,8 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
 - **Regra nova, no ponto 28 do LEIA-ME:** cada artigo deve ter desenho e
   diagrama. Havendo desenho, ele ocupa a página inicial e a abertura do artigo, e
   o diagrama fica para o meio do texto; não havendo, o diagrama faz as duas
-  coisas. **Quatro artigos têm já o desenho — os critérios, o sono, a preparação
-  da consulta e a devolução. Faltam seis.**
+  coisas. **Quatro artigos têm já o desenho — os critérios, o sono, a preparação da
+  consulta e a devolução. Faltam seis.**
 - O artigo do sono ficou com o desenho inserido e o bloco do destaque já
   atualizado, à espera do dia 22. Continua por publicar.
 
@@ -118,9 +123,14 @@ linha no `sitemap.xml`, e tornar descarregável o material «Registo de sono —
 semanas», que está na página como «Em preparação» e cujo PDF já existe em
 `assets/materiais/`.
 
-**2 · Os desenhos que faltam.** Seis artigos ainda só têm diagrama. O ritmo
-natural é um desenho por semana, para o artigo seguinte — o de 12 de setembro,
-«Organizar-se não é feitio, é uma competência», é o próximo.
+**2 · Os desenhos que faltam.** Seis artigos ainda só têm diagrama: os de 12 e 19
+de setembro, e os de 26 de setembro, 3, 10 e 17 de outubro.
+
+**Os desenhos são a marcador preto** — decidido a 17 de agosto, e a dizer sempre
+que se pedir um novo. Chegou um a cores para a PHDA e não se aproveita: as duas
+conversões possíveis ou fazem desaparecer o sol ou transformam-no numa mancha
+preta que domina a imagem. Ficou de fora do site, e o artigo da PHDA volta a ter
+só o diagrama até haver um desenho a preto.
 
 **Ao publicar o de 5 de setembro, há também o vídeo da rubrica a ligar** — o Reel
 com a Dra. Marta Ezequiel, indicado no CALENDARIO-EDITORIAL, ainda por ligar.
