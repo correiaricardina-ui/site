@@ -1,4 +1,4 @@
-# Estado do projeto — atualizado a 15 de agosto de 2026
+# Estado do projeto — atualizado a 24 de agosto de 2026
 
 Documento de referência rápida. **Atualizar sempre que houver alteração
 substancial.** O que aqui está desatualizado gera trabalho errado.
@@ -43,8 +43,8 @@ vier a ativar, o acompanhamento limita-se aos 18 anos.
 | Endereço | **`https://ricardinacorreia.pt` — no ar, com certificado válido** |
 | Páginas | 12 páginas + 11 artigos na pasta |
 | Artigos escritos | 10, revistos clinicamente, cada um com diagrama |
-| Ilustrações | 10 diagramas; 4 desenhos da Luísa, faltam 6; ícones da Júlia |
-| Artigos publicados | Apenas o primeiro, «Será que já é caso para consulta?» |
+| Ilustrações | 10 diagramas; 5 desenhos da Luísa, faltam 5; ícones da Júlia |
+| Artigos publicados | 2 — «Será que já é caso para consulta?» e «Retomar o sono» |
 | Materiais | 10, em PDF e Word; 9 publicados na página |
 | Ferramentas descritas | 9 disponíveis, 4 em preparação |
 | Recursos recomendados | 5, na página «Onde saber mais» |
@@ -114,23 +114,47 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
 
 ---
 
+## Feito a 24 de agosto
+
+- **Publicado o artigo do sono**, com dois dias de atraso sobre o sábado 22. Feitas
+  quatro das cinco alterações: cartões na `biblioteca.html` e na `index.html`,
+  filtro *Rotinas*, bloco movido para o array em `assets/js/destaques.js` e linha
+  no `sitemap.xml`. E a quinta: o material «Registo de sono — três semanas»
+  passou de «Em preparação» a descarregável na `materiais.html`, a apontar ao PDF
+  que já existia em `assets/materiais/`. O artigo já lhe ligava.
+- **Os cartões de espera deixam de ter data e passam a dizer «Em breve».** Decisão
+  de Ricardina Correia, tomada a propósito deste atraso. O ponto 18 do LEIA-ME foi
+  reescrito em conformidade. As datas continuam no calendário editorial, que é
+  interno.
+- **O artigo da PHDA ficou com desenho** — a marcador preto, desta vez. Resolve o
+  caso do desenho a cores que ficara de fora a 17 de agosto. É o primeiro desenho
+  vertical: a folha está preenchida de alto a baixo e não se recorta sem se
+  perder, pelo que leva `figura` sozinha e não `figura--larga`. O ponto 28 do
+  LEIA-ME passa a prever o caso. O artigo continua por publicar, a 19 de setembro.
+- **Retirada a função `serieSono()` do `destaques.js`.** Desenhava o gráfico da
+  versão antiga do destaque do sono e deixou de ser chamada quando esse destaque
+  passou a ser o desenho.
+- **Página «Onde saber mais»:** entrou uma caixa `chamada` com a ligação ao
+  Instagram próprio, **fora da lista de recursos** e com a razão registada no
+  ponto 26 do LEIA-ME; a etiqueta do CNS Pediatria passou de «Vídeos · Instagram»
+  a «Instagram», por a ligação ser à conta e não aos vídeos; e a
+  `<meta name="description">` foi substituída — descrevia a página como um
+  diretório de organismos oficiais, exatamente o contrário do que ficou decidido.
+
+---
+
 ## Por fazer
 
-**1 · Publicar o artigo de 22 de agosto** — «Retomar o sono antes do regresso às
-aulas». São cinco alterações coordenadas: cartão na `biblioteca.html`, cartões na
-`index.html`, mover o bloco do comentário para o array em `assets/js/destaques.js`,
-linha no `sitemap.xml`, e tornar descarregável o material «Registo de sono — três
-semanas», que está na página como «Em preparação» e cujo PDF já existe em
-`assets/materiais/`.
-
-**2 · Os desenhos que faltam.** Seis artigos ainda só têm diagrama: os de 12 e 19
-de setembro, e os de 26 de setembro, 3, 10 e 17 de outubro.
+**1 · Os desenhos que faltam.** Cinco artigos ainda só têm diagrama: o de 12 de
+setembro, e os de 26 de setembro, 3, 10 e 17 de outubro. O de 19 de setembro — a
+PHDA — passou a ter desenho a 24 de agosto.
 
 **Os desenhos são a marcador preto** — decidido a 17 de agosto, e a dizer sempre
-que se pedir um novo. Chegou um a cores para a PHDA e não se aproveita: as duas
+que se pedir um novo. Chegou um a cores para a PHDA e não se aproveitou: as duas
 conversões possíveis ou fazem desaparecer o sol ou transformam-no numa mancha
-preta que domina a imagem. Ficou de fora do site, e o artigo da PHDA volta a ter
-só o diagrama até haver um desenho a preto.
+preta que domina a imagem. **Resolveu-se a 24 de agosto**, com um desenho novo a
+preto, já inserido no artigo. O caso fica registado porque a razão continua a
+valer para os próximos.
 
 **Ao publicar o de 5 de setembro, há também o vídeo da rubrica a ligar** — o Reel
 com a Dra. Marta Ezequiel, indicado no CALENDARIO-EDITORIAL, ainda por ligar.
@@ -141,13 +165,13 @@ da direita é ilustrada com duas caras em sofrimento, o que aproxima dificuldade
 de tristeza; o artigo trabalha precisamente contra essa leitura. Foi decidido
 manter, com a legenda a fazer o contrapeso.
 
-**3 · Decidir onde fica o crédito à Júlia.** O crédito «Ilustrações de Júlia, 10
+**2 · Decidir onde fica o crédito à Júlia.** O crédito «Ilustrações de Júlia, 10
 anos» está apenas no fim da página das ferramentas, e assim ficou por decisão de
 15 de agosto. Os desenhos dela passaram a estar no topo de todas as páginas do
 site, pelo que a questão fica em aberto, e não fechada. O crédito à Luísa, esse,
 ficou resolvido: vai na legenda da própria figura.
 
-**4 · Estatísticas de visitas — ponderado e adiado a 15 de agosto.** A opção
+**3 · Estatísticas de visitas — ponderado e adiado a 15 de agosto.** A opção
 considerada foi uma ferramenta sem cookies alojada na União Europeia (Plausible,
 Simple Analytics, Matomo), a cerca de nove euros por mês. Ficou adiada por não
 corresponder a nenhuma decisão em curso. **O que a distingue da Tally:** o

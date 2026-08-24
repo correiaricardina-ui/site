@@ -424,8 +424,15 @@ Para publicar o artigo da semana, quatro alterações:
 1. **`biblioteca.html`** — converter o cartão *a publicar* num cartão real
    (mudar `<div class="artigo-cartao artigo-cartao--espera">` para
    `<a class="artigo-cartao" href="artigos/nome.html">`, fechar com `</a>`, e
-   trocar «A publicar · data» pelo tempo de leitura). Acrescentar de seguida um
-   novo cartão *a publicar* para o artigo seguinte, com a data.
+   trocar o rótulo de espera pelo tempo de leitura). Acrescentar de seguida um
+   novo cartão *a publicar* para o artigo seguinte.
+
+   **O cartão de espera diz «Em breve» e nunca a data.** Decidido a 24 de agosto
+   de 2026, depois de o artigo do sono sair com dois dias de atraso: uma data
+   anunciada é um compromisso público, e qualquer desvio fica visível para quem
+   passa pela página. «Em breve» diz o mesmo sem criar prazo. O título do artigo
+   seguinte mantém-se — é o que dá conteúdo ao cartão. As datas continuam a
+   existir no `CALENDARIO-EDITORIAL.md`, que é interno.
 2. **`index.html`** — a mesma operação nos dois cartões da secção *Da biblioteca*.
 3. **`assets/js/destaques.js`** — **mover** o bloco do artigo do comentário para
    dentro do array `destaques`. Os blocos dos dez artigos estão já escritos, num
@@ -825,6 +832,25 @@ noutra qualquer.
 A caixa final declara que são páginas externas e que a inclusão não significa
 vínculo nem parceria, salvo onde se indica. Manter essa nota.
 
+### A caixa «Também no Instagram» não é um recurso
+
+Entre a lista e a caixa final há um bloco `chamada` com a ligação à conta de
+Ricardina Correia. **Está deliberadamente fora da lista, e assim deve ficar.**
+
+Os blocos `achado` têm um segundo parágrafo que diz porque é que o recurso vale a
+pena e a quem se recomenda. Escrito pela própria sobre a própria conta, isso é
+autoelogio — e a caixa final declara que aquilo são páginas de terceiros. Uma
+entrada própria no meio das recomendações contradiz a página e tira-lhe o valor,
+que está na escolha.
+
+**Não acrescentar a conta à lista de `achado`, mesmo que a lista cresça.** Se um
+dia parecer pouco visível onde está, o caminho é o rodapé ou a página de
+contacto, não a lista.
+
+A conta do CNS Pediatria é caso diferente e está na lista com razão: a rubrica é
+da equipa, não dela, e a participação é referida no texto. É o «salvo onde se
+indica» da caixa final a funcionar.
+
 ---
 
 ## 27. Ícones ilustrados das páginas
@@ -915,9 +941,16 @@ O objetivo é que todos os artigos venham a ter os dois. Enquanto não tiverem, 
 rotação da página inicial mistura desenhos e diagramas, e não há problema nisso —
 o que não se deve fazer é publicar um artigo sem nenhuma imagem.
 
-**Os diagramas são verticais; os desenhos, deitados.** Uma figura deitada leva a
-classe `figura--larga` além de `figura`, sem a qual o limite de altura pensado
-para os diagramas verticais lhe daria uma largura acima da coluna de leitura.
+**Os diagramas são verticais; os desenhos, habitualmente deitados.** Uma figura
+deitada leva a classe `figura--larga` além de `figura`, sem a qual o limite de
+altura pensado para os diagramas verticais lhe daria uma largura acima da coluna
+de leitura.
+
+**Um desenho vertical leva `figura` sozinha**, como os diagramas. Em
+`figura--larga` passaria dos mil píxeis de altura no ecrã e empurraria o texto
+para muito abaixo da dobra. O primeiro caso foi o da PHDA, em agosto de 2026: a
+criança preencheu a folha de alto a baixo, e o desenho não se recorta sem se
+perder. A orientação é do desenho, não uma escolha de quem o insere.
 
 ### Autoria
 

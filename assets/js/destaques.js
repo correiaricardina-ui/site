@@ -14,6 +14,14 @@
       ligacao: 'artigos/porque-procurar-consulta.html',
       legenda: 'A sala que está do outro lado da decisão',
       svg: '<img src="assets/img/desenho-consulta.webp" alt="Desenho à mão de uma sala de consulta: quadros na parede, uma mesa comprida com uma criança sentada de cada lado e uma pessoa de pé entre as duas" class="destaque__imagem destaque__imagem--larga" width="1600" height="1178">'
+    },
+    {
+      etiqueta: 'Em destaque · Rotinas',
+      titulo: 'Retomar o sono antes do regresso às aulas',
+      resumo: 'O horário ajusta-se em duas semanas. O que costuma demorar mais é o que acontece entre as pessoas na hora de deitar.',
+      ligacao: 'artigos/sono-regresso-as-aulas.html',
+      legenda: 'O que se quer de volta, antes de se falar de horários',
+      svg: '<img src="assets/img/desenho-sono.webp" alt="Desenho à mão de uma figura adormecida, enrolada dentro de um coração grande, rodeada de estrelas" class="destaque__imagem destaque__imagem--larga" width="1600" height="1200">'
     }
   ];
 
@@ -22,16 +30,6 @@
      Ao publicar, mover o bloco respetivo para dentro do array acima
      e fazer as restantes alterações do ponto 18 do LEIA-ME.
      ═══════════════════════════════════════════════════════════════
-
-  // ── 22 ago ──
-  {
-        etiqueta: 'Em destaque · Rotinas',
-        titulo: 'Retomar o sono antes do regresso às aulas',
-        resumo: 'O horário ajusta-se em duas semanas. O que costuma demorar mais é o que acontece entre as pessoas na hora de deitar.',
-        ligacao: 'artigos/sono-regresso-as-aulas.html',
-        legenda: 'O que se quer de volta, antes de se falar de horários',
-        svg: '<img src="assets/img/desenho-sono.webp" alt="Desenho à mão de uma figura adormecida, enrolada dentro de um coração grande, rodeada de estrelas" class="destaque__imagem destaque__imagem--larga" width="1600" height="1200">'
-      }
 
   // ── 29 ago ──
   {
@@ -69,8 +67,8 @@
         titulo: '«Ele consegue quando quer»',
         resumo: 'Não é uma dificuldade em saber o que fazer. É uma dificuldade em fazer aquilo que se sabe — e isso muda o que ajuda.',
         ligacao: 'artigos/phda-consegue-quando-quer.html',
-        legenda: 'A mesma criança, em condições opostas',
-        svg: '<img src="assets/img/destaque-phda.webp" alt="Diagrama das condições em que o desempenho melhora e em que piora, e do que daí decorre para a intervenção" class="destaque__imagem" width="1024" height="1536">'
+        legenda: 'Uma folha inteira preenchida ao pormenor',
+        svg: '<img src="assets/img/desenho-phda.webp" alt="Desenho à mão de uma menina de cabelo comprido e olhos em forma de coração, a segurar uma pequena figura com coroa, rodeada de um coração, uma estrela e uma figura com asas" class="destaque__imagem" width="1600" height="2182">'
       }
 
   // ── 26 set ──
@@ -115,20 +113,6 @@
 
   ═══════════════════════════════════════════════════════════════ */
 
-
-  // Constrói a série de pontos do gráfico do sono
-  function serieSono() {
-    var horas = [0, 23.75, 23.5, 23.25, 23, 22.75, 22.5, 22.25, 22, 21.75, 21.5, 21.25, 21, 21];
-    var partes = [], caminho = [];
-    for (var i = 0; i < horas.length; i++) {
-      var x = 68 + i * 28;
-      var h = horas[i] === 0 ? 24 : horas[i];
-      var y = 38 + (24 - h) / 3 * 158;
-      caminho.push((i === 0 ? 'M' : 'L') + x + ' ' + y);
-      partes.push('<circle class="dv-ponto" cx="' + x + '" cy="' + y + '" r="3.5"/>');
-    }
-    return '<path d="' + caminho.join(' ') + '" fill="none" stroke="#7B5BD6" stroke-width="1.6" stroke-linejoin="round"/>' + partes.join('');
-  }
 
   var visual = document.getElementById('destaque-visual');
   if (!visual) return;
