@@ -280,6 +280,22 @@ por
 <a class="material__descarregar" href="assets/materiais/rotina-visual.pdf" download><svg class="icone" aria-hidden="true"><use href="#i-download"/></svg>Descarregar</a>
 ```
 
+### Cada material tem um identificador
+
+Cada bloco `<article class="material">` leva um `id` — `registo-de-sono`,
+`antes-de-pedir-avaliacao` — para poder ser ligado diretamente, com
+`materiais.html#registo-de-sono`. É o que o cartão *Material* da secção
+*Novidades* usa: sem isso, quem clicasse caía numa página com dez materiais e
+tinha de procurar o que o cartão anunciava.
+
+Ao acrescentar um material, dar-lhe um `id` em minúsculas e com hífenes, e
+manter o `style="scroll-margin-top:96px"` — sem ele o cabeçalho fixo tapa o
+material ao saltar para a âncora.
+
+**Os filtros não interferem**, porque a página abre sempre em *Todos*. Se um dia
+passar a abrir num tema, uma âncora para um material fora desse tema apontaria a
+um bloco escondido.
+
 **Código QR:** os materiais impressos não incluem código QR. O acesso à página é
 feito por código apresentado nos diapositivos das sessões, gerado à parte, a
 apontar para `https://ricardinacorreia.pt/materiais.html`. Convém que o código
@@ -442,6 +458,10 @@ Para publicar o artigo da semana, quatro alterações:
    restantes, a página inicial passa a mostrar e a ligar artigos que ainda não
    saíram — e qualquer pessoa lhes acede.
 4. **`sitemap.xml`** — acrescentar a linha do artigo.
+5. **`index.html`, secção *Novidades*** — se o artigo trouxer material novo,
+   substituir o cartão *Material*. A secção é manual e não se atualiza sozinha
+   (ponto 25). Foi esquecida na publicação de 24 de agosto: o cartão continuava a
+   mostrar um material de duas semanas antes.
 
 **Filtros.** Só devem estar visíveis os temas com artigos publicados. À medida
 que os artigos saem, acrescentar os filtros correspondentes em `biblioteca.html`.

@@ -121,7 +121,11 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
   filtro *Rotinas*, bloco movido para o array em `assets/js/destaques.js` e linha
   no `sitemap.xml`. E a quinta: o material «Registo de sono — três semanas»
   passou de «Em preparação» a descarregável na `materiais.html`, a apontar ao PDF
-  que já existia em `assets/materiais/`. O artigo já lhe ligava.
+  que já existia em `assets/materiais/`. O artigo já lhe ligava. O cartão
+  *Material* da secção *Novidades* da página inicial passou a mostrá-lo — essa
+  secção é manual, e o ponto 18 do LEIA-ME passa a lembrá-lo. Os materiais
+  passaram a ter identificador próprio, para o cartão poder ligar ao item e não
+  à página inteira.
 - **Os cartões de espera deixam de ter data e passam a dizer «Em breve».** Decisão
   de Ricardina Correia, tomada a propósito deste atraso. O ponto 18 do LEIA-ME foi
   reescrito em conformidade. As datas continuam no calendário editorial, que é
