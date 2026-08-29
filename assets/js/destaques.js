@@ -22,6 +22,14 @@
       ligacao: 'artigos/sono-regresso-as-aulas.html',
       legenda: 'O que se quer de volta, antes de se falar de horários',
       svg: '<img src="assets/img/desenho-sono.webp" alt="Desenho à mão de uma figura adormecida, enrolada dentro de um coração grande, rodeada de estrelas" class="destaque__imagem destaque__imagem--larga" width="1600" height="1200">'
+    },
+    {
+      etiqueta: 'Em destaque · Avaliação',
+      titulo: 'Preparar a ida à consulta de psicologia',
+      resumo: 'A primeira consulta é só com os pais, e há razões clínicas para isso. É nela que se define o que vai ser avaliado.',
+      ligacao: 'artigos/preparar-consulta-psicologia.html',
+      legenda: 'Boa parte do trabalho faz-se antes de lá chegar',
+      svg: '<img src="assets/img/desenho-preparar.webp" alt="Desenho à mão de uma figura com um saco, parada no início de um caminho de pedras, com um ponto de interrogação ao lado e um coração num balão de pensamento" class="destaque__imagem destaque__imagem--larga" width="1600" height="1148">'
     }
   ];
 
@@ -30,16 +38,6 @@
      Ao publicar, mover o bloco respetivo para dentro do array acima
      e fazer as restantes alterações do ponto 18 do LEIA-ME.
      ═══════════════════════════════════════════════════════════════
-
-  // ── 29 ago ──
-  {
-        etiqueta: 'Em destaque · Avaliação',
-        titulo: 'Preparar a ida à consulta de psicologia',
-        resumo: 'A primeira consulta é só com os pais, e há razões clínicas para isso. É nela que se define o que vai ser avaliado.',
-        ligacao: 'artigos/preparar-consulta-psicologia.html',
-        legenda: 'Boa parte do trabalho faz-se antes de lá chegar',
-        svg: '<img src="assets/img/desenho-preparar.webp" alt="Desenho à mão de uma figura com um saco, parada no início de um caminho de pedras, com um ponto de interrogação ao lado e um coração num balão de pensamento" class="destaque__imagem destaque__imagem--larga" width="1600" height="1148">'
-      }
 
   // ── 5 set ──
   {

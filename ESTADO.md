@@ -1,4 +1,4 @@
-# Estado do projeto — atualizado a 24 de agosto de 2026
+# Estado do projeto — atualizado a 29 de agosto de 2026
 
 Documento de referência rápida. **Atualizar sempre que houver alteração
 substancial.** O que aqui está desatualizado gera trabalho errado.
@@ -44,8 +44,8 @@ vier a ativar, o acompanhamento limita-se aos 18 anos.
 | Páginas | 12 páginas + 11 artigos na pasta |
 | Artigos escritos | 10, revistos clinicamente, cada um com diagrama |
 | Ilustrações | 10 diagramas; 5 desenhos da Luísa, faltam 5; ícones da Júlia |
-| Artigos publicados | 2 — «Será que já é caso para consulta?» e «Retomar o sono» |
-| Materiais | 10, em PDF e Word; 9 publicados na página |
+| Artigos publicados | 3 — até «Preparar a ida à consulta de psicologia» |
+| Materiais | 10, em PDF e Word; 3 visíveis na página, os restantes saem com o artigo que acompanham |
 | Ferramentas descritas | 9 disponíveis, 4 em preparação |
 | Recursos recomendados | 5, na página «Onde saber mais» |
 | Repositório | `correiaricardina-ui/site`, público, no GitHub |
@@ -147,9 +147,41 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
 
 ---
 
+## Feito a 29 de agosto
+
+- **Publicado «Preparar a ida à consulta de psicologia»**, a horas. As cinco
+  alterações: cartões na `biblioteca.html` e na `index.html`, bloco movido para o
+  array em `assets/js/destaques.js`, linha no `sitemap.xml`, e o material
+  «Preparar a primeira consulta» reposto na `materiais.html`, com identificador
+  próprio, a que o cartão *Material* das *Novidades* passa a ligar.
+- O cartão de espera seguinte é «A devolução dos resultados e como ler um
+  relatório», sem data, como ficou regra a 24 de agosto.
+- **A página inicial tem agora quatro cartões de artigo** na secção da biblioteca,
+  e cresce um por semana. Fica por decidir se passa a mostrar apenas o último
+  publicado e o seguinte — ver «Por fazer».
+- **O artigo liga a «A devolução dos resultados», que só sai a 5 de setembro.**
+  A ligação estava escrita no artigo e foi mantida; torna esse texto alcançável
+  uma semana antes da data. Ver «Por fazer».
+
+---
+
 ## Por fazer
 
-**1 · Os desenhos que faltam.** Cinco artigos ainda só têm diagrama: o de 12 de
+**1 · Duas decisões abertas na publicação de 29 de agosto.**
+
+*A ligação antecipada.* «Preparar a ida à consulta» termina a remeter para «A
+devolução dos resultados», previsto para 5 de setembro. O ficheiro existe e a
+ligação funciona, pelo que esse artigo passa a estar acessível a quem clicar,
+sem constar de nenhuma lista. Ou se aceita — a sequência foi desenhada para se
+referenciar — ou se retira o parágrafo final até dia 5. Fica como está até haver
+decisão.
+
+*Os cartões da página inicial.* São quatro, e o calendário traz mais nove. A
+alternativa é mostrar só o último publicado e o «Em breve», deixando os
+anteriores para a biblioteca, o que é mais coerente com o princípio de que a
+entrada encaminha em vez de repetir o site.
+
+**2 · Os desenhos que faltam.** Cinco artigos ainda só têm diagrama: o de 12 de
 setembro, e os de 26 de setembro, 3, 10 e 17 de outubro. O de 19 de setembro — a
 PHDA — passou a ter desenho a 24 de agosto.
 
@@ -169,13 +201,13 @@ da direita é ilustrada com duas caras em sofrimento, o que aproxima dificuldade
 de tristeza; o artigo trabalha precisamente contra essa leitura. Foi decidido
 manter, com a legenda a fazer o contrapeso.
 
-**2 · Decidir onde fica o crédito à Júlia.** O crédito «Ilustrações de Júlia, 10
+**3 · Decidir onde fica o crédito à Júlia.** O crédito «Ilustrações de Júlia, 10
 anos» está apenas no fim da página das ferramentas, e assim ficou por decisão de
 15 de agosto. Os desenhos dela passaram a estar no topo de todas as páginas do
 site, pelo que a questão fica em aberto, e não fechada. O crédito à Luísa, esse,
 ficou resolvido: vai na legenda da própria figura.
 
-**3 · Estatísticas de visitas — ponderado e adiado a 15 de agosto.** A opção
+**4 · Estatísticas de visitas — ponderado e adiado a 15 de agosto.** A opção
 considerada foi uma ferramenta sem cookies alojada na União Europeia (Plausible,
 Simple Analytics, Matomo), a cerca de nove euros por mês. Ficou adiada por não
 corresponder a nenhuma decisão em curso. **O que a distingue da Tally:** o
