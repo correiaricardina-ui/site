@@ -1,4 +1,4 @@
-# Estado do projeto — atualizado a 29 de agosto de 2026
+# Estado do projeto — atualizado a 5 de setembro de 2026
 
 Documento de referência rápida. **Atualizar sempre que houver alteração
 substancial.** O que aqui está desatualizado gera trabalho errado.
@@ -43,8 +43,8 @@ vier a ativar, o acompanhamento limita-se aos 18 anos.
 | Endereço | **`https://ricardinacorreia.pt` — no ar, com certificado válido** |
 | Páginas | 12 páginas + 11 artigos na pasta |
 | Artigos escritos | 10, revistos clinicamente, cada um com diagrama |
-| Ilustrações | 10 diagramas; 5 desenhos da Luísa, faltam 5; ícones da Júlia |
-| Artigos publicados | 3 — até «Preparar a ida à consulta de psicologia» |
+| Ilustrações | 10 diagramas; 8 desenhos da Luísa, faltam 2; ícones da Júlia |
+| Artigos publicados | 4 — até «E se ele não se adaptar?» |
 | Materiais | 10, em PDF e Word; 3 visíveis na página, os restantes saem com o artigo que acompanham |
 | Ferramentas descritas | 9 disponíveis, 4 em preparação |
 | Recursos recomendados | 5, na página «Onde saber mais» |
@@ -165,25 +165,58 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
 
 ---
 
+## Feito a 5 de setembro
+
+- **O calendário de setembro foi reordenado**, a pedido de Ricardina Correia. O
+  critério deixou de ser a sequência do percurso e passou a ser qual das janelas
+  fecha primeiro: «E se ele não se adaptar?» está construído sobre as semanas
+  anteriores ao primeiro dia de aulas, e esse momento acaba nesta semana. A nova
+  ordem é **5 set** adaptação, **12 set** organização, **19 set** PHDA com os cinco
+  materiais, **26 set** o desaba, **3 out** a devolução. «A reunião na escola» e
+  «Manhãs difíceis» ficam onde estavam.
+- **Publicado «E se ele não se adaptar?»** — cartões na `biblioteca.html` e na
+  `index.html`, filtro *Emoções*, bloco no array do `destaques.js` com o desenho,
+  e linha no `sitemap.xml`.
+- **Retirada a ligação antecipada** para «A devolução dos resultados», no fim de
+  «Preparar a ida à consulta». Decisão de Ricardina Correia entre as três saídas
+  postas: manter, formalizar a publicação, ou retirar. O texto do parágrafo
+  mantém-se e passa a anunciar em vez de entregar; o código original ficou em
+  comentário no ficheiro, para repor quando o artigo sair.
+- **A ligação recíproca do par foi neutralizada.** «E se ele não se adaptar?» e
+  «Correu tudo bem na escola» remetem um para o outro; publicar o primeiro tornava
+  o segundo alcançável durante três semanas. A caixa mantém-se com a pergunta que
+  lança, o destino passa a «Em breve», e o original fica em comentário com a
+  indicação de repor a 26 de setembro.
+- **Três desenhos novos da Luísa**, todos a marcador preto: a escola com a
+  despedida à porta (`desenho-pais.webp`), a mochila com o material todo fora
+  (`desenho-organizar.webp`) e os dois painéis escola/casa
+  (`desenho-desaba.webp`). Os dois últimos ficam em `assets/img/` à espera dos
+  sábados de 12 e 26.
+- **O telhado da escola sai da folha, por opção da autora do desenho.** Não é
+  defeito da fotografia, e não se substitui. Tem consequência técnica — ver o
+  ponto 28 do LEIA-ME.
+- **Regra nova no processamento dos desenhos:** descartar os componentes cuja
+  caixa toca a margem da imagem, que são sombras do bordo da folha e passam o
+  filtro dos 800 píxeis. Não é automática — no desenho da escola teria comido o
+  telhado.
+
+---
+
 ## Por fazer
 
-**1 · Duas decisões abertas na publicação de 29 de agosto.**
-
-*A ligação antecipada.* «Preparar a ida à consulta» termina a remeter para «A
-devolução dos resultados», previsto para 5 de setembro. O ficheiro existe e a
-ligação funciona, pelo que esse artigo passa a estar acessível a quem clicar,
-sem constar de nenhuma lista. Ou se aceita — a sequência foi desenhada para se
-referenciar — ou se retira o parágrafo final até dia 5. Fica como está até haver
-decisão.
-
-*Os cartões da página inicial.* São quatro, e o calendário traz mais nove. A
+**1 · Os cartões da página inicial.** São cinco, e o calendário traz mais seis. A
 alternativa é mostrar só o último publicado e o «Em breve», deixando os
 anteriores para a biblioteca, o que é mais coerente com o princípio de que a
-entrada encaminha em vez de repetir o site.
+entrada encaminha em vez de repetir o site. **A decisão sobre a ligação
+antecipada ficou resolvida a 5 de setembro** — retirou-se.
 
-**2 · Os desenhos que faltam.** Cinco artigos ainda só têm diagrama: o de 12 de
-setembro, e os de 26 de setembro, 3, 10 e 17 de outubro. O de 19 de setembro — a
-PHDA — passou a ter desenho a 24 de agosto.
+**1a · Uma divergência de cor por resolver.** O tema *Rotinas* aparece com
+`etiqueta--ocre` dentro do artigo «Organizar-se» e com `etiqueta--roxo` nos
+cartões da biblioteca. Nos cartões seguiu-se a biblioteca, para a página ficar
+coerente consigo mesma. Falta decidir qual das duas fica.
+
+**2 · Os desenhos que faltam.** Dois artigos ainda só têm diagrama: «A reunião na
+escola», de 10 de outubro, e «Manhãs difíceis», de 17.
 
 **Os desenhos são a marcador preto** — decidido a 17 de agosto, e a dizer sempre
 que se pedir um novo. Chegou um a cores para a PHDA e não se aproveitou: as duas
@@ -192,8 +225,8 @@ preta que domina a imagem. **Resolveu-se a 24 de agosto**, com um desenho novo a
 preto, já inserido no artigo. O caso fica registado porque a razão continua a
 valer para os próximos.
 
-**Ao publicar o de 5 de setembro, há também o vídeo da rubrica a ligar** — o Reel
-com a Dra. Marta Ezequiel, indicado no CALENDARIO-EDITORIAL, ainda por ligar.
+**Ao publicar a devolução, a 3 de outubro, há também o vídeo da rubrica a ligar**
+— o Reel com a Dra. Marta Ezequiel, indicado no CALENDARIO-EDITORIAL.
 
 **O desenho da devolução é o primeiro com palavras escritas** — «pontos fortes» e
 «a melhorar». Os três anteriores não tinham nenhuma. Fica a nota de que a coluna

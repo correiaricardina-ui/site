@@ -30,6 +30,14 @@
       ligacao: 'artigos/preparar-consulta-psicologia.html',
       legenda: 'Boa parte do trabalho faz-se antes de lá chegar',
       svg: '<img src="assets/img/desenho-preparar.webp" alt="Desenho à mão de uma figura com um saco, parada no início de um caminho de pedras, com um ponto de interrogação ao lado e um coração num balão de pensamento" class="destaque__imagem destaque__imagem--larga" width="1600" height="1148">'
+    },
+    {
+      etiqueta: 'Em destaque · Emoções',
+      titulo: 'E se ele não se adaptar?',
+      resumo: 'Nas mudanças de ciclo, quem passa pior noite é frequentemente o adulto. E isso tem efeitos que vale a pena conhecer.',
+      ligacao: 'artigos/ansiedade-dos-pais-transicoes.html',
+      legenda: 'A despedida também custa a quem fica',
+      svg: '<img src="assets/img/desenho-pais.webp" alt="Desenho à mão de uma escola com o letreiro «escola» e as portas orladas de corações, uma criança à entrada a mandar beijos e uma figura adulta do lado de fora a responder com o mesmo gesto" class="destaque__imagem destaque__imagem--larga" width="1600" height="1200">'
     }
   ];
 
@@ -38,16 +46,6 @@
      Ao publicar, mover o bloco respetivo para dentro do array acima
      e fazer as restantes alterações do ponto 18 do LEIA-ME.
      ═══════════════════════════════════════════════════════════════
-
-  // ── 5 set ──
-  {
-        etiqueta: 'Em destaque · Avaliação',
-        titulo: 'A devolução dos resultados e como ler um relatório',
-        resumo: 'A convergência entre as fontes é o que sustenta cada conclusão — e é por isso que um relatório não se lê sozinho.',
-        ligacao: 'artigos/ler-relatorio-avaliacao.html',
-        legenda: 'As duas colunas existem sempre — o que muda está no fim',
-        svg: '<img src="assets/img/desenho-relatorio.webp" alt="Desenho à mão dividido em duas colunas, «pontos fortes» e «a melhorar», cada uma com dois quadros: à esquerda as vogais com um livro aberto e duas figuras com corações; à direita duas caras em sofrimento" class="destaque__imagem destaque__imagem--larga" width="1600" height="1196">'
-      }
 
   // ── 12 set ──
   {
@@ -81,12 +79,12 @@
 
   // ── 3 out ──
   {
-        etiqueta: 'Em destaque · Emoções',
-        titulo: 'E se ele não se adaptar?',
-        resumo: 'Nas mudanças de ciclo, quem passa pior noite é frequentemente o adulto. E isso tem efeitos que vale a pena conhecer.',
-        ligacao: 'artigos/ansiedade-dos-pais-transicoes.html',
-        legenda: 'A acomodação familiar, e porque se desfaz',
-        svg: '<img src="assets/img/destaque-pais.webp" alt="Diagrama da acomodação familiar, do mecanismo que a mantém e da combinação que a evidência aponta" class="destaque__imagem" width="921" height="1707">'
+        etiqueta: 'Em destaque · Avaliação',
+        titulo: 'A devolução dos resultados e como ler um relatório',
+        resumo: 'A convergência entre as fontes é o que sustenta cada conclusão — e é por isso que um relatório não se lê sozinho.',
+        ligacao: 'artigos/ler-relatorio-avaliacao.html',
+        legenda: 'As duas colunas existem sempre — o que muda está no fim',
+        svg: '<img src="assets/img/desenho-relatorio.webp" alt="Desenho à mão dividido em duas colunas, «pontos fortes» e «a melhorar», cada uma com dois quadros: à esquerda as vogais com um livro aberto e duas figuras com corações; à direita duas caras em sofrimento" class="destaque__imagem destaque__imagem--larga" width="1600" height="1196">'
       }
 
   // ── 10 out ──

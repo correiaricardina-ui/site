@@ -458,6 +458,18 @@ Para publicar o artigo da semana, quatro alterações:
    restantes, a página inicial passa a mostrar e a ligar artigos que ainda não
    saíram — e qualquer pessoa lhes acede.
 4. **`sitemap.xml`** — acrescentar a linha do artigo.
+
+**Ligações a artigos ainda não publicados.** Os artigos remetem uns para os
+outros, e alguns remetem para os que saem depois. Publicar um artigo que aponte
+para outro por publicar torna esse outro alcançável a quem clique, sem constar de
+lista nenhuma — que é precisamente o que este ponto procura evitar.
+
+Ao publicar, procurar no artigo as ligações a ficheiros de `artigos/` e, para
+cada uma que aponte a um texto ainda por sair, substituir a ligação por «Em
+breve», mantendo a frase. **Deixar o código original em comentário HTML, com a
+data em que se repõe** — assim a reposição não depende de ninguém se lembrar.
+Feito pela primeira vez a 5 de setembro de 2026, no par «E se ele não se
+adaptar?» / «Correu tudo bem na escola», que se remetem nos dois sentidos.
 5. **`index.html`, secção *Novidades*** — se o artigo trouxer material novo,
    substituir o cartão *Material*. A secção é manual e não se atualiza sozinha
    (ponto 25). Foi esquecida na publicação de 24 de agosto: o cartão continuava a
@@ -1007,6 +1019,16 @@ a imagem, e a relva uma faixa cinzenta. **Deixa de ser o desenho que a criança
 fez.** Se vier um a cores, ou se pede outro a preto, ou o artigo sai só com o
 diagrama.
 
+**Descartar os componentes que tocam a margem da imagem.** Além dos que têm menos
+de 800 píxeis, que são manchas do papel, há um segundo caso: a sombra do bordo da
+folha, que sai como faixa comprida e fina e tem área que sobra para passar o
+filtro. Publicada, lê-se como um traço a atravessar o desenho.
+
+**Esta regra não é automática.** No desenho da escola, de setembro de 2026, o
+telhado sai da folha de propósito, e a regra tê-lo-ia apagado inteiro. Aplica-se
+quando o que toca a margem é sombra de papel — e olha-se para a prova antes de
+dar por bom.
+
 **Na rotação de destaques da página inicial entra o desenho, quando existe; o
 diagrama, quando não existe.** A regra mudou a 15 de agosto de 2026, e a razão
 está nas medidas: a coluna do visual tem cerca de 450 píxeis
@@ -1049,8 +1071,8 @@ JavaScript e prejudica quem tem movimento reduzido ativado no sistema.
 
 ### Estado das ilustrações
 
-Os dez artigos escritos têm todos o seu diagrama, em `assets/img/`. Quatro têm já
-o desenho da Luísa; faltam seis.
+Os dez artigos escritos têm todos o seu diagrama, em `assets/img/`. Oito têm já
+o desenho da Luísa; faltam dois.
 
 | Artigo | Diagrama | Desenho |
 |---|---|---|
@@ -1058,10 +1080,10 @@ o desenho da Luísa; faltam seis.
 | Retomar o sono | `destaque-sono.webp` | `desenho-sono.webp` |
 | Preparar a ida à consulta | `destaque-preparar.webp` | `desenho-preparar.webp` |
 | A devolução dos resultados | `destaque-relatorio.webp` | `desenho-relatorio.webp` |
-| Organizar-se não é feitio | `destaque-organizar.webp` | — |
-| «Ele consegue quando quer» | `destaque-phda.webp` | — |
-| Correu tudo bem na escola | `destaque-desaba.webp` | — |
-| E se ele não se adaptar? | `destaque-pais.webp` | — |
+| Organizar-se não é feitio | `destaque-organizar.webp` | `desenho-organizar.webp` |
+| «Ele consegue quando quer» | `destaque-phda.webp` | `desenho-phda.webp` |
+| Correu tudo bem na escola | `destaque-desaba.webp` | `desenho-desaba.webp` |
+| E se ele não se adaptar? | `destaque-pais.webp` | `desenho-pais.webp` |
 | A reunião na escola | `destaque-reuniao.webp` | — |
 | Manhãs difíceis | `destaque-manhas.webp` | — |
 
