@@ -1,0 +1,141 @@
+/* Ricardina Correia — destaque rotativo da página inicial
+   Cada artigo tem uma ilustração própria. A rotação é diária: dentro do mesmo
+   dia todos veem o mesmo destaque, e a cada dia muda. Assim quem regressa
+   encontra novidade, sem que a página mude a meio de uma partilha. */
+
+(function () {
+  'use strict';
+
+  var destaques = [
+    {
+      etiqueta: 'Em destaque · Avaliação',
+      titulo: '«Será que já é caso para consulta?»',
+      resumo: 'O critério não é a gravidade — é há quanto tempo dura, quanto interfere e se o que já se fazia deixou de resultar.',
+      ligacao: 'artigos/porque-procurar-consulta.html',
+      legenda: 'A sala que está do outro lado da decisão',
+      svg: '<img src="assets/img/desenho-consulta.webp" alt="Desenho à mão de uma sala de consulta: quadros na parede, uma mesa comprida com uma criança sentada de cada lado e uma pessoa de pé entre as duas" class="destaque__imagem destaque__imagem--larga" width="1600" height="1178">'
+    },
+    {
+      etiqueta: 'Em destaque · Rotinas',
+      titulo: 'Retomar o sono antes do regresso às aulas',
+      resumo: 'O horário ajusta-se em duas semanas. O que costuma demorar mais é o que acontece entre as pessoas na hora de deitar.',
+      ligacao: 'artigos/sono-regresso-as-aulas.html',
+      legenda: 'O que se quer de volta, antes de se falar de horários',
+      svg: '<img src="assets/img/desenho-sono.webp" alt="Desenho à mão de uma figura adormecida, enrolada dentro de um coração grande, rodeada de estrelas" class="destaque__imagem destaque__imagem--larga" width="1600" height="1200">'
+    },
+    {
+      etiqueta: 'Em destaque · Avaliação',
+      titulo: 'Preparar a ida à consulta de psicologia',
+      resumo: 'A primeira consulta é só com os pais, e há razões clínicas para isso. É nela que se define o que vai ser avaliado.',
+      ligacao: 'artigos/preparar-consulta-psicologia.html',
+      legenda: 'Boa parte do trabalho faz-se antes de lá chegar',
+      svg: '<img src="assets/img/desenho-preparar.webp" alt="Desenho à mão de uma figura com um saco, parada no início de um caminho de pedras, com um ponto de interrogação ao lado e um coração num balão de pensamento" class="destaque__imagem destaque__imagem--larga" width="1600" height="1148">'
+    },
+    {
+      etiqueta: 'Em destaque · Emoções',
+      titulo: 'E se ele não se adaptar?',
+      resumo: 'Nas mudanças de ciclo, quem passa pior noite é frequentemente o adulto. E isso tem efeitos que vale a pena conhecer.',
+      ligacao: 'artigos/ansiedade-dos-pais-transicoes.html',
+      legenda: 'A despedida também custa a quem fica',
+      svg: '<img src="assets/img/desenho-pais.webp" alt="Desenho à mão de uma escola com o letreiro «escola» e as portas orladas de corações, uma criança à entrada a mandar beijos e uma figura adulta do lado de fora a responder com o mesmo gesto" class="destaque__imagem destaque__imagem--larga" width="1600" height="1200">'
+    }
+  ];
+
+  /* ═══════════════════════════════════════════════════════════════
+     ARTIGOS POR PUBLICAR — repor um por semana, ao sábado.
+     Ao publicar, mover o bloco respetivo para dentro do array acima
+     e fazer as restantes alterações do ponto 18 do LEIA-ME.
+     ═══════════════════════════════════════════════════════════════
+
+  // ── 12 set ──
+  {
+        etiqueta: 'Em destaque · Rotinas',
+        titulo: 'Começar o ano letivo: organizar-se não é feitio',
+        resumo: 'É um conjunto de competências que se desenvolve, e que falha por áreas. Identificar qual muda o que se faz.',
+        ligacao: 'artigos/organizar-se-ano-letivo.html',
+        legenda: 'Quatro áreas que falham separadamente',
+        svg: '<img src="assets/img/destaque-organizar.webp" alt="Diagrama das quatro áreas da organização escolar e do que ajuda em cada uma" class="destaque__imagem" width="911" height="1726">'
+      }
+
+  // ── 19 set ──
+  {
+        etiqueta: 'Em destaque · PHDA',
+        titulo: '«Ele consegue quando quer»',
+        resumo: 'Não é uma dificuldade em saber o que fazer. É uma dificuldade em fazer aquilo que se sabe — e isso muda o que ajuda.',
+        ligacao: 'artigos/phda-consegue-quando-quer.html',
+        legenda: 'Uma folha inteira preenchida ao pormenor',
+        svg: '<img src="assets/img/desenho-phda.webp" alt="Desenho à mão de uma menina de cabelo comprido e olhos em forma de coração, a segurar uma pequena figura com coroa, rodeada de um coração, uma estrela e uma figura com asas" class="destaque__imagem" width="1600" height="2182">'
+      }
+
+  // ── 26 set ──
+  {
+        etiqueta: 'Em destaque · Emoções',
+        titulo: 'Correu tudo bem na escola. E às cinco da tarde desaba.',
+        resumo: 'Manter-se durante o dia inteiro exige um esforço que tem limite. Quando chega ao sítio onde se sente segura, o esforço para.',
+        ligacao: 'artigos/ansiedade-inicio-das-aulas.html',
+        legenda: 'O esforço de contenção tem limite',
+        svg: '<img src="assets/img/destaque-desaba.webp" alt="Diagrama da capacidade de autorregulação a esgotar-se ao longo do dia e do ciclo do evitamento" class="destaque__imagem" width="941" height="1672">'
+      }
+
+  // ── 3 out ──
+  {
+        etiqueta: 'Em destaque · Avaliação',
+        titulo: 'A devolução dos resultados e como ler um relatório',
+        resumo: 'A convergência entre as fontes é o que sustenta cada conclusão — e é por isso que um relatório não se lê sozinho.',
+        ligacao: 'artigos/ler-relatorio-avaliacao.html',
+        legenda: 'As duas colunas existem sempre — o que muda está no fim',
+        svg: '<img src="assets/img/desenho-relatorio.webp" alt="Desenho à mão dividido em duas colunas, «pontos fortes» e «a melhorar», cada uma com dois quadros: à esquerda as vogais com um livro aberto e duas figuras com corações; à direita duas caras em sofrimento" class="destaque__imagem destaque__imagem--larga" width="1600" height="1196">'
+      }
+
+  // ── 10 out ──
+  {
+        etiqueta: 'Em destaque · Escola',
+        titulo: 'A reunião na escola: preparar antes de entrar',
+        resumo: 'Não é sobre quem tem razão — é sobre o que se combina fazer a seguir. E o que a determina é a preparação.',
+        ligacao: 'artigos/reuniao-na-escola.html',
+        legenda: 'O que levar, e o que fixar antes de sair',
+        svg: '<img src="assets/img/destaque-reuniao.webp" alt="Diagrama do que cada lado vê, do que levar à reunião e do que fixar por escrito antes de sair" class="destaque__imagem" width="922" height="1706">'
+      }
+
+  // ── 17 out ──
+  {
+        etiqueta: 'Em destaque · Rotinas',
+        titulo: 'Manhãs difíceis: desmontar a rotina em passos',
+        resumo: 'Quando a manhã corre mal todos os dias, o problema quase nunca está na motivação. Está na sequência.',
+        ligacao: 'artigos/manhas-dificeis.html',
+        legenda: 'Uma manhã não é uma tarefa. São sete.',
+        svg: '<img src="assets/img/destaque-manhas.webp" alt="Diagrama da cadeia dos sete passos da manhã e do ciclo que se instala entre a criança e o adulto" class="destaque__imagem" width="914" height="1721">'
+      }
+
+  ═══════════════════════════════════════════════════════════════ */
+
+
+  var visual = document.getElementById('destaque-visual');
+  if (!visual) return;
+
+  // Rotação diária, estável dentro do mesmo dia
+  var dias = Math.floor(Date.now() / 86400000);
+  var d = destaques[dias % destaques.length];
+
+  visual.innerHTML = d.svg +
+    '<p class="nota" style="font-size:12.5px; text-align:center; margin:14px 0 0">' + d.legenda + '</p>';
+  visual.style.flexDirection = 'column';
+
+  // Botão de ampliar, se o destaque for uma imagem
+  var img = visual.querySelector('img');
+  if (img) {
+    visual.style.position = 'relative';
+    var botao = document.createElement('button');
+    botao.className = 'figura__ampliar destaque__ampliar';
+    botao.type = 'button';
+    botao.setAttribute('data-imagem', img.getAttribute('src'));
+    botao.setAttribute('aria-label', 'Ver a imagem em tamanho grande');
+    botao.innerHTML = '<svg class="icone" aria-hidden="true"><use href="#i-maximizar"/></svg><span>Ampliar</span>';
+    visual.insertBefore(botao, visual.firstChild);
+  }
+
+  document.getElementById('destaque-etiqueta').textContent = d.etiqueta;
+  document.getElementById('destaque-titulo').textContent = d.titulo;
+  document.getElementById('destaque-resumo').textContent = d.resumo;
+  document.getElementById('destaque-ligacao').setAttribute('href', d.ligacao);
+})();
