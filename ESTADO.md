@@ -1,4 +1,4 @@
-# Estado do projeto — atualizado a 5 de setembro de 2026
+# Estado do projeto — atualizado a 18 de setembro de 2026
 
 Documento de referência rápida. **Atualizar sempre que houver alteração
 substancial.** O que aqui está desatualizado gera trabalho errado.
@@ -41,11 +41,11 @@ vier a ativar, o acompanhamento limita-se aos 18 anos.
 | Elemento | Estado |
 |---|---|
 | Endereço | **`https://ricardinacorreia.pt` — no ar, com certificado válido** |
-| Páginas | 12 páginas + 11 artigos na pasta |
+| Páginas | 12 páginas + 12 artigos na pasta |
 | Artigos escritos | 10, revistos clinicamente, cada um com diagrama |
-| Ilustrações | 10 diagramas; 8 desenhos da Luísa, faltam 2; ícones da Júlia |
-| Artigos publicados | 4 — até «E se ele não se adaptar?» |
-| Materiais | 10, em PDF e Word; 3 visíveis na página, os restantes saem com o artigo que acompanham |
+| Ilustrações | 10 diagramas; 9 desenhos da Luísa, faltam 2; ícones da Júlia |
+| Artigos publicados | 6 — até «Ele consegue quando quer» |
+| Materiais | 12, em PDF e Word; 9 visíveis na página. Dois são para profissionais e estão assinalados como tal |
 | Ferramentas descritas | 9 disponíveis, 4 em preparação |
 | Recursos recomendados | 5, na página «Onde saber mais» |
 | Repositório | `correiaricardina-ui/site`, público, no GitHub |
@@ -202,6 +202,73 @@ e Email» do cPanel — não existe como serviço isolado. IMAP e SMTP em
 
 ---
 
+## Feito a 10 de setembro
+
+- **As publicações do site passaram a ser automáticas.** Um trabalho agendado no
+  GitHub (`.github/workflows/publicar.yml`) corre uma vez por dia, vê o que está
+  marcado em `scripts/publicacoes/` e aplica-o sozinho. Está marcado o cartão do
+  ENEP para 26 de setembro e o artigo técnico para 2 de outubro. Documentado em
+  `scripts/publicacoes/LEIA-ME-publicacoes.md`. **A primeira execução tem de ser
+  feita à mão**, pelo separador Actions.
+- **Categoria nova: artigos técnicos.** Dirigidos a colegas, com referências em
+  APA e sem a estrutura fixa dos artigos das famílias. Etiqueta própria,
+  `etiqueta--tecnico`, em azul-marinho `#2B4C7E` — **é um público, não um tema**.
+  Não entram na página inicial nem na rotação de destaques, e por isso dispensam
+  desenho e diagrama. A `supervisao.html` remete-lhes.
+- **Primeiro artigo técnico escrito**, `reciprocidade-desenvolvimento-bebe.html`,
+  a partir do workshop no ENEP. Cinco referências verificadas nas fontes
+  primárias. Sai a 2 de outubro, automaticamente.
+- **A ilustração desse artigo é um desenho da Luísa**, com crédito na legenda,
+  como as restantes. Substituiu a imagem provisória que existiu entre 10 e 12 de
+  setembro.
+- **Dois materiais novos, para profissionais:** grelha de observação da díade e
+  guião de anamnese sobre a interação precoce. A `materiais.html` ganhou o filtro
+  «Para profissionais» e uma nota de que pressupõem formação em psicologia e não
+  se destinam a autoavaliação nem à observação do próprio filho.
+- **Os filtros passaram a ler `?tema=` do endereço**, para se poder ligar a um
+  filtro a partir de outra página.
+- **Reposta a ligação de inscrição da tertúlia** na `formacao.html`, com o local
+  e as condições de entrada corretos: Auditório da Universidade Sénior Rainha
+  Dona Leonor, entrada gratuita com inscrição obrigatória até às 14h00 do dia 24.
+  A acreditação do CFAE só conta para quem tenha estado também na sessão de 10 de
+  setembro.
+- **O calendário de publicações passou a viver num Excel**, que é agora a fonte.
+  O calendário editorial e a pasta `scripts/publicacoes/` derivam dele.
+
+---
+
+## Feito a 18 de setembro
+
+- **O pacote de 10 de setembro foi aplicado à raiz do repositório.** Tinha sido
+  extraído para dentro de uma subpasta `site/`, pelo que nenhuma das alterações
+  de 5 e 10 de setembro estava no ar: a `formacao.html` continuava sem a ligação
+  de inscrição da tertúlia, a página inicial dizia «Entrada livre» em vez de
+  «gratuita, com inscrição obrigatória», os filtros não liam `?tema=`, e o
+  trabalho agendado do GitHub não existia — as publicações automáticas de 26 de
+  setembro e de 2 de outubro não teriam saído.
+- **Publicado «Começar o ano letivo: organizar-se não é feitio»**, com seis dias
+  de atraso sobre o sábado 12. O desenho da Luísa passou a abrir o artigo e a
+  ocupar o destaque da página inicial, como manda o ponto 28 do LEIA-ME; o
+  diagrama das quatro áreas fica onde estava, no meio do texto.
+- **Publicado «Ele consegue quando quer»**, com três dias de atraso sobre terça
+  15, e com ele os **quatro materiais de PHDA** que faltavam na página: o
+  essencial em duas páginas, os cinco modos de falha, como escolher um alvo e a
+  nota científica sobre maturação cortical. O quinto, «Antes de pedir avaliação»,
+  já estava publicado desde agosto.
+- **Os dois materiais que tratam de sistemas de pontos ligam agora à ferramenta
+  Pontos em Família**, como ficara previsto no calendário editorial.
+- **Filtro novo na biblioteca: PHDA.** A etiqueta segue a do artigo,
+  `etiqueta--rosa` — a mesma cor que Emoções, o que junta mais um caso à
+  divergência de cor já registada em «Por fazer».
+- O cartão *Material* das Novidades passou a mostrar «PHDA — o essencial», e o
+  cartão de espera da biblioteca e da página inicial passou a ser «Correu tudo
+  bem na escola», de 26 de setembro.
+- **O sábado 19 fica sem artigo próprio**, por o de PHDA ter passado para terça.
+  Com os dois textos a saírem agora, a semana não fica vazia, e «Correu tudo bem
+  na escola» mantém-se a 26.
+
+---
+
 ## Por fazer
 
 **1 · Os cartões da página inicial.** São cinco, e o calendário traz mais seis. A
@@ -214,6 +281,18 @@ antecipada ficou resolvida a 5 de setembro** — retirou-se.
 `etiqueta--ocre` dentro do artigo «Organizar-se» e com `etiqueta--roxo` nos
 cartões da biblioteca. Nos cartões seguiu-se a biblioteca, para a página ficar
 coerente consigo mesma. Falta decidir qual das duas fica.
+
+**1b · Três pastas a mais no repositório, que é público.** O pacote de 10 de
+setembro trouxe consigo `interno/`, `redes/` e `LEIA-PRIMEIRO.md`, que não se
+destinavam ao GitHub e lá ficaram desde 13 de setembro — o calendário de
+publicações, as decisões pendentes e as peças de Instagram ainda por publicar.
+Retirá-los da pasta e acrescentá-los ao `.gitignore` resolve o presente; o
+histórico do repositório mantém-nos acessíveis a quem souber procurar, e limpá-lo
+exigiria reescrever o histórico. Decisão de Ricardina Correia.
+
+**1c · O `CALENDARIO-EDITORIAL.md` da raiz está público e desatualizado.** A
+versão viva passou a viver em `interno/`, fora do repositório. Convém decidir se
+o da raiz se apaga ou se se mantém atualizado.
 
 **2 · Os desenhos que faltam.** Dois artigos ainda só têm diagrama: «A reunião na
 escola», de 10 de outubro, e «Manhãs difíceis», de 17.

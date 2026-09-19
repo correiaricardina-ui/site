@@ -62,6 +62,10 @@
   --ocre-fundo: #FDEFE0;
   --roxo-fundo: #EFEBFC;
 
+  /* Público, não tema — artigos para colegas */
+  --tecnico: #2B4C7E;
+  --tecnico-fundo: #EAEFF6;
+
   /* Tipografia */
   --display: "Source Serif 4", Georgia, "Times New Roman", serif;
   --corpo: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
@@ -250,6 +254,7 @@ p { margin: 0 0 1.1em; }
 .etiqueta--agua { color: var(--agua); background: var(--agua-fundo); }
 .etiqueta--ocre { color: var(--ocre); background: var(--ocre-fundo); }
 .etiqueta--roxo { color: var(--roxo); background: var(--roxo-fundo); }
+.etiqueta--tecnico { color: var(--tecnico); background: var(--tecnico-fundo); }
 
 /* ---------- Ferramentas ---------- */
 
@@ -1090,6 +1095,7 @@ body { background: var(--branco); }
 .artigo-cartao:has(.etiqueta--agua)  { border-top-color: var(--agua); }
 .artigo-cartao:has(.etiqueta--ocre)  { border-top-color: var(--ocre); }
 .artigo-cartao:has(.etiqueta--roxo)  { border-top-color: var(--roxo); }
+.artigo-cartao:has(.etiqueta--tecnico)  { border-top-color: var(--tecnico); }
 
 /* ── Símbolo da entrada com fundo quente ── */
 .entrada__marca { position: relative; }
@@ -1148,6 +1154,7 @@ h1, h2, h3, h4 { font-variation-settings: "wght" 520, "opsz" 40; }
 .material { border-top: 3px solid var(--linha); }
 .material:has([href*="phda"])       { border-top-color: var(--rosa); }
 .material:has([data-temas*="escola"]) { border-top-color: var(--agua); }
+.material[data-temas~="phda"]         { border-top-color: var(--rosa); }
 
 details.app { border-top: 3px solid var(--linha); }
 details.app:hover { border-top-color: var(--clara); }

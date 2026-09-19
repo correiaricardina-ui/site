@@ -38,6 +38,22 @@
       ligacao: 'artigos/ansiedade-dos-pais-transicoes.html',
       legenda: 'A despedida também custa a quem fica',
       svg: '<img src="assets/img/desenho-pais.webp" alt="Desenho à mão de uma escola com o letreiro «escola» e as portas orladas de corações, uma criança à entrada a mandar beijos e uma figura adulta do lado de fora a responder com o mesmo gesto" class="destaque__imagem destaque__imagem--larga" width="1600" height="1200">'
+    },
+    {
+      etiqueta: 'Em destaque · Rotinas',
+      titulo: 'Começar o ano letivo: organizar-se não é feitio',
+      resumo: 'É um conjunto de competências que se desenvolve, e que falha por áreas. Identificar qual muda o que se faz.',
+      ligacao: 'artigos/organizar-se-ano-letivo.html',
+      legenda: 'O material está todo ali — falta o sistema que o põe lá dentro',
+      svg: '<img src="assets/img/desenho-organizar.webp" alt="Desenho à mão de uma mochila de rodas com a palavra «mochila» e um coração, rodeada de lápis, réguas e cadernos espalhados no ar" class="destaque__imagem destaque__imagem--larga" width="1600" height="1066">'
+    },
+    {
+      etiqueta: 'Em destaque · PHDA',
+      titulo: '«Ele consegue quando quer»',
+      resumo: 'Não é uma dificuldade em saber o que fazer. É uma dificuldade em fazer aquilo que se sabe — e isso muda o que ajuda.',
+      ligacao: 'artigos/phda-consegue-quando-quer.html',
+      legenda: 'Uma folha inteira preenchida ao pormenor',
+      svg: '<img src="assets/img/desenho-phda.webp" alt="Desenho à mão de uma menina de cabelo comprido e olhos em forma de coração, a segurar uma pequena figura com coroa, rodeada de um coração, uma estrela e uma figura com asas" class="destaque__imagem" width="1600" height="2182">'
     }
   ];
 
@@ -46,26 +62,6 @@
      Ao publicar, mover o bloco respetivo para dentro do array acima
      e fazer as restantes alterações do ponto 18 do LEIA-ME.
      ═══════════════════════════════════════════════════════════════
-
-  // ── 12 set ──
-  {
-        etiqueta: 'Em destaque · Rotinas',
-        titulo: 'Começar o ano letivo: organizar-se não é feitio',
-        resumo: 'É um conjunto de competências que se desenvolve, e que falha por áreas. Identificar qual muda o que se faz.',
-        ligacao: 'artigos/organizar-se-ano-letivo.html',
-        legenda: 'Quatro áreas que falham separadamente',
-        svg: '<img src="assets/img/destaque-organizar.webp" alt="Diagrama das quatro áreas da organização escolar e do que ajuda em cada uma" class="destaque__imagem" width="911" height="1726">'
-      }
-
-  // ── 19 set ──
-  {
-        etiqueta: 'Em destaque · PHDA',
-        titulo: '«Ele consegue quando quer»',
-        resumo: 'Não é uma dificuldade em saber o que fazer. É uma dificuldade em fazer aquilo que se sabe — e isso muda o que ajuda.',
-        ligacao: 'artigos/phda-consegue-quando-quer.html',
-        legenda: 'Uma folha inteira preenchida ao pormenor',
-        svg: '<img src="assets/img/desenho-phda.webp" alt="Desenho à mão de uma menina de cabelo comprido e olhos em forma de coração, a segurar uma pequena figura com coroa, rodeada de um coração, uma estrela e uma figura com asas" class="destaque__imagem" width="1600" height="2182">'
-      }
 
   // ── 26 set ──
   {
@@ -77,7 +73,7 @@
         svg: '<img src="assets/img/destaque-desaba.webp" alt="Diagrama da capacidade de autorregulação a esgotar-se ao longo do dia e do ciclo do evitamento" class="destaque__imagem" width="941" height="1672">'
       }
 
-  // ── 3 out ──
+  // ── 5 out ──
   {
         etiqueta: 'Em destaque · Avaliação',
         titulo: 'A devolução dos resultados e como ler um relatório',

@@ -5,3 +5,8 @@ _rascunhos/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Documentos de trabalho e peças de redes — ficam fora do repositório público
+interno/
+redes/
+LEIA-PRIMEIRO.md

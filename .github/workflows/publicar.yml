@@ -1,0 +1,30 @@
+name: Publicações agendadas
+
+# Corre todos os dias às 06:00 UTC (07:00 em Portugal no inverno, 08:00 no verão).
+# O GitHub pode atrasar-se de minutos a algumas horas — a hora não é garantida.
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:        # permite correr à mão, pelo separador Actions
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Aplicar as publicações marcadas para hoje
+        id: aplicar
+        run: python scripts/publicar.py
+
+      - name: Fazer commit, se houve alterações
+        if: steps.aplicar.outputs.alterou == 'sim'
+        run: |
+          git config user.name  "Publicação agendada"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "${{ steps.aplicar.outputs.mensagem }}"
+          git push

@@ -66,7 +66,28 @@
   var cartoes = Array.prototype.slice.call(document.querySelectorAll('[data-temas]'));
   var vazio = document.querySelector('.vazio');
 
+  function aplicarTema(tema) {
+    var visiveis = 0;
+    filtros.forEach(function (f) {
+      f.setAttribute('aria-pressed', String(f.dataset.tema === tema));
+    });
+    cartoes.forEach(function (cartao) {
+      var mostra = tema === 'todos' || cartao.dataset.temas.split(' ').indexOf(tema) !== -1;
+      cartao.hidden = !mostra;
+      if (mostra) visiveis++;
+    });
+    if (vazio) vazio.hidden = visiveis > 0;
+  }
+
   if (filtros.length && cartoes.length) {
+    /* Tema vindo do endereço, para se poder ligar a um filtro a partir
+       de outra página: biblioteca.html?tema=tecnico. Ignora-se em silêncio
+       se o tema não existir nesta página. */
+    var pedido = new URLSearchParams(window.location.search).get('tema');
+    if (pedido && filtros.some(function (f) { return f.dataset.tema === pedido; })) {
+      aplicarTema(pedido);
+    }
+
     filtros.forEach(function (filtro) {
       filtro.addEventListener('click', function () {
         var tema = filtro.dataset.tema;
@@ -74,13 +95,7 @@
           f.setAttribute('aria-pressed', String(f === filtro));
         });
 
-        var visiveis = 0;
-        cartoes.forEach(function (cartao) {
-          var mostra = tema === 'todos' || cartao.dataset.temas.split(' ').indexOf(tema) !== -1;
-          cartao.hidden = !mostra;
-          if (mostra) visiveis++;
-        });
-        if (vazio) vazio.hidden = visiveis > 0;
+        aplicarTema(tema);
       });
     });
   }

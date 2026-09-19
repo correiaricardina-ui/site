@@ -399,9 +399,13 @@ Cada material existe em PDF (publicado em `assets/materiais/`) e em Word
 | Como escolher um alvo | 2 | — |
 | Antes de pedir avaliação (3 semanas) | 2 | Preparar a ida à consulta |
 | Maturação cortical na PHDA — nota científica | 2 | — |
+| Grelha de observação da díade | 2 | Não é mais estimulação. É mais presença. |
+| Guião de anamnese — interação precoce | 2 | Não é mais estimulação. É mais presença. |
 
-Os cinco últimos foram criados para a tertúlia sobre PHDA de 24 de setembro
-de 2026.
+Os cinco de PHDA — o essencial, os cinco modos de falha, como escolher um alvo,
+as três semanas de observação e a nota científica — foram criados para a tertúlia
+de 24 de setembro de 2026. Os dois últimos da tabela são **para profissionais** e
+estão assinalados como tal na página.
 
 **Quatro materiais continuam em preparação**, assinalados como tal na página:
 quadro de rotina visual, termómetro das emoções, grelha de observação para
@@ -481,8 +485,12 @@ que os artigos saem, acrescentar os filtros correspondentes em `biblioteca.html`
 **Materiais.** Cada material sai na mesma semana do artigo que acompanha. Os
 blocos dos materiais ainda não publicados foram retirados de `materiais.html`,
 mas os PDF estão todos em `assets/materiais/` — basta repor o bloco quando for
-altura. Os cinco materiais de PHDA saem a 19 de setembro, antes da tertúlia
-de 24.
+altura. Os cinco materiais de PHDA saíram com o artigo «Ele consegue quando
+quer», a 18 de setembro, antes da tertúlia de 24.
+
+**Um material que o artigo referencia tem de sair no mesmo dia que ele.** O
+artigo da PHDA liga a `phda-o-essencial.pdf`: publicado sozinho, a ligação
+apontaria a um bloco inexistente na página de materiais.
 
 O calendário completo, com datas e ordem, está em `CALENDARIO-EDITORIAL.md`.
 
