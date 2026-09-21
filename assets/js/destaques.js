@@ -103,6 +103,17 @@
         svg: '<img src="assets/img/destaque-manhas.webp" alt="Diagrama da cadeia dos sete passos da manhã e do ciclo que se instala entre a criança e o adulto" class="destaque__imagem" width="914" height="1721">'
       }
 
+
+  // ── 24 out ── (acompanha o guia «Desde que o bebé nasceu, parece ter andado para trás»)
+  {
+        etiqueta: 'Em destaque · Emoções',
+        titulo: 'Voltou a pedir colo desde que o irmão nasceu',
+        resumo: 'Voltar atrás depois do nascimento de um irmão não é obrigatório nem é manha. Muitas vezes é uma forma de pedir proximidade.',
+        ligacao: 'artigos/voltou-a-pedir-colo.html',
+        legenda: 'Não precisa de ser bebé para ter colo',
+        svg: '<img src="assets/img/destaque-irmao.webp" alt="Diagrama das duas origens da regressão, do ciclo que se instala entre a criança e o adulto e das três formas de o interromper" class="destaque__imagem" width="1000" height="1989">'
+      }
+
   ═══════════════════════════════════════════════════════════════ */
 
 

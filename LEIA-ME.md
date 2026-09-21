@@ -1179,3 +1179,52 @@ pessoa, em vez de um ícone genérico:
 Ao acrescentar um recurso com pessoa, **pedir autorização para usar a fotografia**
 ou usar apenas o ícone genérico. Uma fotografia de perfil é pública, mas usá-la
 noutro sítio é outra coisa.
+
+
+---
+
+## 31. Guias para pais
+
+Os guias estão em `materiais.html`, com filtro próprio («Guias para pais»,
+`data-temas="guias"`) e barra roxa no topo do cartão. Cada guia tem duas peças:
+
+- **Guia completo** — PDF A4, em `assets/materiais/guia-<tema>.pdf`
+- **Resumo numa página** — flyer ilustrado, em `assets/materiais/flyer-<tema>.pdf`
+
+A versão Word do guia fica em `materiais-editaveis/`, com o mesmo nome. O flyer é desenhado à parte e não tem versão Word.
+
+### Estrutura fixa do guia
+
+1. Em poucas palavras — três ideias
+2. O que pode estar a acontecer — a leitura psicológica do comportamento
+3. Mudanças mais frequentes — princípios e tabela «o que se pode ver / como responder»
+4. O que ajuda — organizado por momentos, com caixa por idade
+5. O que costuma não resultar, e porquê
+6. Exemplos — construídos, assinalados como tal
+7. E os adultos
+8. Sinais de alerta e quando procurar ajuda — tabela «esperado / justifica ajuda» e a quem recorrer
+9. Para saber mais — livros por idade e destinatário, referências APA, nota final
+
+**O flyer deriva do guia e não tem texto novo:** as três ideias, os três princípios,
+o que ajuda, quando procurar ajuda e o código QR.
+
+### Livros
+
+Cada livro leva uma etiqueta com a idade e quem lê («4 aos 7 anos · lido pelo
+adulto»). **Idades com asterisco são estimativas** — a editora não as indica.
+Retirar o asterisco depois de confirmar. As capas pertencem às editoras: pedir
+autorização e, sempre que possível, a imagem sem marca de água de livraria.
+
+### Código QR
+
+Aponta para `materiais.html?tema=guias#<id-do-cartão>` — abre a página já
+filtrada nos guias e desce até ao cartão. **O `id` do cartão não pode mudar**
+depois de o flyer ser impresso. O SVG fica em `assets/img/qr/`.
+
+**O código QR nunca vem da ferramenta de desenho.** No flyer da chegada de um irmão, o
+código desenhado pela ferramenta tinha o aspeto de um QR mas não era legível. Foi
+coberto e substituído pelo código verdadeiro, em vetor, por cima da imagem. Fazer
+sempre o mesmo e testar a leitura no PDF final.
+
+Antes de imprimir, confirmar que o domínio está ativo e que o código abre a
+página certa num telemóvel.

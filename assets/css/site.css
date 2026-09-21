@@ -1155,6 +1155,7 @@ h1, h2, h3, h4 { font-variation-settings: "wght" 520, "opsz" 40; }
 .material:has([href*="phda"])       { border-top-color: var(--rosa); }
 .material:has([data-temas*="escola"]) { border-top-color: var(--agua); }
 .material[data-temas~="phda"]         { border-top-color: var(--rosa); }
+.material[data-temas~="guias"]        { border-top-color: var(--roxo); }
 
 details.app { border-top: 3px solid var(--linha); }
 details.app:hover { border-top-color: var(--clara); }
