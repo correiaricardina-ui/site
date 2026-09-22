@@ -111,7 +111,29 @@
         resumo: 'Voltar atrás depois do nascimento de um irmão não é obrigatório nem é manha. Muitas vezes é uma forma de pedir proximidade.',
         ligacao: 'artigos/voltou-a-pedir-colo.html',
         legenda: 'Não precisa de ser bebé para ter colo',
-        svg: '<img src="assets/img/destaque-irmao.webp" alt="Diagrama das duas origens da regressão, do ciclo que se instala entre a criança e o adulto e das três formas de o interromper" class="destaque__imagem" width="1000" height="1989">'
+        svg: '<img src="assets/img/destaque-irmao.webp" alt="Diagrama das duas origens da regressão, do ciclo que se instala entre a criança e o adulto e das três formas de o interromper" class="destaque__imagem" width="1024" height="1536">'
+      }
+
+
+  // ── data a definir ── (acompanha o guia «Alguém de quem gosta foi operado. Deve ir visitá-lo?»)
+  {
+        etiqueta: 'Em destaque · Emoções',
+        titulo: 'A mãe está no hospital. E ele pergunta todos os dias quando ela volta.',
+        resumo: 'O silêncio não protege a criança. O que ela percebe, o que imagina em cada idade, e como preparar uma visita ao hospital.',
+        ligacao: 'artigos/mae-no-hospital.html',
+        legenda: 'Não precisa de perceber tudo. Precisa de saber que está segura.',
+        svg: '<img src="assets/img/destaque-hospital.webp" alt="Diagrama sobre o que a criança imagina quando ninguém explica, o que a protege e os passos para uma visita ao hospital" class="destaque__imagem" width="1024" height="1536">'
+      }
+
+
+  // ── data a definir ── (acompanha o guia «O gato morreu. E ele quer saber quando volta.»)
+  {
+        etiqueta: 'Em destaque · Emoções',
+        titulo: 'Virou uma estrelinha? O que dizer quando morre o animal da casa',
+        resumo: 'A morte de um animal é, muitas vezes, o primeiro encontro com a morte. As palavras que se escolhem ficam como modelo.',
+        ligacao: 'artigos/virou-uma-estrelinha.html',
+        legenda: 'A primeira perda ensina',
+        svg: '<img src="assets/img/destaque-animal.webp" alt="Diagrama sobre as palavras que se escolhem quando morre um animal de estimação: o que confunde, o que a criança precisa de perceber e o que ajuda" class="destaque__imagem" width="1024" height="1536">'
       }
 
   ═══════════════════════════════════════════════════════════════ */
