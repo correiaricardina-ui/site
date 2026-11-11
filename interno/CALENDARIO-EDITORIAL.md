@@ -10,6 +10,15 @@ peças ligadas a encontros — ver a secção respetiva.
 
 ---
 
+## Atualização — 11 de novembro de 2026
+
+Publicado fora da sequência: «A lei dos apoios na escola mudou: o que muda para o
+meu filho?», com destaque nas *Novidades*. Filtro «Escola» acrescentado à
+biblioteca. O artigo «Medidas de suporte» foi retirado do repositório. Ver a
+secção sobre alterações legislativas.
+
+---
+
 ## Estado — 10 de setembro de 2026
 
 **Publicados: quatro.** «Será que já é caso para consulta?», «Retomar o sono»,
@@ -126,23 +135,36 @@ Verificar o estado antes de escrever ou publicar qualquer coisa nesta área.
 ### Revisão do Decreto-Lei n.º 54/2018
 
 Aprovada em Conselho de Ministros a **30 de julho de 2026**, após consulta
-pública com 492 contributos. **As novas regras avançam nas escolas a partir de
-janeiro de 2027**, depois de publicada legislação complementar.
+pública com 492 contributos. **Publicada a 3 de novembro de 2026** como
+**Decreto-Lei n.º 208/2026** (DR n.º 213/2026, Série I), terceira alteração ao DL
+54/2018. Produz efeitos a **1 de janeiro de 2027** e só se aplica a casos novos;
+quem já tem RTP, PEI ou PIT mantém os documentos até ao fim de 2026/2027. Várias
+peças dependem de legislação complementar por publicar (SNAI, ELAI, Subcomissões
+de Coordenação Regional, manual da EduQA).
 
-Não é uma alteração pontual: substitui integralmente o regime atual — DL 54/2018,
-Lei n.º 116/2019 e DL n.º 62/2023. Do que se conhece da proposta, o EMAEI sucede
-à equipa multidisciplinar, com um Gestor de Apoio à Inclusão próprio, e o Centro
-de Apoio à Aprendizagem dá lugar a uma «estrutura integrada de apoio à
-aprendizagem e à inclusão», de natureza transversal e não circunscrita a um
-espaço.
+Não substitui o DL 54/2018: altera-o (já alterado pela Lei n.º 116/2019 e pelo DL
+n.º 62/2023). O que muda para as famílias: um Plano de Desenvolvimento Integral
+único, em vez de RTP, PEI e PIT; o pedido dirigido ao coordenador da EMAEI; um
+Gestor de Apoio à Inclusão por caso; prazos definidos; e o apoio sobretudo em
+sala de aula, deixando o centro de apoio à aprendizagem de constar como recurso
+próprio.
 
-**Consequência:** o artigo sobre medidas de suporte foi retirado de outubro de
-2026 e passa para **janeiro de 2027**, altura em que será reescrito para o novo
-regime. Escrito para descrever o que existe, ficaria desatualizado em três meses;
-escrito em janeiro, explica o que mudou no mês em que muda.
+**Decidido a 11 de novembro de 2026: o artigo sai agora, não em janeiro.**
+«A lei dos apoios na escola mudou: o que muda para o meu filho?»
+(`artigos/novo-regime-educacao-inclusiva.html`) foi publicado com o diploma já no
+Diário da República — as famílias têm dúvidas agora, e não só quando as regras
+entram em vigor. Substitui o artigo «Medidas de suporte», previsto para janeiro
+de 2027. Saiu fora do sábado e da sequência mensal, em destaque nas *Novidades*
+da página inicial.
 
-O ficheiro `artigos/medidas-de-suporte.html` existe e descreve o regime atual.
-**Não publicar sem rever face ao novo diploma.**
+**`artigos/medidas-de-suporte.html` foi retirado do repositório** a 11 de
+novembro: descrevia o regime que vai ser revogado e estava acessível a quem
+conhecesse o endereço. A versão de trabalho continua em `_rascunhos/`, que não
+é publicada. **Não republicar.**
+
+**Ao rever em janeiro**, confirmar o que entretanto foi publicado — a data de
+1 de janeiro, os prazos do pedido de apoio e as peças ainda por regulamentar são
+o que mais facilmente muda. O artigo declara no fim a data em que foi escrito.
 
 ### Lei n.º 41/2026, de 7 de agosto — ensino superior
 
@@ -178,7 +200,7 @@ estava previsto.
 |---|---|---|---|
 | **Nov 26** | O adolescente que se fechou no quarto | Meses mais escuros, humor em baixa | Retraimento normativo vs. sinal clínico; sono e exposição à luz |
 | **Dez 26** | Ecrãs nas férias: onde traçar a linha | Interrupção letiva, tempo sem estrutura | Deslocamento de atividades e impacto no sono, mais do que tempo total |
-| **Jan 27** | Medidas de suporte: o que muda com o novo regime | As novas regras entram em vigor nas escolas em janeiro de 2027 | Novo regime jurídico da educação inclusiva |
+| **Jan 27** | — | **Vago.** O artigo sobre o novo regime saiu a 11 de novembro de 2026. Ver «Por decidir» | — |
 | **Fev 27** | Quando as notas não foram as esperadas | Depois da avaliação do primeiro período | Atribuição causal, motivação, crenças de competência |
 | **Mar 27** | Escolher um caminho: do 9.º ano ao ensino superior | Decisões de percurso, nos dois momentos que contam. Inclui os direitos no ensino superior ao abrigo da Lei n.º 41/2026 | Maturidade vocacional, exploração e indecisão normativa |
 | **Abr 27** | O que é, e o que não é, o espetro do autismo | Dia Mundial de Consciencialização, 2 de abril — data fixa, não deslocar | Critérios de diagnóstico e mitos correntes |
@@ -202,9 +224,9 @@ referenciar-se uns aos outros:
   duas situações: **com relatório em mãos**, em que se leva apenas a parte das
   recomendações que depende da escola; e **sem relatório**, em que se leva o
   registo de observação e o que se pretende pedir
-- **Medidas de suporte** (jan 27) → remete para *A reunião na escola*, publicado
-  em outubro. Ao reescrever para o novo regime, confirmar que a ligação continua
-  a fazer sentido
+- **A lei dos apoios na escola mudou** (11 nov) → remete para *A reunião na
+  escola* e para *A devolução dos resultados*. Confirmar, ao publicar, que os dois
+  já estão na biblioteca
 - **A reunião na escola** → remete, na secção de quando procurar ajuda, para
   *Porquê e quando procurar uma consulta*, fechando o círculo
 
@@ -366,6 +388,12 @@ reclama. Nenhuma remete para o site, por o artigo ser técnico.
 ---
 
 ## Por decidir
+
+- **Janeiro de 2027:** o lugar ficou vago. Opções: um artigo novo, ou deixar o mês
+  sem artigo e rever o de 11 de novembro quando sair a regulamentação
+  complementar.
+- **Destaque rotativo e cartões «Da biblioteca» do artigo de 11 de novembro:**
+  não foram acrescentados. O primeiro depende do diagrama `destaque-pdi.webp`.
 
 - **Artigo vocacional:** março de 2027 como está, ou depois de 23 de março para
   sair já com o Reel ligado.
