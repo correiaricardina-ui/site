@@ -94,4 +94,11 @@
 
 /* Ajustes: mostrar a marca da ilustração e não esticar os cartões */
 .inicio-destaque__imagem img { object-position: right center; }
-.inicio-secundarios { align-items: start; }
+.inicio-secundarios { align-items: stretch; }
+.inicio-secundarios .novidade { display: flex; flex-direction: column; }
+.inicio-enc__imgs img { aspect-ratio: 1 / 1; object-position: center top; }
+
+/* Cartão dos jogos e ligações no fim dos cartões */
+.inicio-jogo__img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; margin-bottom: 16px; }
+.inicio-ver { margin-top: auto; padding-top: 14px; font-size: 14px; font-weight: 600; color: var(--tinta); }
+.inicio-secundarios a.novidade:hover .inicio-ver { text-decoration: underline; }

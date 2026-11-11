@@ -1,40 +1,67 @@
 /* Página «Ferramentas» — duas secções (aplicações e jogos).
    Carregado depois de site.css, só em ferramentas.html. */
 
-.ferr-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 6px; }
-.ferr-nav a {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 14.5px; font-weight: 600; color: var(--tinta);
-  background: var(--cartao); border: 1px solid var(--linha); border-radius: 999px;
-  padding: 9px 18px;
-}
-.ferr-nav a:hover { border-color: var(--clara); background: var(--papel); }
-
 .ferr-secao { margin-top: 44px; padding-top: 6px; scroll-margin-top: 90px; }
 .ferr-secao__cab { margin-bottom: 22px; }
 .ferr-secao__cab .rotulo { margin-bottom: 6px; }
 .ferr-secao__cab h2 { font-size: clamp(26px, 3.2vw, 34px); margin-bottom: 10px; }
 .ferr-secao__cab .nota { max-width: 70ch; margin: 0; }
-.ferr-secao--jogos {
-  margin-top: 64px; padding: 40px 0 6px; border-top: 4px solid var(--roxo);
-}
-.ferr-secao--jogos .rotulo { color: var(--roxo); }
+.ferr-secao[hidden] { display: none; }
+.ferr-secao { margin-top: 30px; }
 
+/* Separadores */
+.ferr-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0 0; }
+.ferr-tab {
+  appearance: none; font: inherit; text-align: left; cursor: pointer; color: var(--tinta);
+  background: var(--cartao); border: 1px solid var(--linha); border-top: 4px solid var(--linha);
+  border-radius: var(--raio); padding: 20px 24px 22px;
+  display: flex; flex-direction: column; gap: 4px; position: relative;
+  transition: border-color .18s, background .18s, box-shadow .18s;
+}
+.ferr-tab:hover { border-color: var(--clara); }
+.ferr-tab__titulo { font-family: var(--display); font-size: 22px; font-weight: 500; line-height: 1.2; }
+.ferr-tab__sub { font-size: 14px; color: var(--ardosia); line-height: 1.45; }
+.ferr-tab__pill {
+  align-self: flex-start; font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: #fff; background: var(--roxo); border-radius: 999px; padding: 3px 10px; margin-bottom: 6px;
+}
+.ferr-tab--jogos { border-top-color: var(--roxo); }
+.ferr-tab--apps { border-top-color: var(--agua); }
+.ferr-tab[aria-selected="true"] { box-shadow: 0 8px 26px rgba(51,70,92,.12); }
+.ferr-tab--jogos[aria-selected="true"] { background: #F4F0FC; border-color: var(--roxo); }
+.ferr-tab--apps[aria-selected="true"] { background: #EAF5F3; border-color: var(--agua); }
+.ferr-tab:focus-visible { outline: 3px solid var(--tinta); outline-offset: 2px; }
+@media (max-width: 700px) { .ferr-tabs { grid-template-columns: 1fr; } }
+/* Sem JavaScript os separadores não fazem nada: escondem-se e as duas secções ficam visíveis */
+html:not(.ferr-js) .ferr-tabs { display: none; }
+
+/* Lançamento dos jogos */
+.lancamento {
+  background: linear-gradient(135deg, #2A1B4D 0%, #4B2F86 100%); color: #fff;
+  border-radius: var(--raio); padding: 32px 34px 34px; margin-bottom: 22px;
+}
+.lancamento__pill {
+  display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: #2A1B4D; background: #FFD76A; border-radius: 999px; padding: 5px 13px; margin-bottom: 14px;
+}
+.lancamento h2 { color: #fff; font-size: clamp(24px, 3.2vw, 32px); line-height: 1.2; margin: 0 0 12px; max-width: 28ch; }
+.lancamento p { color: #E6DFF5; font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; }
+@media (max-width: 700px) { .lancamento { padding: 24px 22px 26px; } }
+
+/* Jogos em grelha de duas colunas */
+.jogos-grelha { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 800px) { .jogos-grelha { grid-template-columns: 1fr; } }
 .jogo {
-  display: grid; grid-template-columns: 1.25fr 1fr; gap: 0; margin-bottom: 20px;
-  background: var(--cartao); border: 1px solid var(--linha); border-radius: var(--raio); overflow: hidden;
+  display: flex; flex-direction: column; background: var(--cartao);
+  border: 1px solid var(--linha); border-radius: var(--raio); overflow: hidden;
 }
 .jogo__imagem { background: #2A1B4D; }
 .jogo__imagem img { display: block; width: 100%; height: auto; }
-.jogo__texto { padding: 26px 28px 28px; display: flex; flex-direction: column; justify-content: center; }
+.jogo__texto { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
 .jogo__cabeca { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 10px; }
-.jogo__cabeca h3 { font-size: 24px; margin: 0; }
+.jogo__cabeca h3 { font-size: 22px; margin: 0; }
 .jogo .selo--preparacao { color: var(--roxo); border-color: var(--roxo); }
 .jogo__texto > .nota { margin: 0 0 14px; }
-.jogo__texto h4 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ardosia); margin: 0 0 8px; font-weight: 600; }
-.jogo__texto ul { margin: 0 0 14px; padding-left: 18px; color: var(--ardosia); font-size: 15px; line-height: 1.6; }
-.jogo__ficha { margin: 0; font-size: 13.5px; color: var(--clara); }
-@media (max-width: 800px) {
-  .jogo { grid-template-columns: 1fr; }
-  .jogo__texto { padding: 22px 22px 24px; }
-}
+.jogo__texto h4 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ardosia); margin: 0 0 6px; font-weight: 600; }
+.jogo__dominios { margin: 0 0 14px; color: var(--ardosia); font-size: 15px; line-height: 1.6; }
+.jogo__ficha { margin: auto 0 0; font-size: 13.5px; color: var(--clara); }
