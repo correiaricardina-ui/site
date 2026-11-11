@@ -1,0 +1,40 @@
+/* Página «Ferramentas» — duas secções (aplicações e jogos).
+   Carregado depois de site.css, só em ferramentas.html. */
+
+.ferr-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 6px; }
+.ferr-nav a {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14.5px; font-weight: 600; color: var(--tinta);
+  background: var(--cartao); border: 1px solid var(--linha); border-radius: 999px;
+  padding: 9px 18px;
+}
+.ferr-nav a:hover { border-color: var(--clara); background: var(--papel); }
+
+.ferr-secao { margin-top: 44px; padding-top: 6px; scroll-margin-top: 90px; }
+.ferr-secao__cab { margin-bottom: 22px; }
+.ferr-secao__cab .rotulo { margin-bottom: 6px; }
+.ferr-secao__cab h2 { font-size: clamp(26px, 3.2vw, 34px); margin-bottom: 10px; }
+.ferr-secao__cab .nota { max-width: 70ch; margin: 0; }
+.ferr-secao--jogos {
+  margin-top: 64px; padding: 40px 0 6px; border-top: 4px solid var(--roxo);
+}
+.ferr-secao--jogos .rotulo { color: var(--roxo); }
+
+.jogo {
+  display: grid; grid-template-columns: 1.25fr 1fr; gap: 0; margin-bottom: 20px;
+  background: var(--cartao); border: 1px solid var(--linha); border-radius: var(--raio); overflow: hidden;
+}
+.jogo__imagem { background: #2A1B4D; }
+.jogo__imagem img { display: block; width: 100%; height: auto; }
+.jogo__texto { padding: 26px 28px 28px; display: flex; flex-direction: column; justify-content: center; }
+.jogo__cabeca { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 10px; }
+.jogo__cabeca h3 { font-size: 24px; margin: 0; }
+.jogo .selo--preparacao { color: var(--roxo); border-color: var(--roxo); }
+.jogo__texto > .nota { margin: 0 0 14px; }
+.jogo__texto h4 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ardosia); margin: 0 0 8px; font-weight: 600; }
+.jogo__texto ul { margin: 0 0 14px; padding-left: 18px; color: var(--ardosia); font-size: 15px; line-height: 1.6; }
+.jogo__ficha { margin: 0; font-size: 13.5px; color: var(--clara); }
+@media (max-width: 800px) {
+  .jogo { grid-template-columns: 1fr; }
+  .jogo__texto { padding: 22px 22px 24px; }
+}

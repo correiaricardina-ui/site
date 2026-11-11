@@ -1,0 +1,97 @@
+/* Página inicial — entrada compacta e faixa «O que há de novo».
+   Carregado depois de site.css, só em index.html. Usa classes próprias
+   (inicio-*) para não competir com as regras da entrada em site.css. */
+
+/* ── Entrada: mantém-se, mais pequena e discreta ── */
+.entrada.entrada--compacta { padding: 0; }
+.entrada.entrada--compacta .entrada__interior { padding-top: 34px; padding-bottom: 32px; }
+.entrada.entrada--compacta .entrada__grelha {
+  grid-template-columns: 1fr auto; gap: 36px; align-items: center; margin-bottom: 0;
+}
+.entrada.entrada--compacta h1 {
+  font-size: clamp(23px, 2.8vw, 30px); line-height: 1.2; max-width: none; margin: 0 0 8px;
+}
+.entrada.entrada--compacta .lede {
+  font-size: 15.5px; line-height: 1.6; max-width: 62ch; color: var(--ardosia);
+}
+.entrada.entrada--compacta .entrada__marca img { max-width: 84px; opacity: .9; }
+@media (max-width: 700px) {
+  .entrada.entrada--compacta .entrada__grelha { grid-template-columns: 1fr; gap: 14px; }
+  .entrada.entrada--compacta .entrada__marca { display: none; }
+}
+
+/* ── Faixa «O que há de novo» ── */
+.inicio-novidades {
+  position: relative; padding: 60px 0 72px; border-top: 0;
+  background: linear-gradient(180deg, #F1EEFA 0%, #F8F6FC 100%);
+}
+.inicio-novidades::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--rosa) 0%, var(--roxo) 34%, var(--agua) 67%, var(--ocre) 100%);
+}
+.inicio-novidades__cab {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 16px; flex-wrap: wrap; margin-bottom: 28px;
+}
+.inicio-novidades__cab .rotulo { color: var(--roxo); margin-bottom: 8px; }
+.inicio-novidades__cab h2 { font-size: clamp(32px, 4.6vw, 46px); line-height: 1.1; }
+.inicio-novidades__todos {
+  font-size: 14.5px; font-weight: 600; color: var(--tinta);
+  border-bottom: 1px solid var(--clara); padding-bottom: 2px;
+}
+.inicio-novidades__todos:hover { border-bottom-color: var(--tinta); }
+
+/* Artigo em destaque, dentro da faixa */
+.inicio-destaque {
+  display: grid; grid-template-columns: 1.05fr 1fr; gap: 0;
+  background: var(--cartao); border: 1px solid var(--linha); border-top: 4px solid var(--agua);
+  border-radius: var(--raio); overflow: hidden;
+  box-shadow: 0 10px 34px rgba(51,70,92,.10);
+  transition: box-shadow .2s, transform .2s;
+}
+.inicio-destaque:hover { box-shadow: 0 14px 40px rgba(51,70,92,.15); transform: translateY(-2px); }
+.inicio-destaque__texto { padding: 36px 38px 38px; display: flex; flex-direction: column; justify-content: center; }
+.inicio-pill {
+  align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; color: #fff; background: var(--agua);
+  padding: 5px 12px; border-radius: 999px; margin-bottom: 16px;
+}
+.inicio-destaque h3 { font-size: clamp(24px, 3vw, 31px); line-height: 1.2; margin-bottom: 14px; }
+.inicio-destaque__texto p { color: var(--ardosia); font-size: 16px; line-height: 1.6; margin: 0 0 22px; }
+.inicio-destaque__texto .botao { align-self: flex-start; }
+.inicio-destaque__imagem { background: #FBF3E6; min-height: 280px; }
+.inicio-destaque__imagem img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 800px) {
+  .inicio-destaque { grid-template-columns: 1fr; }
+  .inicio-destaque__imagem { order: -1; min-height: 0; aspect-ratio: 3 / 2; }
+  .inicio-destaque__texto { padding: 26px 24px 28px; }
+}
+
+/* Cartões seguintes */
+.inicio-secundarios {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 20px;
+}
+@media (max-width: 900px) { .inicio-secundarios { grid-template-columns: 1fr; } }
+.inicio-secundarios .novidade {
+  box-shadow: 0 4px 16px rgba(51,70,92,.06); transition: box-shadow .2s, transform .2s;
+}
+.inicio-secundarios a.novidade:hover { box-shadow: 0 8px 24px rgba(51,70,92,.11); transform: translateY(-2px); }
+.inicio-enc__imgs { display: flex; gap: 10px; margin-bottom: 16px; }
+.inicio-enc__imgs a { flex: 1; }
+.inicio-enc__imgs img {
+  display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover;
+  border-radius: 8px; border: 1px solid var(--linha);
+}
+
+/* Três caminhos, agora abaixo da faixa */
+.inicio-caminhos { padding: 56px 0 64px; text-align: center; background: var(--papel); border-top: 0; }
+.inicio-caminhos .rotulo { margin-bottom: 18px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .inicio-destaque, .inicio-secundarios .novidade { transition: none; }
+  .inicio-destaque:hover, .inicio-secundarios a.novidade:hover { transform: none; }
+}
+
+/* Ajustes: mostrar a marca da ilustração e não esticar os cartões */
+.inicio-destaque__imagem img { object-position: right center; }
+.inicio-secundarios { align-items: start; }

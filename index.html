@@ -16,6 +16,7 @@
 <link rel="icon" href="assets/img/icone-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/img/icone-180.png">
 <link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/inicio.css">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-menu-2" viewBox="0 0 24 24"><path d="M4 6l16 0" />
@@ -76,7 +77,7 @@
 <main>
 
 <!-- Entrada -->
-<section class="entrada">
+<section class="entrada entrada--compacta">
 <div class="entrada__interior">
     <div class="entrada__grelha">
       <div class="entrada__texto">
@@ -87,7 +88,64 @@
         <img src="assets/img/simbolo-grande-cor.png" alt="" width="600">
       </div>
     </div>
+  </div>
+</section>
 
+<!-- O que há de novo -->
+<section class="seccao inicio-novidades" id="novidades">
+  <div class="envolucro">
+    <div class="inicio-novidades__cab">
+      <div>
+        <p class="rotulo">Novidades</p>
+        <h2>O que há de novo</h2>
+      </div>
+      <a class="inicio-novidades__todos" href="biblioteca.html">Ver todos os artigos &rsaquo;</a>
+    </div>
+
+    <a class="inicio-destaque" href="artigos/novo-regime-educacao-inclusiva.html">
+      <div class="inicio-destaque__texto">
+        <span class="inicio-pill">Novo artigo · Escola</span>
+        <h3>A lei dos apoios na escola mudou: o que muda para o meu filho?</h3>
+        <p>O Decreto-Lei n.º 208/2026 aplica-se a casos novos a partir de 1 de janeiro de 2027. Quem já tem apoios mantém os documentos atuais; quem vai pedir apoio passa a ter um único plano por aluno e prazos definidos.</p>
+        <span class="botao">Ler o artigo</span>
+      </div>
+      <div class="inicio-destaque__imagem">
+        <img src="assets/img/artigo-pdi-menina.webp" alt="Ilustração a lápis de cor de uma menina pensativa, rodeada de balões de pensamento com uma escola, um plano PDI, uma família, peças de puzzle e um calendário em 1 de janeiro de 2027" width="1200" height="800">
+      </div>
+    </a>
+
+    <div class="inicio-secundarios">
+      <a class="novidade novidade--roxo" href="ferramentas.html">
+        <svg class="icone" aria-hidden="true"><use href="#i-star"/></svg>
+        <span class="novidade__marca">Ferramenta</span>
+        <h3>Coisas Boas</h3>
+        <p class="nota">Caderno digital privado onde o jovem regista coisas suas e a que pode voltar mais tarde. Dos 10 aos 16 anos.</p>
+      </a>
+
+      <a class="novidade novidade--agua" href="materiais.html#phda-o-essencial">
+        <svg class="icone" aria-hidden="true"><use href="#i-file"/></svg>
+        <span class="novidade__marca">Material</span>
+        <h3>PHDA — o essencial</h3>
+        <p class="nota">Duas páginas sobre o que é e o que não é, porque varia tanto de dia para dia, e o que ajuda em casa e na sala de aula. Com mais três materiais sobre o tema.</p>
+      </a>
+
+      <div class="novidade novidade--ocre">
+        <div class="inicio-enc__imgs">
+          <a href="formacao.html#eventos"><img src="assets/img/evento-enep.webp" alt="Credencial de oradora do 32.º Encontro Nacional de Estudantes de Psicologia, «Entre o Ruído e o Diálogo», com o nome de Ricardina Correia" width="800" height="1067" loading="lazy"></a>
+          <a href="formacao.html#eventos"><img src="assets/img/evento-tertulia-caldas.webp" alt="Cartaz da tertúlia «À conversa com… Atenção em perspetiva», sobre PHDA, com a Dra. Joana Henriques (PHDA no adulto) e a Dra. Ricardina Correia (PHDA na infância e adolescência), a 24 de setembro de 2026, em Caldas da Rainha" width="880" height="1100" loading="lazy"></a>
+        </div>
+        <span class="novidade__marca">Encontros recentes</span>
+        <h3>Do ENEP a Caldas da Rainha</h3>
+        <p class="nota">O workshop sobre o desenvolvimento do bebé, no 32.º ENEP, a 3 de outubro, e a tertúlia sobre PHDA, a 24 de setembro. <a href="formacao.html#eventos" style="border-bottom:1px solid var(--clara)">Ver os encontros</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Por onde começar -->
+<section class="seccao inicio-caminhos" id="caminhos">
+  <div class="envolucro">
+    <p class="rotulo">Por onde começar</p>
     <div class="caminhos">
       <button class="caminho" data-painel="p-familias" aria-expanded="false" aria-controls="p-familias">
         <svg class="icone caminho__icone" aria-hidden="true"><use href="#i-heart"/></svg>
@@ -131,132 +189,6 @@
   </div>
 </section>
 
-<!-- Em destaque -->
-<section class="seccao seccao--tom-agua" id="destaque">
-  <div class="envolucro destaque">
-    <div class="destaque__visual" id="destaque-visual"></div>
-    <div class="destaque__texto">
-      <p class="rotulo" id="destaque-etiqueta">Em destaque</p>
-      <h2 id="destaque-titulo"></h2>
-      <p class="lede" id="destaque-resumo" style="margin:12px 0 20px"></p>
-      <a class="botao" id="destaque-ligacao" href="biblioteca.html">Ler o artigo</a>
-    </div>
-  </div>
-</section>
-
-<!-- Novidades -->
-<section class="seccao seccao--tom-roxo" id="novidades">
-  <div class="envolucro">
-    <p class="rotulo">Novidades</p>
-    <h2>O que há de novo</h2>
-    <p class="lede" style="margin-bottom:34px">Artigos, ferramentas, materiais e encontros.</p>
-
-    <div class="grelha">
-      <a class="novidade novidade--agua" href="artigos/novo-regime-educacao-inclusiva.html" style="grid-column:1/-1">
-        <svg class="icone" aria-hidden="true"><use href="#i-school"/></svg>
-        <span class="novidade__marca">Artigo · Nova lei da educação inclusiva</span>
-        <h3 style="font-size:24px">A lei dos apoios na escola mudou: o que muda para o meu filho?</h3>
-        <p class="nota">O Decreto-Lei n.º 208/2026 aplica-se a casos novos a partir de 1 de janeiro de 2027. Quem já tem apoios mantém os documentos atuais; quem vai pedir apoio passa a ter um único plano por aluno e prazos definidos. O que se mantém, o que muda e o que ainda falta regulamentar.</p>
-      </a>
-
-      <div class="novidade novidade--ocre" style="grid-column:1/-1; display:flex; flex-wrap:wrap; gap:28px; align-items:center">
-        <div style="display:flex; gap:14px; flex:0 1 400px; min-width:260px">
-          <a href="formacao.html#eventos" style="flex:1"><img src="assets/img/evento-enep.webp" alt="Credencial de oradora do 32.º Encontro Nacional de Estudantes de Psicologia, «Entre o Ruído e o Diálogo», com o nome de Ricardina Correia" width="800" height="1067" loading="lazy" style="display:block; border-radius:10px; border:1px solid var(--linha); object-fit:cover; width:100%; height:auto; aspect-ratio:4/5"></a>
-          <a href="formacao.html#eventos" style="flex:1"><img src="assets/img/evento-tertulia-caldas.webp" alt="Cartaz da tertúlia «À conversa com… Atenção em perspetiva», sobre PHDA, com a Dra. Joana Henriques (PHDA no adulto) e a Dra. Ricardina Correia (PHDA na infância e adolescência), a 24 de setembro de 2026, em Caldas da Rainha" width="880" height="1100" loading="lazy" style="display:block; border-radius:10px; border:1px solid var(--linha); object-fit:cover; width:100%; height:auto; aspect-ratio:4/5"></a>
-        </div>
-        <div style="flex:1 1 280px">
-          <svg class="icone" aria-hidden="true"><use href="#i-users"/></svg>
-          <span class="novidade__marca">Encontros recentes</span>
-          <h3 style="font-size:24px">Do ENEP a Caldas da Rainha</h3>
-          <p class="nota">A 3 de outubro, o workshop sobre neuropsicologia do desenvolvimento saudável do bebé, no 32.º Encontro Nacional de Estudantes de Psicologia, em Lisboa. A 24 de setembro, a tertúlia «Atenção em Perspetiva», sobre a PHDA da infância à vida adulta, em Caldas da Rainha.</p>
-          <p class="nota" style="margin-top:14px"><a href="formacao.html#eventos" style="border-bottom:1px solid var(--clara)">Ver todos os encontros</a></p>
-        </div>
-      </div>
-
-      <a class="novidade novidade--roxo" href="ferramentas.html">
-        <svg class="icone" aria-hidden="true"><use href="#i-star"/></svg>
-        <span class="novidade__marca">Ferramenta</span>
-        <h3>Coisas Boas</h3>
-        <p class="nota">Caderno digital privado onde o jovem regista coisas suas e a que pode voltar mais tarde. Dos 10 aos 16 anos.</p>
-      </a>
-
-      <a class="novidade novidade--agua" href="materiais.html#phda-o-essencial">
-        <svg class="icone" aria-hidden="true"><use href="#i-file"/></svg>
-        <span class="novidade__marca">Material</span>
-        <h3>PHDA — o essencial</h3>
-        <p class="nota">Duas páginas sobre o que é e o que não é, porque varia tanto de dia para dia, e o que ajuda em casa e na sala de aula. Com mais três materiais sobre o tema.</p>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- Biblioteca -->
-<section class="seccao seccao--tom-rosa" id="biblioteca">
-  <div class="envolucro">
-    <p class="rotulo">Biblioteca</p>
-    <h2>Perguntas que orientam respostas</h2>
-    <p class="lede" style="margin-bottom:34px">Textos curtos sobre situações concretas, escritos para serem úteis a quem está no meio delas.</p>
-
-    <div class="grelha">
-      <a class="artigo-cartao" href="artigos/porque-procurar-consulta.html">
-        <span class="etiqueta etiqueta--agua">Avaliação</span>
-        <h3>«Será que já é caso para consulta?»</h3>
-        <p class="nota">O critério não é a gravidade. É há quanto tempo dura, quanto interfere e se o que já se fazia deixou de resultar.</p>
-        <span class="artigo-cartao__meta">10 min de leitura</span>
-      </a>
-
-      <a class="artigo-cartao" href="artigos/sono-regresso-as-aulas.html">
-        <span class="etiqueta etiqueta--roxo">Rotinas</span>
-        <h3>Retomar o sono antes do regresso às aulas</h3>
-        <p class="nota">O horário ajusta-se em duas semanas. O que costuma demorar mais é o que acontece entre as pessoas na hora de deitar.</p>
-        <span class="artigo-cartao__meta">7 min de leitura</span>
-      </a>
-
-      <a class="artigo-cartao" href="artigos/preparar-consulta-psicologia.html">
-        <span class="etiqueta etiqueta--agua">Avaliação</span>
-        <h3>Preparar a ida à consulta de psicologia</h3>
-        <p class="nota">A primeira consulta é habitualmente só com os pais. É nela que se define o que vai ser avaliado — e disso depende a utilidade de tudo o que vem depois.</p>
-        <span class="artigo-cartao__meta">9 min de leitura</span>
-      </a>
-
-      <a class="artigo-cartao" href="artigos/ansiedade-dos-pais-transicoes.html">
-        <span class="etiqueta etiqueta--rosa">Emoções</span>
-        <h3>E se ele não se adaptar?</h3>
-        <p class="nota">Nas mudanças de ciclo, quem passa pior noite antes do primeiro dia é frequentemente o adulto. Isso tem efeitos sobre a criança que vale a pena conhecer.</p>
-        <span class="artigo-cartao__meta">9 min de leitura</span>
-      </a>
-
-      <a class="artigo-cartao" href="artigos/organizar-se-ano-letivo.html">
-        <span class="etiqueta etiqueta--roxo">Rotinas</span>
-        <h3>Começar o ano letivo: organizar-se não é feitio</h3>
-        <p class="nota">A mochila desarrumada lê-se como desinteresse e é quase sempre outra coisa. São quatro áreas que falham separadamente.</p>
-        <span class="artigo-cartao__meta">9 min de leitura</span>
-      </a>
-
-      <a class="artigo-cartao" href="artigos/phda-consegue-quando-quer.html">
-        <span class="etiqueta etiqueta--rosa">PHDA</span>
-        <h3>«Ele consegue quando quer»</h3>
-        <p class="nota">Não é uma dificuldade em saber o que fazer, é uma dificuldade em fazer aquilo que se sabe. E isso muda o que ajuda.</p>
-        <span class="artigo-cartao__meta">10 min de leitura</span>
-      </a>
-
-      <div class="artigo-cartao artigo-cartao--espera">
-        <span class="etiqueta etiqueta--rosa">Emoções</span>
-        <h3>Correu tudo bem na escola. E às cinco da tarde desaba.</h3>
-        <p class="nota">Manter-se durante o dia inteiro exige um esforço que tem limite. Quando chega ao sítio onde se sente segura, o esforço para.</p>
-        <span class="artigo-cartao__meta artigo-cartao__meta--espera">Em breve</span>
-      </div>
-
-      <a class="artigo-cartao artigo-cartao--indice" href="biblioteca.html">
-        <h3>Ver a biblioteca</h3>
-        <p class="nota">Artigos sobre desenvolvimento, escola, emoções e relações. Com materiais para levar para casa.</p>
-        <span class="artigo-cartao__meta" style="color:var(--tinta)">Todos os artigos &rsaquo;</span>
-      </a>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer class="rodape">
@@ -294,6 +226,5 @@
 </footer>
 
 <script src="assets/js/site.js"></script>
-<script src="assets/js/destaques.js"></script>
 </body>
 </html>

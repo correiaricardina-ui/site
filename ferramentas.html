@@ -4,12 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ferramentas de apoio — Ricardina Correia</title>
-<meta name="description" content="Aplicações de autoria própria entregues em consulta às famílias em acompanhamento: para quem se destinam, objetivos e conteúdos.">
+<meta name="description" content="Aplicações terapêuticas e jogos de estimulação neurocognitiva de autoria própria, desenvolvidos para os casos em acompanhamento: para quem se destinam, objetivos e conteúdos.">
 <link rel="preload" href="assets/fontes/source-serif-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fontes/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="assets/img/icone-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/img/icone-180.png">
 <link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/jogos.css">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-menu-2" viewBox="0 0 24 24"><path d="M4 6l16 0" />
@@ -72,7 +73,19 @@
     <img class="pagina__icone" src="assets/img/paginas/ferramentas.svg" alt="" width="72" height="72">
     <p class="rotulo">Ferramentas</p>
     <h1 style="margin-bottom:16px">Entre uma sessão e a seguinte</h1>
-    <p class="lede" style="margin-bottom:12px">Ferramentas de autoria própria, desenvolvidas para os casos em acompanhamento. Cada uma empresta um mecanismo com apoio empírico e é usada como apoio à intervenção, não como substituto dela.</p>
+    <p class="lede" style="margin-bottom:12px">Ferramentas de autoria própria, desenvolvidas para os casos em acompanhamento. Cada uma empresta um mecanismo com apoio empírico e é usada como apoio à intervenção, não como substituto dela. Reúnem-se em duas secções: as aplicações terapêuticas, prescritas às famílias, e os jogos de estimulação neurocognitiva e de intervenção terapêutica.</p>
+
+    <nav class="ferr-nav" aria-label="Secções da página">
+      <a href="#aplicacoes">Aplicações terapêuticas</a>
+      <a href="#jogos">Jogos de estimulação neurocognitiva</a>
+    </nav>
+
+    <section class="ferr-secao" id="aplicacoes" aria-labelledby="t-aplicacoes">
+    <div class="ferr-secao__cab">
+      <p class="rotulo">Para as famílias em acompanhamento</p>
+      <h2 id="t-aplicacoes">Aplicações terapêuticas</h2>
+      <p class="nota">Aplicações de uso doméstico, prescritas pela psicóloga a cada família no decorrer do acompanhamento.</p>
+    </div>
 
     <div class="aviso" style="margin:20px 0 34px">
       <svg class="icone" aria-hidden="true"><use href="#i-lock"/></svg>
@@ -358,6 +371,74 @@
       </article>
       </div>
     </div>
+    </section>
+
+    <section class="ferr-secao ferr-secao--jogos" id="jogos" aria-labelledby="t-jogos">
+    <div class="ferr-secao__cab">
+      <p class="rotulo">Para usar em sessão</p>
+      <h2 id="t-jogos">Jogos de estimulação neurocognitiva</h2>
+      <p class="nota">Jogos digitais de autoria própria, para estimulação neurocognitiva e para intervenção terapêutica, em formato HTML e para uso em gabinete. Ainda não estão disponíveis.</p>
+    </div>
+
+    <article class="jogo" id="laboratorio-orbital">
+      <div class="jogo__imagem"><img src="assets/img/jogos/laboratorio-orbital.webp" alt="Cartaz do jogo Laboratório Orbital, de estimulação neurocognitiva: uma criança com fato de astronauta, num laboratório espacial, ao lado de um robô e de um globo luminoso. Níveis iniciado, médio e avançado, dos 6 aos 12 anos." width="1200" height="800" loading="lazy"></div>
+      <div class="jogo__texto">
+        <div class="jogo__cabeca">
+          <h3>Laboratório Orbital</h3>
+          <span class="app__idade">6 aos 12 anos</span>
+          <span class="selo selo--preparacao">Em breve</span>
+        </div>
+        <p class="nota">Jogo de estimulação neurocognitiva com seis estações e três níveis de dificuldade: iniciado, médio e avançado.</p>
+        <h4>Domínios trabalhados</h4>
+        <ul>
+          <li>Atenção e concentração</li>
+          <li>Memória e raciocínio</li>
+          <li>Planeamento e organização</li>
+          <li>Flexibilidade e resolução de problemas</li>
+        </ul>
+        <p class="jogo__ficha">Formato digital (HTML), para uso em gabinete.</p>
+      </div>
+    </article>
+
+    <article class="jogo" id="mansao-dos-monstrinhos">
+      <div class="jogo__imagem"><img src="assets/img/jogos/mansao-dos-monstrinhos.webp" alt="Cartaz do jogo A Mansão dos Monstrinhos, uma aventura de Halloween: uma sala com caldeirão, livro de feitiços, gatos pretos, abóbora e fantasmas simpáticos. Dos 6 aos 12 anos." width="1200" height="800" loading="lazy"></div>
+      <div class="jogo__texto">
+        <div class="jogo__cabeca">
+          <h3>A Mansão dos Monstrinhos</h3>
+          <span class="app__idade">6 aos 12 anos</span>
+          <span class="selo selo--preparacao">Em breve</span>
+        </div>
+        <p class="nota">Aventura de Halloween com desafios de pensamento, de atenção e de autorregulação.</p>
+        <h4>Domínios trabalhados</h4>
+        <ul>
+          <li>Desafios cognitivos</li>
+          <li>Flexibilidade e resolução de problemas</li>
+          <li>Gestão da frustração</li>
+          <li>Autonomia e persistência</li>
+        </ul>
+        <p class="jogo__ficha">Formato digital (HTML), para uso em gabinete.</p>
+      </div>
+    </article>
+
+    <article class="jogo" id="fabrica-dos-squishies">
+      <div class="jogo__imagem"><img src="assets/img/jogos/fabrica-dos-squishies.webp" alt="Cartaz do jogo A Fábrica dos Squishies: uma criança com óculos de aviador numa oficina colorida, rodeada de squishies em forma de panda, polvo, estrela, dinossauro e gato. Dois percursos, dos 6 aos 8 e dos 9 aos 12 anos." width="1200" height="675" loading="lazy"></div>
+      <div class="jogo__texto">
+        <div class="jogo__cabeca">
+          <h3>A Fábrica dos Squishies</h3>
+          <span class="app__idade">6 aos 12 anos</span>
+          <span class="selo selo--preparacao">Em breve</span>
+        </div>
+        <p class="nota">Oficina de criação de squishies, com quatro oficinas de desafios e dois percursos por idade: dos 6 aos 8 e dos 9 aos 12 anos.</p>
+        <h4>Em cada oficina</h4>
+        <ul>
+          <li>Explorar e criar</li>
+          <li>Desafiar e aprender</li>
+          <li>Regular</li>
+        </ul>
+        <p class="jogo__ficha">Formato digital (HTML), para uso em gabinete.</p>
+      </div>
+    </article>
+    </section>
 
     <div class="sessao-apenas">
       <p class="nota"><strong style="color:var(--tinta)">Materiais de uso exclusivo em sessão.</strong> Há ainda materiais que não são entregues às famílias e se usam apenas em consulta, como <em>Vamos conversar sobre…?</em> e <em>Resolver conflitos sociais</em>.</p>
